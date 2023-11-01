@@ -3529,10 +3529,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:MedicationHistory",
+            "@id": "bts:MedicationHistoryMetadataTemplate",
             "@type": "rdfs:Class",
             "rdfs:comment": "SysBio VEOIBD Medication History Metadata Template",
-            "rdfs:label": "MedicationHistory",
+            "rdfs:label": "MedicationHistoryMetadataTemplate",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataType"
@@ -3541,7 +3541,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "medicationHistory",
+            "sms:displayName": "medicationHistoryMetadataTemplate",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
