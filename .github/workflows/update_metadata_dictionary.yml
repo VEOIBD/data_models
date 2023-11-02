@@ -40,15 +40,17 @@ jobs:
           message: 'Updated term files in _data/'
 
       - name: Get changed term files
-        id: changed-files-yaml
-        uses: tj-actions/changed-files@v37
+        id: changed-term-files
+        uses: dorny/paths-filter@v2
         with:
-          files_yaml: |
-            data:
-              - _data/**.csv
+          base: HEAD
+          filters: |
+            addedOrdeleted:
+              - added|deleted: "_data/**.csv"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: update term page if the availability of term file changed
-        if: steps.changed-files-yaml.outputs.data_added_files_count != 0 && steps.changed-files-yaml.outputs.data_deleted_files_count != 0
+        if: steps.changed-term-files.outputs.addedOrdeleted == 'true'
         run: |
           python term_page_manager.py
 
@@ -56,20 +58,3 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Updated term pages in docs/'
-
-      - name: Get changed term pages
-        id: changed-pages-yaml
-        uses: tj-actions/changed-files@v37
-        with:
-          files_yaml: |
-            page:
-              - docs/**/**.md      
-      - name: update template page if the availability of term page changed
-        if: steps.changed-files-yaml.outputs.page_modified_pages_count != 0
-        run: |
-          python update_template_page.py
-      
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Updated template pages in docs/Metadata Template/'
