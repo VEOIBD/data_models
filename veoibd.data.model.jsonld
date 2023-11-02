@@ -2059,303 +2059,6 @@
                 },
                 {
                     "@id": "bts:IsRC2"
-                },
-                {
-                    "@id": "bts:Mesalamine"
-                },
-                {
-                    "@id": "bts:MesalamineUse"
-                },
-                {
-                    "@id": "bts:MesalamineChange"
-                },
-                {
-                    "@id": "bts:Sulfasa"
-                },
-                {
-                    "@id": "bts:SulfasaUse"
-                },
-                {
-                    "@id": "bts:SulfasaChange"
-                },
-                {
-                    "@id": "bts:Balsalazide"
-                },
-                {
-                    "@id": "bts:BalsalazideUse"
-                },
-                {
-                    "@id": "bts:BalsalazideChange"
-                },
-                {
-                    "@id": "bts:Olsalazine"
-                },
-                {
-                    "@id": "bts:OlsalazineUse"
-                },
-                {
-                    "@id": "bts:OlsalazineChange"
-                },
-                {
-                    "@id": "bts:Mercap6"
-                },
-                {
-                    "@id": "bts:Mercap6Use"
-                },
-                {
-                    "@id": "bts:Mercap6Change"
-                },
-                {
-                    "@id": "bts:Azathioprine"
-                },
-                {
-                    "@id": "bts:AzathioprineUse"
-                },
-                {
-                    "@id": "bts:AzathioprineChange"
-                },
-                {
-                    "@id": "bts:Methotrex"
-                },
-                {
-                    "@id": "bts:MethotrexUse"
-                },
-                {
-                    "@id": "bts:MethotrexChange"
-                },
-                {
-                    "@id": "bts:Fk506"
-                },
-                {
-                    "@id": "bts:Fk506Use"
-                },
-                {
-                    "@id": "bts:Fk506Change"
-                },
-                {
-                    "@id": "bts:Cyclospa"
-                },
-                {
-                    "@id": "bts:CyclospaUse"
-                },
-                {
-                    "@id": "bts:CyclospaChange"
-                },
-                {
-                    "@id": "bts:Thalidomide"
-                },
-                {
-                    "@id": "bts:ThalidomideUse"
-                },
-                {
-                    "@id": "bts:ThalidomideChange"
-                },
-                {
-                    "@id": "bts:Lenalidomide"
-                },
-                {
-                    "@id": "bts:LenalidomideUse"
-                },
-                {
-                    "@id": "bts:LenalidomideChange"
-                },
-                {
-                    "@id": "bts:Infliximab"
-                },
-                {
-                    "@id": "bts:InfliximabUse"
-                },
-                {
-                    "@id": "bts:InfliximabChange"
-                },
-                {
-                    "@id": "bts:Adalimumab"
-                },
-                {
-                    "@id": "bts:AdalimumabUse"
-                },
-                {
-                    "@id": "bts:AdalimumabChange"
-                },
-                {
-                    "@id": "bts:Certolizumab"
-                },
-                {
-                    "@id": "bts:CertolizumabUse"
-                },
-                {
-                    "@id": "bts:CertolizumabChange"
-                },
-                {
-                    "@id": "bts:Golimumab"
-                },
-                {
-                    "@id": "bts:GolimumabUse"
-                },
-                {
-                    "@id": "bts:GolimumabChange"
-                },
-                {
-                    "@id": "bts:Natalizumab"
-                },
-                {
-                    "@id": "bts:NatalizumabUse"
-                },
-                {
-                    "@id": "bts:NatalizumabChange"
-                },
-                {
-                    "@id": "bts:Tocilizumab"
-                },
-                {
-                    "@id": "bts:TocilizumabUse"
-                },
-                {
-                    "@id": "bts:TocilizumabChange"
-                },
-                {
-                    "@id": "bts:Vedolizumab"
-                },
-                {
-                    "@id": "bts:VedolizumabUse"
-                },
-                {
-                    "@id": "bts:VedolizumabChange"
-                },
-                {
-                    "@id": "bts:Ustekinumab"
-                },
-                {
-                    "@id": "bts:UstekinumabUse"
-                },
-                {
-                    "@id": "bts:UstekinumabChange"
-                },
-                {
-                    "@id": "bts:Oralenteric"
-                },
-                {
-                    "@id": "bts:OralentericUse"
-                },
-                {
-                    "@id": "bts:OralentericChange"
-                },
-                {
-                    "@id": "bts:Rectalstrd"
-                },
-                {
-                    "@id": "bts:RectalstrdUse"
-                },
-                {
-                    "@id": "bts:RectalstrdChange"
-                },
-                {
-                    "@id": "bts:Oralsterd"
-                },
-                {
-                    "@id": "bts:OralsterdUse"
-                },
-                {
-                    "@id": "bts:OralsterdChange"
-                },
-                {
-                    "@id": "bts:Intrasterd"
-                },
-                {
-                    "@id": "bts:IntrasterdUse"
-                },
-                {
-                    "@id": "bts:IntrasterdChange"
-                },
-                {
-                    "@id": "bts:Metronida"
-                },
-                {
-                    "@id": "bts:MetronidaUse"
-                },
-                {
-                    "@id": "bts:MetronidaChange"
-                },
-                {
-                    "@id": "bts:Ciproflox"
-                },
-                {
-                    "@id": "bts:CiprofloxUse"
-                },
-                {
-                    "@id": "bts:CiprofloxChange"
-                },
-                {
-                    "@id": "bts:Trimethop"
-                },
-                {
-                    "@id": "bts:TrimethopUse"
-                },
-                {
-                    "@id": "bts:TrimethopChange"
-                },
-                {
-                    "@id": "bts:Amoxicillin"
-                },
-                {
-                    "@id": "bts:AmoxicillinUse"
-                },
-                {
-                    "@id": "bts:AmoxicillinChange"
-                },
-                {
-                    "@id": "bts:Vancomycin"
-                },
-                {
-                    "@id": "bts:VancomycinUse"
-                },
-                {
-                    "@id": "bts:VancomycinChange"
-                },
-                {
-                    "@id": "bts:Ursodiol"
-                },
-                {
-                    "@id": "bts:UrsodiolUse"
-                },
-                {
-                    "@id": "bts:UrsodiolChange"
-                },
-                {
-                    "@id": "bts:Cholestyr"
-                },
-                {
-                    "@id": "bts:CholestyrUse"
-                },
-                {
-                    "@id": "bts:CholestyrChange"
-                },
-                {
-                    "@id": "bts:Rifampin"
-                },
-                {
-                    "@id": "bts:RifampinUse"
-                },
-                {
-                    "@id": "bts:RifampinChange"
-                },
-                {
-                    "@id": "bts:Omega3"
-                },
-                {
-                    "@id": "bts:Omega3Use"
-                },
-                {
-                    "@id": "bts:Omega3Change"
-                },
-                {
-                    "@id": "bts:Probiotic"
-                },
-                {
-                    "@id": "bts:ProbioticUse"
-                },
-                {
-                    "@id": "bts:ProbioticChange"
                 }
             ],
             "sms:validationRules": []
@@ -3823,6 +3526,325 @@
             ],
             "sms:displayName": "isRC2",
             "sms:required": "sms:true",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MedicationHistoryMetadataTemplate",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "SysBio VEOIBD Medication History Metadata Template",
+            "rdfs:label": "MedicationHistoryMetadataTemplate",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataType"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "medicationHistoryMetadataTemplate",
+            "sms:required": "sms:false",
+            "sms:requiresDependency": [
+                {
+                    "@id": "bts:IndividualID"
+                },
+                {
+                    "@id": "bts:Mesalamine"
+                },
+                {
+                    "@id": "bts:MesalamineUse"
+                },
+                {
+                    "@id": "bts:MesalamineChange"
+                },
+                {
+                    "@id": "bts:Sulfasa"
+                },
+                {
+                    "@id": "bts:SulfasaUse"
+                },
+                {
+                    "@id": "bts:SulfasaChange"
+                },
+                {
+                    "@id": "bts:Balsalazide"
+                },
+                {
+                    "@id": "bts:BalsalazideUse"
+                },
+                {
+                    "@id": "bts:BalsalazideChange"
+                },
+                {
+                    "@id": "bts:Olsalazine"
+                },
+                {
+                    "@id": "bts:OlsalazineUse"
+                },
+                {
+                    "@id": "bts:OlsalazineChange"
+                },
+                {
+                    "@id": "bts:Mercap6"
+                },
+                {
+                    "@id": "bts:Mercap6Use"
+                },
+                {
+                    "@id": "bts:Mercap6Change"
+                },
+                {
+                    "@id": "bts:Azathioprine"
+                },
+                {
+                    "@id": "bts:AzathioprineUse"
+                },
+                {
+                    "@id": "bts:AzathioprineChange"
+                },
+                {
+                    "@id": "bts:Methotrex"
+                },
+                {
+                    "@id": "bts:MethotrexUse"
+                },
+                {
+                    "@id": "bts:MethotrexChange"
+                },
+                {
+                    "@id": "bts:Fk506"
+                },
+                {
+                    "@id": "bts:Fk506Use"
+                },
+                {
+                    "@id": "bts:Fk506Change"
+                },
+                {
+                    "@id": "bts:Cyclospa"
+                },
+                {
+                    "@id": "bts:CyclospaUse"
+                },
+                {
+                    "@id": "bts:CyclospaChange"
+                },
+                {
+                    "@id": "bts:Thalidomide"
+                },
+                {
+                    "@id": "bts:ThalidomideUse"
+                },
+                {
+                    "@id": "bts:ThalidomideChange"
+                },
+                {
+                    "@id": "bts:Lenalidomide"
+                },
+                {
+                    "@id": "bts:LenalidomideUse"
+                },
+                {
+                    "@id": "bts:LenalidomideChange"
+                },
+                {
+                    "@id": "bts:Infliximab"
+                },
+                {
+                    "@id": "bts:InfliximabUse"
+                },
+                {
+                    "@id": "bts:InfliximabChange"
+                },
+                {
+                    "@id": "bts:Adalimumab"
+                },
+                {
+                    "@id": "bts:AdalimumabUse"
+                },
+                {
+                    "@id": "bts:AdalimumabChange"
+                },
+                {
+                    "@id": "bts:Certolizumab"
+                },
+                {
+                    "@id": "bts:CertolizumabUse"
+                },
+                {
+                    "@id": "bts:CertolizumabChange"
+                },
+                {
+                    "@id": "bts:Golimumab"
+                },
+                {
+                    "@id": "bts:GolimumabUse"
+                },
+                {
+                    "@id": "bts:GolimumabChange"
+                },
+                {
+                    "@id": "bts:Natalizumab"
+                },
+                {
+                    "@id": "bts:NatalizumabUse"
+                },
+                {
+                    "@id": "bts:NatalizumabChange"
+                },
+                {
+                    "@id": "bts:Tocilizumab"
+                },
+                {
+                    "@id": "bts:TocilizumabUse"
+                },
+                {
+                    "@id": "bts:TocilizumabChange"
+                },
+                {
+                    "@id": "bts:Vedolizumab"
+                },
+                {
+                    "@id": "bts:VedolizumabUse"
+                },
+                {
+                    "@id": "bts:VedolizumabChange"
+                },
+                {
+                    "@id": "bts:Ustekinumab"
+                },
+                {
+                    "@id": "bts:UstekinumabUse"
+                },
+                {
+                    "@id": "bts:UstekinumabChange"
+                },
+                {
+                    "@id": "bts:Oralenteric"
+                },
+                {
+                    "@id": "bts:OralentericUse"
+                },
+                {
+                    "@id": "bts:OralentericChange"
+                },
+                {
+                    "@id": "bts:Rectalstrd"
+                },
+                {
+                    "@id": "bts:RectalstrdUse"
+                },
+                {
+                    "@id": "bts:RectalstrdChange"
+                },
+                {
+                    "@id": "bts:Oralsterd"
+                },
+                {
+                    "@id": "bts:OralsterdUse"
+                },
+                {
+                    "@id": "bts:OralsterdChange"
+                },
+                {
+                    "@id": "bts:Intrasterd"
+                },
+                {
+                    "@id": "bts:IntrasterdUse"
+                },
+                {
+                    "@id": "bts:IntrasterdChange"
+                },
+                {
+                    "@id": "bts:Metronida"
+                },
+                {
+                    "@id": "bts:MetronidaUse"
+                },
+                {
+                    "@id": "bts:MetronidaChange"
+                },
+                {
+                    "@id": "bts:Ciproflox"
+                },
+                {
+                    "@id": "bts:CiprofloxUse"
+                },
+                {
+                    "@id": "bts:CiprofloxChange"
+                },
+                {
+                    "@id": "bts:Trimethop"
+                },
+                {
+                    "@id": "bts:TrimethopUse"
+                },
+                {
+                    "@id": "bts:TrimethopChange"
+                },
+                {
+                    "@id": "bts:Amoxicillin"
+                },
+                {
+                    "@id": "bts:AmoxicillinUse"
+                },
+                {
+                    "@id": "bts:AmoxicillinChange"
+                },
+                {
+                    "@id": "bts:Vancomycin"
+                },
+                {
+                    "@id": "bts:VancomycinUse"
+                },
+                {
+                    "@id": "bts:VancomycinChange"
+                },
+                {
+                    "@id": "bts:Ursodiol"
+                },
+                {
+                    "@id": "bts:UrsodiolUse"
+                },
+                {
+                    "@id": "bts:UrsodiolChange"
+                },
+                {
+                    "@id": "bts:Cholestyr"
+                },
+                {
+                    "@id": "bts:CholestyrUse"
+                },
+                {
+                    "@id": "bts:CholestyrChange"
+                },
+                {
+                    "@id": "bts:Rifampin"
+                },
+                {
+                    "@id": "bts:RifampinUse"
+                },
+                {
+                    "@id": "bts:RifampinChange"
+                },
+                {
+                    "@id": "bts:Omega3"
+                },
+                {
+                    "@id": "bts:Omega3Use"
+                },
+                {
+                    "@id": "bts:Omega3Change"
+                },
+                {
+                    "@id": "bts:Probiotic"
+                },
+                {
+                    "@id": "bts:ProbioticUse"
+                },
+                {
+                    "@id": "bts:ProbioticChange"
+                }
+            ],
             "sms:validationRules": []
         },
         {
