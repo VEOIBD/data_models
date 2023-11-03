@@ -44,7 +44,7 @@ jobs:
         id: changed-term-files
         with:
           files: |
-             _data/**.csv
+             _data/*.csv
 
       - name: update term pages if the availability of term files changed
         if: steps.changed-term-files.outputs.files_changed == 'true'
@@ -61,7 +61,7 @@ jobs:
         id: changed-term-pages
         with:
           files: |
-            - docs/**/**.md    
+            - docs/**/*.md    
 
       - name: update template page if the availability of term page changed
         if: steps.changed-term-pages.outputs.files_changed == 'true'
