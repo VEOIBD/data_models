@@ -61,7 +61,7 @@ jobs:
         id: changed-term-pages
         with:
           files: |
-            - docs/**/*.md    
+            docs/**/*.md    
 
       - name: update template page if the availability of term page changed
         if: steps.changed-term-pages.outputs.files_changed == 'true'
