@@ -72,3 +72,4 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Updated template pages in docs/Metadata Template/'
+
