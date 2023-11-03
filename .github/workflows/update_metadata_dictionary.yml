@@ -56,3 +56,14 @@ jobs:
         with:
           message: 'Updated term pages in docs/'
       
+      - name: Get changed term pages
+        uses: tj-actions/verify-changed-files@v16
+        id: changed-term-pages
+        with:
+          files: |
+            - docs/**/**.md    
+
+      - name: update template page if the availability of term page changed
+        if: steps.changed-term-pages.outputs.files_changed == 'true'
+        run: |
+          python update_template_page.py
