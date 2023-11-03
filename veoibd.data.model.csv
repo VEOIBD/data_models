@@ -134,7 +134,7 @@ probiotic_change,,,,,FALSE,DataProperty,,,,,
 biospecimenMetadataTemplate,SysBio VEOIBD Biospecimen Metadata Template,,"localID,individualID,specimenID,sampleKey,fundingSource,sampleType,dateCollected,diagnosisCategory,notes,shippingTrackingNumber,shippingVendor,specimenIDSource,uniqueID",,FALSE,DataType,,Sage Bionetworks,,Metadata Template,
 specimenID,Identifying string linked to a particular sample or specimen. For RC2 Samples: formatted as [IndividualID] + [Sample Type Abbreviation] + [Sample letter key] + [Subcategory of analysis type],,,,TRUE,DataProperty,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C166393,str,,
 sampleKey,"Key indicating additional information about samples. Should match key found in RC2 Sample ID. For biopsy: suggested location, inflammation status, and preservation method. For blood: blood component, preservation method.","A,B,C,D,E,F,G,H,I,J",,,TRUE,DataProperty,,Sage Bionetworks,,Experimental Data,STRING
-fundingSource,Funding source used to support sampling. May be necessary information to determine scope of sharing permissions.,"RC2,Helmsley,Internal",,,TRUE,DataProperty,,,,Other,STRING
+fundingSource,Funding source used to support sampling. May be necessary information to determine scope of sharing permissions.,"RC2,Helmsley,Internal",,,TRUE,DataProperty,,Sage Bionetworks,,Other,STRING
 sampleType,The type of sample being described,"Biopsy,Blood,Serum,PBMC,PAX",,,TRUE,DataProperty,,Sage Bionetworks,,Experimental Data,STRING
 Biopsy,,,"biopsyLocation,biopsyInflammationStatus,biopsiesNumber,preservationMethod",,FALSE,DataProperty,,,,,
 Serum,,,"volume,volumeUnit",,FALSE,DataProperty,,,,,
