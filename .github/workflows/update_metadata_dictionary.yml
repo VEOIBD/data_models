@@ -29,7 +29,7 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v37
 
-      - name: update term file if data model csv is changed
+      - name: update term files if data model csv is changed
         if: contains(steps.changed-files.outputs.modified_files, 'veoibd.data.model.csv')
         run: |
           python term_file_manager.py
@@ -39,14 +39,14 @@ jobs:
         with:
           message: 'Updated term files in _data/'
 
-      - name: check if term files changed
+      - name: check if term files changed during the workflow execution
         uses: tj-actions/verify-changed-files@v16
         id: changed-term-files
         with:
           files: |
              _data/**.csv
 
-      - name: update term page if the availability of term file changed
+      - name: update term pages if the availability of term files changed
         if: steps.changed-term-files.outputs.files_changed == 'true'
         run: |
           python term_page_manager.py
@@ -56,7 +56,7 @@ jobs:
         with:
           message: 'Updated term pages in docs/'
       
-      - name: Get changed term pages
+      - name: check if term pages changed during the workflow execution
         uses: tj-actions/verify-changed-files@v16
         id: changed-term-pages
         with:
