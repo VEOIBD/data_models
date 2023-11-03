@@ -34,11 +34,6 @@ jobs:
         run: |
           python term_file_manager.py
 
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Updated term files in _data/'
-
       - name: check if term files changed during the workflow execution
         uses: tj-actions/verify-changed-files@v16
         id: changed-term-files
@@ -50,18 +45,13 @@ jobs:
         if: steps.changed-term-files.outputs.files_changed == 'true'
         run: |
           python term_page_manager.py
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          message: 'Updated term pages in docs/'
       
       - name: check if term pages changed during the workflow execution
         uses: tj-actions/verify-changed-files@v16
         id: changed-term-pages
         with:
           files: |
-            docs/**/*.md    
+             docs/**/*.md
 
       - name: update template page if the availability of term page changed
         if: steps.changed-term-pages.outputs.files_changed == 'true'
@@ -71,5 +61,5 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          message: 'Updated template pages in docs/Metadata Template/'
+          message: 'Updated template files and pages'
 
