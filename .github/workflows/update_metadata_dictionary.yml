@@ -39,18 +39,15 @@ jobs:
         with:
           message: 'Updated term files in _data/'
 
-      - name: Get changed term files
+      - name: check if term files changed
+        uses: tj-actions/verify-changed-files@v16
         id: changed-term-files
-        uses: dorny/paths-filter@v2
         with:
-          base: HEAD
-          filters: |
-            addedOrdeleted:
-              - added|deleted: "_data/**.csv"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+             _data/**.csv
 
       - name: update term page if the availability of term file changed
-        if: steps.changed-term-files.outputs.addedOrdeleted == 'true'
+        if: steps.changed-term-files.outputs.files_changed == 'true'
         run: |
           python term_page_manager.py
 
@@ -58,3 +55,4 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Updated term pages in docs/'
+      
