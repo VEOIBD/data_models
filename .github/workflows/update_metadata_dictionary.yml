@@ -61,5 +61,6 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
+          pull: '--rebase --autostash ...'
           message: 'Updated template files and pages'
 
