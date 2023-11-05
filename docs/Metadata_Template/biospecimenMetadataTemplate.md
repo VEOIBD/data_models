@@ -29,7 +29,7 @@ title: Biospecimen Metadata Template
 </table>
 
 <script type="text/javascript">
-  var pages = ['diseaseActivityLocation', 'genomicSex', 'siblingType', 'sex', 'ethnicity', 'diseaseActivityBehavior', 'participantRole', 'GIPhenotype', 'birthCountry', 'upperDiseaseType', 'race', 'site', 'analysisType', 'biopsyInflammationStatus', 'biopsyLocation', 'sampleTissueType', 'sampleType', 'preservationMethod', 'sampleKey', 'diagnosisCategory', 'dataSubtype', 'dataType', 'specimenIDSource', 'volumeUnit', 'assay', 'sampleStatus', 'platform', 'runType', 'libraryPreparationMethod', 'libraryPrep', 'referenceSet', 'isStranded', 'cellViability', 'nucleicAcidSource', 'readStrandOrigin', 'libraryType', 'resourceType', 'fundingSource', 'fileFormat', 'shippingVendor', 'metadataType'];
+  var pages = ['analysisType', 'libraryPreparationMethod', 'referenceSet', 'libraryType', 'nucleicAcidSource', 'libraryPrep', 'isStranded', 'readStrandOrigin', 'runType', 'cellViability', 'specimenIDSource', 'volumeUnit', 'dataType', 'diagnosisCategory', 'assay', 'biopsyLocation', 'sampleType', 'sampleKey', 'biopsyInflammationStatus', 'platform', 'sampleTissueType', 'sampleStatus', 'dataSubtype', 'preservationMethod', 'fileFormat', 'shippingVendor', 'fundingSource', 'resourceType', 'metadataType', 'birthCountry', 'genomicSex', 'siblingType', 'diseaseActivityBehavior', 'GIPhenotype', 'participantRole', 'diseaseActivityLocation', 'site', 'sex', 'upperDiseaseType', 'ethnicity', 'race'];
   $('#myTable').DataTable({
     responsive: {
         details: {

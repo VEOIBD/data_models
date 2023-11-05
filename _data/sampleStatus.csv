@@ -1,5 +1,5 @@
 Key,Key Description,Type,Source,Module
-Frozen,,STRING,,Experimental Data
-Paxgene,,STRING,,Experimental Data
-Formalin-fixed,,STRING,,Experimental Data
-Fresh,,STRING,,Experimental Data
+Frozen,,STRING,,Experimental_Data
+Paxgene,,STRING,,Experimental_Data
+Formalin-fixed,,STRING,,Experimental_Data
+Fresh,,STRING,,Experimental_Data
