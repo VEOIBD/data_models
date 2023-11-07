@@ -1,6 +1,6 @@
 """
 Name: term_file_manager.py
-Descriptions: a script to generate/update term csv 
+Descriptions: a script to generate/update term file in _data/ 
 parameters: term (str): the term name (optional)
 Contributors: Dan Lu
 """
@@ -15,10 +15,12 @@ import pandas as pd
 
 def get_template_keys(data_model,template):
     """
-    Function to get the list of terms for metadata template
+    Function to get the list of terms for the metadata template
 
     :param data_model (pd.DataFrame): data model data frame
-    :param template (str): metadata template name in data model file
+    :param template (str): the metadata template name in data model file
+
+    :returns: a list of terms for the metadata template
     """
     # extrace dependsOn values for the tempalte
     depends_on = data_model.loc[data_model['Attribute'] == template, 'DependsOn'].str.split(',').values[0]
@@ -31,16 +33,17 @@ def get_template_keys(data_model,template):
     depends_on.extend(depend_on_ext)    
     return depends_on
 
-def generate_csv(data_model,term):
+def generate_term_file(data_model,term):
     """
-    Function to generate term csv file for an annotation term
+    Function to generate term file for an annotation term
 
     :param data_model (pd.DataFrame): data model data frame
     :param term (str): an annotation term
+    :returns: a term csv file saved in _data/moduel folder
     """
     parent_folder = data_model.loc[data_model['Attribute'] == term, ]["Module"].unique()[0]
     if 'Template' in term:
-        # generate csv for template
+        # generate file for template
         depends_on = get_template_keys(data_model, term)
         # filter out attributes from data model table
         df = data_model.loc[data_model['Attribute'].isin(depends_on), ]
@@ -48,7 +51,7 @@ def generate_csv(data_model,term):
         df.rename(columns = {'Attribute': 'Key', 'Description':'Key Description'}, inplace = True)
     else: 
         df = data_model.loc[data_model['Attribute'] == term, ][["Attribute", "Valid Values", "DependsOn","Type", "Module"]]
-        # generate csv for term
+        # generate file for term
         df = df.drop(columns = ['Attribute','DependsOn']).set_index(["Type", "Module"]).apply(lambda x: x.str.split(",").explode()).reset_index()
         # add columns
         df.rename(columns={"Valid Values": "Key"}, inplace=True)
@@ -57,7 +60,14 @@ def generate_csv(data_model,term):
     df.to_csv(f"./_data/{parent_folder}/{term}.csv", index=False)
     print("\033[92m {} \033[00m" .format(f'Added {term}.csv'))
 
-def update_csv(data_model, term):
+def update_term_file(data_model, term):
+    """
+    Function to update existing term file for an annotation term
+
+    :param data_model (pd.DataFrame): data model data frame
+    :param term (str): an annotation term
+    :returns: an updated term csv file saved in _data/moduel folder
+    """
     if 'Template' in term:
         depends_on = get_template_keys(data_model, term)
         new = data_model.loc[data_model['Attribute'].isin(depends_on), ]
@@ -72,9 +82,9 @@ def update_csv(data_model, term):
         new = new.drop(columns = ['Attribute','DependsOn']).set_index(["Type", "Module"]).apply(lambda x: x.str.split(",").explode()).reset_index()
         # add columns
         new.rename(columns={"Valid Values": "Key"}, inplace=True)
-        #load existing csv
+        #load existing file
         old = pd.read_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv")
-        # upload existing csv if Key, Type or Module column is changed
+        # upload existing file if Key, Type or Module column is changed
         if not (new['Key'].equals(old['Key']) and new['Type'].equals(old['Type']) and new['Module'].equals(old['Module'])):
             updated = new.merge(old[["Key", "Key Description","Source"]], how='left', on=["Key"])
             updated = updated[["Key", "Key Description", "Type", "Source", "Module"]]
@@ -82,12 +92,14 @@ def update_csv(data_model, term):
             print("\033[92m {} \033[00m" .format(f'Updated {term}.csv'))     
     
 def manage_term_files(term=None):
+    """
+    Helper function to manage term file by calling generate_term_file() and update_term_file()
+    :param term (str, optional): an annotation term
+    """
     # load data model
     data_model = pd.read_csv('./veoibd.data.model.csv')
     # get the list of existing term csvs
-    files = [
-        file.split("/")[-1].split(".")[0] for file in glob.glob('_data/**/*') if file.endswith(('csv','json'))
-    ]
+    files = [file.split("/")[-1].split(".")[0] for file in glob.glob('_data/**/*')]
     if term:
         df = data_model.loc[
             (data_model["Module"].notnull()) & (data_model["Attribute"].isin(term))
@@ -96,15 +108,15 @@ def manage_term_files(term=None):
         df = data_model.loc[data_model["Module"].notnull(),]
     # generate files when term files don't exist
     new_terms = df.loc[~df["Attribute"].isin(files),'Attribute'].tolist()
-    # generate csv by calling reformatter for each row of the df
-    generate_csv_temp = partial(generate_csv, data_model)
-    list(map(generate_csv_temp, new_terms))
+    # generate file by calling reformatter for each row of the df
+    generate_term_file_temp = partial(generate_term_file, data_model)
+    list(map(generate_term_file_temp, new_terms))
     # update files if the term files exist
     exist_terms = df.loc[df["Attribute"].isin(files),'Attribute'].tolist()
-    update_csv_temp = partial(update_csv, data_model)
-    list(map(update_csv_temp, exist_terms))
-    # delete term csv if the attribute is removed from data model
-    [os.remove(f"_data/{file}.csv") for file in files if file not in data_model.Attribute.values]
+    update_term_file_temp = partial(update_term_file, data_model)
+    list(map(update_term_file_temp, exist_terms))
+    # delete term file if the attribute is removed from data model
+    [os.remove(file) for file in glob.glob('_data/**/*') if file.split("/")[-1].split(".")[0] not in data_model.Attribute.values]
 
 def main():
     parser = argparse.ArgumentParser()

@@ -20,8 +20,8 @@ from mdutils import fileutils
 def get_term_info(data_model,term):
     """
     Function to get a dictionary for term definition, definition source, module
-
-    :param term: the term name
+    :param data_model (pd.DataFrame): data model data frame
+    :param term(str): the term name
 
     :returns: a dictionary with keys: Description and Module
     """
@@ -120,15 +120,23 @@ def generate_page(data_model, term_path):
     file.append_end(frontmatter.dumps(post))
 
 def delete_page(term):
-    for file in glob.glob("docs/*/*.md"):
+    """
+    Function to delete term/template markdown page
+
+    :param term(str): the term name
+
+    :returns: delete the term Markdown page in the docs/<module_name> folder
+    """
+    for file in glob.glob("docs/**/*.md"):
         if file.split('/')[-1].split('.')[0] == term:
             os.remove(file)
+
 def main():
     # load data model csv file
     data_model = pd.read_csv("veoibd.data.model.csv")
     # pull terms 
-    term_files = [file.split('/')[-1].split('.')[0] for file in glob.glob('_data/**/*') if file.endswith(('csv','json'))]
-    term_pages = [file.split('/')[-1].split('.')[0] for file in glob.glob("docs/*/*.md")]
+    term_files = [file.split('/')[-1].split('.')[0] for file in glob.glob('_data/**/*')]
+    term_pages = [file.split('/')[-1].split('.')[0] for file in glob.glob("docs/**/*.md")]
     to_add = np.setdiff1d(term_files,term_pages).tolist()
     to_delete = np.setdiff1d(term_pages,term_files).tolist()
     to_add_path = [file for term in to_add for file in glob.glob("_data/**/*") if file.split('/')[-1].split('.')[0] == term]
