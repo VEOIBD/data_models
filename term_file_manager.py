@@ -113,7 +113,9 @@ def update_term_file(data_model, term):
     :returns: an updated term csv file saved in _data/moduel folder
     """
     if "Template" in term:
-        module_folder = data_model.loc[data_model["Attribute"] == term,]["Module"].unique()[0]
+        module_folder = data_model.loc[data_model["Attribute"] == term,][
+            "Module"
+        ].unique()[0]
         depends_on = get_template_keys(data_model, term)
         new = data_model.loc[
             data_model["Attribute"].isin(depends_on),
