@@ -1,0 +1,68 @@
+---
+datatable: true
+layout: page
+parent: module
+title: term
+---
+
+<table id="myTable" class="display" style="width:100%">
+    <thead>
+    <th>{{ 'Key' }}</th>
+    <th>{{ 'Key Description' }}</th>
+    <th>{{ 'Source' }}</th>
+    <th>{{ 'Type' }}</th>
+    </thead>
+    <tbody>
+    {% for row in mydata %}
+        <tr>
+        {% for cell in row %}
+            <td>{{ cell[1] }}</td>
+        {% endfor %}
+        <td>{{ module.type }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<script type="text/javascript">
+  $('#myTable').DataTable({
+    responsive: {
+        details: {
+            display: $.fn.dataTable.Responsive.display.modal( {
+                header: function ( row ) {
+                    var data = row.data();
+                    return 'Details for '+data[0];
+                }
+            } ),
+            renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+                tableClass: "table"
+            })
+        }
+    },
+   "deferRender": true,
+   "columnDefs": [
+      { 
+         targets: [2],
+         render : function(data, type, row, meta){
+            if(type === 'display' & data != 'Sage Bionetworks'){
+               return $('<a>')
+                  .attr('href', data)
+                  .text(data)
+                  .wrap('<div></div>')
+                  .parent()
+                  .html();} 
+            if(type === 'display' & data == 'Sage Bionetworks'){
+                return $('<a>')
+                   .attr('href', 'https://sagebionetworks.org/')
+                   .text(data)
+                   .wrap('<div></div>')
+                   .parent()
+                   .html();
+            
+            } else {
+               return data;
+            }
+         }
+      } 
+   ]
+});
+</script>

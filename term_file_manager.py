@@ -1,19 +1,25 @@
 """
 Name: term_file_manager.py
-definition: a script to generate/update term csv 
+Descriptions: a script to generate/update term csv 
 parameters: term (str): the term name (optional)
 Contributors: Dan Lu
 """
 # load modules
 import argparse
+import glob
 import os
-import pdb
 from functools import partial
 
 import pandas as pd
 
 
 def get_template_keys(data_model,template):
+    """
+    Function to get the list of terms for metadata template
+
+    :param data_model (pd.DataFrame): data model data frame
+    :param template (str): metadata template name in data model file
+    """
     # extrace dependsOn values for the tempalte
     depends_on = data_model.loc[data_model['Attribute'] == template, 'DependsOn'].str.split(',').values[0]
     # extract dependencies for valid values of required attributes
@@ -26,6 +32,13 @@ def get_template_keys(data_model,template):
     return depends_on
 
 def generate_csv(data_model,term):
+    """
+    Function to generate term csv file for an annotation term
+
+    :param data_model (pd.DataFrame): data model data frame
+    :param term (str): an annotation term
+    """
+    parent_folder = data_model.loc[data_model['Attribute'] == term, ]["Module"].unique()[0]
     if 'Template' in term:
         # generate csv for template
         depends_on = get_template_keys(data_model, term)
@@ -41,7 +54,7 @@ def generate_csv(data_model,term):
         df.rename(columns={"Valid Values": "Key"}, inplace=True)
         df = df.assign(**dict([(_, None) for _ in ["Key Description", "Source"]]))
         df = df[["Key", "Key Description", "Type", "Source", "Module"]]
-    df.to_csv(f"./_data/{term}.csv", index=False)
+    df.to_csv(f"./_data/{parent_folder}/{term}.csv", index=False)
     print("\033[92m {} \033[00m" .format(f'Added {term}.csv'))
 
 def update_csv(data_model, term):
@@ -51,7 +64,7 @@ def update_csv(data_model, term):
         new = new[['Attribute','Description', 'Type', 'Valid Values', 'DependsOn', 'Required','Source','Module']].reset_index(drop= True)
         new.rename(columns = {'Attribute': 'Key', 'Description':'Key Description'}, inplace = True)
         # update template file
-        new.to_csv(f"./_data/{term}.csv", index=False)
+        new.to_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv", index=False)
         print("\033[92m {} \033[00m" .format(f'Updated {term}.csv'))
     else: 
         # convert dataframe to long format
@@ -60,22 +73,20 @@ def update_csv(data_model, term):
         # add columns
         new.rename(columns={"Valid Values": "Key"}, inplace=True)
         #load existing csv
-        old = pd.read_csv(f"./_data/{term}.csv")
+        old = pd.read_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv")
         # upload existing csv if Key, Type or Module column is changed
         if not (new['Key'].equals(old['Key']) and new['Type'].equals(old['Type']) and new['Module'].equals(old['Module'])):
-            updated = new.merge(old, how='left', on=["Key","Type", "Module"])
-            updated["Type"] = new["Type"]
-            updated["Module"] = new["Module"]
+            updated = new.merge(old[["Key", "Key Description","Source"]], how='left', on=["Key"])
             updated = updated[["Key", "Key Description", "Type", "Source", "Module"]]
-            updated.to_csv(f"./_data/{term}.csv", index=False)
+            updated.to_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv", index=False)
             print("\033[92m {} \033[00m" .format(f'Updated {term}.csv'))     
     
 def manage_term_files(term=None):
     # load data model
-    data_model = pd.read_csv('veoibd.data.model.csv')
+    data_model = pd.read_csv('./veoibd.data.model.csv')
     # get the list of existing term csvs
     files = [
-        file.split(".csv")[0] for file in os.listdir("_data/") if file.endswith(".csv")
+        file.split("/")[-1].split(".")[0] for file in glob.glob('_data/**/*') if file.endswith(('csv','json'))
     ]
     if term:
         df = data_model.loc[
