@@ -166,7 +166,7 @@ isStranded,Whether or not the library is stranded,"False,True",,,FALSE,DataPrope
 readStrandOrigin,The strand from which the read originates in a strand-specific protocol,"forward,reverse",,,FALSE,DataProperty,,,,NGS,STRING
 readLength,The length of the read,,,,FALSE,DataProperty,,,num,,
 runType,The sequencing read types,"singleEnd,pairedEnd",,,FALSE,DataProperty,,,,NGS,STRING
-referenceSet,"A set of references (e.g., canonical assembled contigs) which defines a common coordinate space for comparing reference-aligned Experimental Data.","GRCh37,GRCm38,MMUL1.0,HRC,1000 Genomes phase 3,GRCh38,dmel_r6.06",,,FALSE,DataProperty,,,,NGS,STRING
+referenceSet,"A set of references (e.g., canonical assembled contigs) which defines a common coordinate space for comparing reference-aligned experimental data.","GRCh37,GRCm38,MMUL1.0,HRC,1000 Genomes phase 3,GRCh38,dmel_r6.06",,,FALSE,DataProperty,,,,NGS,STRING
 sampleStatus,Conditions under which sample is kept,"Frozen,Paxgene,Formalin-fixed,Fresh",,,FALSE,DataProperty,,,,Experimental_Data,STRING
 analysisThresholds,The minimum counts-per-million (CPM) threshold,,,,FALSE,DataProperty,,,num,,
 analysisType,Type of analysis,"differential expression,eQTL",,,FALSE,DataProperty,,,,Analysis,STRING
