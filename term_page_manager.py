@@ -73,8 +73,8 @@ def generate_page(data_model, term_path):
     else:
         post = frontmatter.load("csv_term_page_template.md")
         post.metadata["title"] = term
-    post.metadata["parent"] = re.sub("([A-Z]+)", r" \1", module).title()
-
+    # post.metadata["parent"] = re.sub("([A-Z]+)", r" \1", module).title() # used when working with json file in synapseAnnotation repo
+    post.metadata["parent"] = module
     # load input data and term/template description
     if "Template" in term:
         post.content = (
@@ -114,11 +114,11 @@ def generate_page(data_model, term_path):
         if "Template" in term:
             # add permalink for template page
             module_page.append_end(
-                f"--- \nlayout: page \ntitle: {post.metadata['parent']} \nhas_children: true \nnav_order: 5 \npermalink: docs/{post.metadata['parent']}.html \n---"
+                f"--- \nlayout: page \ntitle: {' '.join(post.metadata['parent'].split('_'))} \nhas_children: true \nnav_order: 5 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
             )
         else:
             module_page.append_end(
-                f"--- \nlayout: page \ntitle: {post.metadata['parent']} \nhas_children: true \nnav_order: 2 \npermalink: docs/{post.metadata['parent']}.html \n---"
+                f"--- \nlayout: page \ntitle: {' '.join(post.metadata['parent'].split('_'))} \nhas_children: true \nnav_order: 2 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
             )
 
     # create file
