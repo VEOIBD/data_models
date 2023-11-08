@@ -60,7 +60,7 @@ def generate_term_file(data_model, term):
     :param term (str): an annotation term
     :returns: a term csv file saved in _data/moduel folder
     """
-    parent_folder = data_model.loc[data_model["Attribute"] == term,][
+    module_folder = data_model.loc[data_model["Attribute"] == term,][
         "Module"
     ].unique()[0]
     if "Template" in term:
@@ -100,7 +100,7 @@ def generate_term_file(data_model, term):
         df.rename(columns={"Valid Values": "Key"}, inplace=True)
         df = df.assign(**dict([(_, None) for _ in ["Key Description", "Source"]]))
         df = df[["Key", "Key Description", "Type", "Source", "Module"]]
-    df.to_csv(f"./_data/{parent_folder}/{term}.csv", index=False)
+    df.to_csv(f"./_data/{module_folder}/{term}.csv", index=False)
     print("\033[92m {} \033[00m".format(f"Added {term}.csv"))
 
 
@@ -113,6 +113,9 @@ def update_term_file(data_model, term):
     :returns: an updated term csv file saved in _data/moduel folder
     """
     if "Template" in term:
+        module_folder = data_model.loc[data_model["Attribute"] == term,][
+            "Module"
+        ].unique()[0]
         depends_on = get_template_keys(data_model, term)
         new = data_model.loc[
             data_model["Attribute"].isin(depends_on),
@@ -133,7 +136,7 @@ def update_term_file(data_model, term):
             columns={"Attribute": "Key", "Description": "Key Description"}, inplace=True
         )
         # update template file
-        new.to_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv", index=False)
+        new.to_csv(f"./_data/{module_folder}/{term}.csv", index=False)
         print("\033[92m {} \033[00m".format(f"Updated {term}.csv"))
     else:
         # convert dataframe to long format
@@ -149,7 +152,7 @@ def update_term_file(data_model, term):
         # add columns
         new.rename(columns={"Valid Values": "Key"}, inplace=True)
         # load existing file
-        old = pd.read_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv")
+        old = pd.read_csv(f"./_data/{new.Module.dropna().unique()[0]}/{term}.csv")
         # upload existing file if Key, Type or Module column is changed
         if not (
             new["Key"].equals(old["Key"])
@@ -160,7 +163,7 @@ def update_term_file(data_model, term):
                 old[["Key", "Key Description", "Source"]], how="left", on=["Key"]
             )
             updated = updated[["Key", "Key Description", "Type", "Source", "Module"]]
-            updated.to_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv", index=False)
+            updated.to_csv(f"./_data/{new.Module.dropna().unique()[0]}/{term}.csv", index=False)
             print("\033[92m {} \033[00m".format(f"Updated {term}.csv"))
 
 
