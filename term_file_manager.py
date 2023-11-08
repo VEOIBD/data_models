@@ -152,7 +152,7 @@ def update_term_file(data_model, term):
         # add columns
         new.rename(columns={"Valid Values": "Key"}, inplace=True)
         # load existing file
-        old = pd.read_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv")
+        old = pd.read_csv(f"./_data/{new.Module.dropna().unique()[0]}/{term}.csv")
         # upload existing file if Key, Type or Module column is changed
         if not (
             new["Key"].equals(old["Key"])
@@ -163,7 +163,7 @@ def update_term_file(data_model, term):
                 old[["Key", "Key Description", "Source"]], how="left", on=["Key"]
             )
             updated = updated[["Key", "Key Description", "Type", "Source", "Module"]]
-            updated.to_csv(f"./_data/{new.Module.unique()[0]}/{term}.csv", index=False)
+            updated.to_csv(f"./_data/{new.Module.dropna().unique()[0]}/{term}.csv", index=False)
             print("\033[92m {} \033[00m".format(f"Updated {term}.csv"))
 
 
