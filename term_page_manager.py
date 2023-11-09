@@ -76,7 +76,7 @@ def generate_page(data_model, term_path):
     # post.metadata["parent"] = re.sub("([A-Z]+)", r" \1", module).title() # used when working with json file in synapseAnnotation repo
     post.metadata["parent"] = module
     # load input data and term/template description
-    if "Template" in term:
+    if "Template" in term_path:
         post.content = (
             "{% assign mydata=site.data."
             + f"{module}."
@@ -87,7 +87,7 @@ def generate_page(data_model, term_path):
             + f">{description} [[Source]]({source})\n"
             + post.content
         )
-    else:
+    elif "json" in term_path:
         post.content = (
             "{% assign mydata=site.data."
             + f"{module}."
@@ -97,6 +97,18 @@ def generate_page(data_model, term_path):
             + f"{module}."
             + f"{term}"
             + " %} "
+            + "\n{: .note-title } \n"
+            + f">{post.metadata['title']}\n"
+            + ">\n"
+            + f">{description} [[Source]]({source})\n"
+            + post.content
+        )
+    else:
+        post.content = (
+            "{% assign mydata=site.data."
+            + f"{module}."
+            + f"{term}"
+            + " %} \n"
             + "\n{: .note-title } \n"
             + f">{post.metadata['title']}\n"
             + ">\n"
@@ -114,17 +126,15 @@ def generate_page(data_model, term_path):
         if "Template" in term:
             # add permalink for template page
             module_page.append_end(
-                f"--- \nlayout: page \ntitle: {' '.join(post.metadata['parent'].split('_'))} \nhas_children: true \nnav_order: 5 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
+                f"--- \nlayout: page \ntitle: {post.metadata['parent']} \nhas_children: true \nnav_order: 5 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
             )
         else:
             module_page.append_end(
-                f"--- \nlayout: page \ntitle: {' '.join(post.metadata['parent'].split('_'))} \nhas_children: true \nnav_order: 2 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
+                f"--- \nlayout: page \ntitle: {post.metadata['parent']} \nhas_children: true \nnav_order: 2 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
             )
 
     # create file
-    file = fileutils.MarkDownFile(
-        f"docs/{post.metadata['parent']}/{post.metadata['title']}"
-    )
+    file = fileutils.MarkDownFile(f"docs/{post.metadata['parent']}/{term}")
     # add content to the file
     file.append_end(frontmatter.dumps(post))
 
