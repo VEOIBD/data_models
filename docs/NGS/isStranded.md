@@ -5,7 +5,8 @@ parent: NGS
 title: isStranded
 ---
 
-{% assign mydata=site.data.isStranded %} 
+{% assign mydata=site.data.NGS.isStranded %} 
+
 {: .note-title } 
 >isStranded
 >

@@ -5,7 +5,8 @@ parent: NGS
 title: libraryType
 ---
 
-{% assign mydata=site.data.libraryType %} 
+{% assign mydata=site.data.NGS.libraryType %} 
+
 {: .note-title } 
 >libraryType
 >

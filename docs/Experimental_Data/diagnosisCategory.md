@@ -1,11 +1,12 @@
 ---
 datatable: true
 layout: page
-parent: Experimental Data
+parent: Experimental_Data
 title: diagnosisCategory
 ---
 
-{% assign mydata=site.data.diagnosisCategory %} 
+{% assign mydata=site.data.Experimental_Data.diagnosisCategory %} 
+
 {: .note-title } 
 >diagnosisCategory
 >

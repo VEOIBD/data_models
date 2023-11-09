@@ -5,7 +5,8 @@ parent: Clinical
 title: genomicSex
 ---
 
-{% assign mydata=site.data.genomicSex %} 
+{% assign mydata=site.data.Clinical.genomicSex %} 
+
 {: .note-title } 
 >genomicSex
 >

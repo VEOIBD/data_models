@@ -5,7 +5,8 @@ parent: NGS
 title: readStrandOrigin
 ---
 
-{% assign mydata=site.data.readStrandOrigin %} 
+{% assign mydata=site.data.NGS.readStrandOrigin %} 
+
 {: .note-title } 
 >readStrandOrigin
 >

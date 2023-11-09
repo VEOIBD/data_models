@@ -1,11 +1,12 @@
 ---
 datatable: true
 layout: page
-parent: Experimental Data
+parent: Experimental_Data
 title: specimenIDSource
 ---
 
-{% assign mydata=site.data.specimenIDSource %} 
+{% assign mydata=site.data.Experimental_Data.specimenIDSource %} 
+
 {: .note-title } 
 >specimenIDSource
 >

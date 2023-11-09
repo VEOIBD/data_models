@@ -5,7 +5,8 @@ parent: Clinical
 title: diseaseActivityLocation
 ---
 
-{% assign mydata=site.data.diseaseActivityLocation %} 
+{% assign mydata=site.data.Clinical.diseaseActivityLocation %} 
+
 {: .note-title } 
 >diseaseActivityLocation
 >

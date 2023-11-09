@@ -5,7 +5,8 @@ parent: NGS
 title: referenceSet
 ---
 
-{% assign mydata=site.data.referenceSet %} 
+{% assign mydata=site.data.NGS.referenceSet %} 
+
 {: .note-title } 
 >referenceSet
 >

@@ -1,11 +1,12 @@
 ---
 datatable: true
 layout: page
-parent: Experimental Data
+parent: Experimental_Data
 title: biopsyLocation
 ---
 
-{% assign mydata=site.data.biopsyLocation %} 
+{% assign mydata=site.data.Experimental_Data.biopsyLocation %} 
+
 {: .note-title } 
 >biopsyLocation
 >

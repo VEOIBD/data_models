@@ -5,7 +5,8 @@ parent: Analysis
 title: analysisType
 ---
 
-{% assign mydata=site.data.analysisType %} 
+{% assign mydata=site.data.Analysis.analysisType %} 
+
 {: .note-title } 
 >analysisType
 >

@@ -5,7 +5,8 @@ parent: NGS
 title: runType
 ---
 
-{% assign mydata=site.data.runType %} 
+{% assign mydata=site.data.NGS.runType %} 
+
 {: .note-title } 
 >runType
 >

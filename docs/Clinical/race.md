@@ -5,7 +5,8 @@ parent: Clinical
 title: race
 ---
 
-{% assign mydata=site.data.race %} 
+{% assign mydata=site.data.Clinical.race %} 
+
 {: .note-title } 
 >race
 >

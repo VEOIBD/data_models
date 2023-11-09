@@ -5,7 +5,8 @@ parent: Clinical
 title: GIPhenotype
 ---
 
-{% assign mydata=site.data.GIPhenotype %} 
+{% assign mydata=site.data.Clinical.GIPhenotype %} 
+
 {: .note-title } 
 >GIPhenotype
 >

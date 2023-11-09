@@ -1,12 +1,12 @@
 ---
 datatable: true
 layout: page
-parent: Metadata Template
+parent: Metadata_Template
 permalink: docs/Sc Rnaseq Assay Template.html
 title: Sc Rnaseq Assay Template
 ---
 
-{% assign mydata=site.data.scRNAseqAssayTemplate %} 
+{% assign mydata=site.data.Metadata_Template.scRNAseqAssayTemplate %} 
 {: .note-title } 
 >Sc Rnaseq Assay Template
 >
@@ -29,7 +29,7 @@ title: Sc Rnaseq Assay Template
 </table>
 
 <script type="text/javascript">
-  var pages = ['diseaseActivityLocation', 'genomicSex', 'siblingType', 'sex', 'ethnicity', 'diseaseActivityBehavior', 'participantRole', 'GIPhenotype', 'birthCountry', 'upperDiseaseType', 'race', 'site', 'analysisType', 'biopsyInflammationStatus', 'biopsyLocation', 'sampleTissueType', 'sampleType', 'preservationMethod', 'sampleKey', 'diagnosisCategory', 'dataSubtype', 'dataType', 'specimenIDSource', 'volumeUnit', 'assay', 'sampleStatus', 'platform', 'runType', 'libraryPreparationMethod', 'libraryPrep', 'referenceSet', 'isStranded', 'cellViability', 'nucleicAcidSource', 'readStrandOrigin', 'libraryType', 'resourceType', 'fundingSource', 'fileFormat', 'shippingVendor', 'metadataType'];
+  var pages = [];
   $('#myTable').DataTable({
     responsive: {
         details: {

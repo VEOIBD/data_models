@@ -5,7 +5,8 @@ parent: NGS
 title: libraryPreparationMethod
 ---
 
-{% assign mydata=site.data.libraryPreparationMethod %} 
+{% assign mydata=site.data.NGS.libraryPreparationMethod %} 
+
 {: .note-title } 
 >libraryPreparationMethod
 >

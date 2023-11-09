@@ -1,11 +1,12 @@
 ---
 datatable: true
 layout: page
-parent: Experimental Data
+parent: Experimental_Data
 title: dataType
 ---
 
-{% assign mydata=site.data.dataType %} 
+{% assign mydata=site.data.Experimental_Data.dataType %} 
+
 {: .note-title } 
 >dataType
 >

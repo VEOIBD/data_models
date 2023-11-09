@@ -5,7 +5,8 @@ parent: NGS
 title: nucleicAcidSource
 ---
 
-{% assign mydata=site.data.nucleicAcidSource %} 
+{% assign mydata=site.data.NGS.nucleicAcidSource %} 
+
 {: .note-title } 
 >nucleicAcidSource
 >
