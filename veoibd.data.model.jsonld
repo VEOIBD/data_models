@@ -1975,7 +1975,7 @@
         {
             "@id": "bts:ClinicalMetadataTemplate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "SysBio VEOIBD Clinical Metadata Template",
+            "rdfs:comment": "VEOIBD Clinical Metadata Template",
             "rdfs:label": "ClinicalMetadataTemplate",
             "rdfs:subClassOf": [
                 {
@@ -3531,7 +3531,7 @@
         {
             "@id": "bts:MedicationHistoryMetadataTemplate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "SysBio VEOIBD Medication History Metadata Template",
+            "rdfs:comment": "VEOIBD Medication History Metadata Template",
             "rdfs:label": "MedicationHistoryMetadataTemplate",
             "rdfs:subClassOf": [
                 {
@@ -5533,7 +5533,7 @@
         {
             "@id": "bts:BiospecimenMetadataTemplate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "SysBio VEOIBD Biospecimen Metadata Template",
+            "rdfs:comment": "VEOIBD Biospecimen Metadata Template",
             "rdfs:label": "BiospecimenMetadataTemplate",
             "rdfs:subClassOf": [
                 {
@@ -6178,7 +6178,7 @@
         {
             "@id": "bts:BulkRNAseqAssayTemplate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "SysBio VEOIBD Bulk RNASeq Assay Metadata Template",
+            "rdfs:comment": "VEOIBD Bulk RNASeq Assay Metadata Template",
             "rdfs:label": "BulkRNAseqAssayTemplate",
             "rdfs:subClassOf": [
                 {
@@ -7792,7 +7792,7 @@
         {
             "@id": "bts:ScRNAseqAssayTemplate",
             "@type": "rdfs:Class",
-            "rdfs:comment": "SysBio VEOIBD Single Cell RNASeq Assay Metadata Template",
+            "rdfs:comment": "VEOIBD Single Cell RNASeq Assay Metadata Template",
             "rdfs:label": "ScRNAseqAssayTemplate",
             "rdfs:subClassOf": [
                 {
