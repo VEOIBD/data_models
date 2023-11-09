@@ -5,7 +5,8 @@ parent: Other
 title: shippingVendor
 ---
 
-{% assign mydata=site.data.shippingVendor %} 
+{% assign mydata=site.data.Other.shippingVendor %} 
+
 {: .note-title } 
 >shippingVendor
 >

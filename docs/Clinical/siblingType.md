@@ -5,7 +5,8 @@ parent: Clinical
 title: siblingType
 ---
 
-{% assign mydata=site.data.siblingType %} 
+{% assign mydata=site.data.Clinical.siblingType %} 
+
 {: .note-title } 
 >siblingType
 >

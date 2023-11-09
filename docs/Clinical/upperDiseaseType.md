@@ -5,7 +5,8 @@ parent: Clinical
 title: upperDiseaseType
 ---
 
-{% assign mydata=site.data.upperDiseaseType %} 
+{% assign mydata=site.data.Clinical.upperDiseaseType %} 
+
 {: .note-title } 
 >upperDiseaseType
 >

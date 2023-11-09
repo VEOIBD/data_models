@@ -1,11 +1,12 @@
 ---
 datatable: true
 layout: page
-parent: Experimental Data
+parent: Experimental_Data
 title: preservationMethod
 ---
 
-{% assign mydata=site.data.preservationMethod %} 
+{% assign mydata=site.data.Experimental_Data.preservationMethod %} 
+
 {: .note-title } 
 >preservationMethod
 >

@@ -5,7 +5,8 @@ parent: Other
 title: metadataType
 ---
 
-{% assign mydata=site.data.metadataType %} 
+{% assign mydata=site.data.Other.metadataType %} 
+
 {: .note-title } 
 >metadataType
 >

@@ -1,11 +1,12 @@
 ---
 datatable: true
 layout: page
-parent: Experimental Data
+parent: Experimental_Data
 title: sampleKey
 ---
 
-{% assign mydata=site.data.sampleKey %} 
+{% assign mydata=site.data.Experimental_Data.sampleKey %} 
+
 {: .note-title } 
 >sampleKey
 >

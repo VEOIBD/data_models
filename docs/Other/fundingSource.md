@@ -5,7 +5,8 @@ parent: Other
 title: fundingSource
 ---
 
-{% assign mydata=site.data.fundingSource %} 
+{% assign mydata=site.data.Other.fundingSource %} 
+
 {: .note-title } 
 >fundingSource
 >

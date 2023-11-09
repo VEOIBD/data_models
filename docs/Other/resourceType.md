@@ -5,7 +5,8 @@ parent: Other
 title: resourceType
 ---
 
-{% assign mydata=site.data.resourceType %} 
+{% assign mydata=site.data.Other.resourceType %} 
+
 {: .note-title } 
 >resourceType
 >

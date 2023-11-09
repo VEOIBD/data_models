@@ -5,7 +5,8 @@ parent: Other
 title: fileFormat
 ---
 
-{% assign mydata=site.data.fileFormat %} 
+{% assign mydata=site.data.Other.fileFormat %} 
+
 {: .note-title } 
 >fileFormat
 >

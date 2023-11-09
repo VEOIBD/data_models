@@ -5,7 +5,8 @@ parent: NGS
 title: libraryPrep
 ---
 
-{% assign mydata=site.data.libraryPrep %} 
+{% assign mydata=site.data.NGS.libraryPrep %} 
+
 {: .note-title } 
 >libraryPrep
 >

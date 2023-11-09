@@ -5,7 +5,8 @@ parent: NGS
 title: cellViability
 ---
 
-{% assign mydata=site.data.cellViability %} 
+{% assign mydata=site.data.NGS.cellViability %} 
+
 {: .note-title } 
 >cellViability
 >

@@ -5,7 +5,8 @@ parent: Clinical
 title: birthCountry
 ---
 
-{% assign mydata=site.data.birthCountry %} 
+{% assign mydata=site.data.Clinical.birthCountry %} 
+
 {: .note-title } 
 >birthCountry
 >
