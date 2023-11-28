@@ -10,14 +10,13 @@ biopsiesNumber,The number of biopsies,,,,True,https://ncithesaurus.nci.nih.gov/n
 preservationMethod,The method of preservation for biopsy samples,STRING,"Cryopreserved,Snap Frozen,Formalin,PAXGene Tube",,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19232,Experimental_Data
 volume,"The volume of serum, PBMC, PAX collected",,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25335,
 volumeUnit,The units the volume is reported in,STRING,"ml,ul",,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25335,Experimental_Data
-numberCells,The number of cells for PBMC samples as # x 10^6,,,,True,Sage Bionetworks,
-dateCollected,The date sample was collected in format YYYY-MM-DD,,,,True,Sage Bionetworks,
+cellNumber,The number of cells for PBMC samples as # x 10^6,,,,True,Sage Bionetworks,
+collectionDate,The date sample was collected in format YYYY-MM-DD,,,,True,Sage Bionetworks,
 diagnosisCategory,The general diagnosis category,STRING,"CD,UC,IBDU,CTL",,True,Sage Bionetworks,Experimental_Data
 notes,Any additional notes about the biospecimen,,,,False,Sage Bionetworks,
 shippingTrackingNumber,"Tracking number issued by vendor. this can be used to identify shipping ""batches"" i.e. samples that were shipped at the same time under the same conditions",,,,False,Sage Bionetworks,
 shippingVendor,The vendor used to ship biosamples,STRING,"Federal Express,DHL,World Courier",,False,Sage Bionetworks,Other
 specimenIDSource,Sample originator. Should match prefix on RC2 Sample ID,STRING,"BCH,TOR,MUN,NET",,False,Sage Bionetworks,Experimental_Data
 uniqueID,"The unique ID, if there is one that is separate from the specimen ID (for example, if sites use their own internal unique ID). Some sites may collect this but not all",,,,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C70663,
-numberCells,Number of cells or nuclei sequenced,,,,False,,
 cellViability,A cell phenotype that consists of the cell's disposition to survive and develop normally. Provided as number of live cells per unit volume,,,,False,,
 cellViability,A cell phenotype that consists of the cell's disposition to survive and develop normally.,STRING,"Inviable cell,Viable cell",,False,,NGS
