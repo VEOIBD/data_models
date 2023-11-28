@@ -5565,7 +5565,7 @@
                     "@id": "bts:SampleType"
                 },
                 {
-                    "@id": "bts:DateCollected"
+                    "@id": "bts:CollectionDate"
                 },
                 {
                     "@id": "bts:DiagnosisCategory"
@@ -5797,7 +5797,7 @@
                     "@id": "bts:VolumeUnit"
                 },
                 {
-                    "@id": "bts:NumberCells"
+                    "@id": "bts:CellNumber"
                 },
                 {
                     "@id": "bts:CellViability"
@@ -5999,10 +5999,10 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:NumberCells",
+            "@id": "bts:CellNumber",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Number of cells or nuclei sequenced",
-            "rdfs:label": "NumberCells",
+            "rdfs:comment": "The number of cells for PBMC samples as # x 10^6",
+            "rdfs:label": "CellNumber",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataProperty"
@@ -6011,17 +6011,17 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "numberCells",
-            "sms:required": "sms:false",
+            "sms:displayName": "cellNumber",
+            "sms:required": "sms:true",
             "sms:validationRules": [
                 "int"
             ]
         },
         {
-            "@id": "bts:DateCollected",
+            "@id": "bts:CollectionDate",
             "@type": "rdfs:Class",
             "rdfs:comment": "The date sample was collected in format YYYY-MM-DD",
-            "rdfs:label": "DateCollected",
+            "rdfs:label": "CollectionDate",
             "rdfs:subClassOf": [
                 {
                     "@id": "bts:DataProperty"
@@ -6030,7 +6030,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "dateCollected",
+            "sms:displayName": "collectionDate",
             "sms:required": "sms:true",
             "sms:validationRules": []
         },
@@ -7255,7 +7255,9 @@
             },
             "sms:displayName": "numberCells",
             "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:validationRules": [
+                "int"
+            ]
         },
         {
             "@id": "bts:MedianGenes",
