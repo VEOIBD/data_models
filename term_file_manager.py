@@ -2,7 +2,7 @@
 Name: term_file_manager.py
 Descriptions: a script to generate/update term file in _data/ 
 parameters: term (str): the term name (optional)
-Contributors: Dan Lu
+Contributors: Dan Lu, Jess Vera
 """
 # load modules
 import argparse
@@ -58,7 +58,7 @@ def generate_term_file(data_model, term):
 
     :param data_model (pd.DataFrame): data model data frame
     :param term (str): an annotation term
-    :returns: a term csv file saved in _data/moduel folder
+    :returns: a term csv file saved in _data/module folder
     """
     module_folder = data_model.loc[data_model["Attribute"] == term,][
         "Module"
@@ -100,6 +100,10 @@ def generate_term_file(data_model, term):
         df.rename(columns={"Valid Values": "Key"}, inplace=True)
         df = df.assign(**dict([(_, None) for _ in ["Key Description", "Source"]]))
         df = df[["Key", "Key Description", "Type", "Source", "Module"]]
+    
+    # if _data/{module_folder} doesn't exits, create the directory first
+    if not os.path.exists(f"./_data/{module_folder}"):
+      os.makedirs(f"./_data/{module_folder}")
     df.to_csv(f"./_data/{module_folder}/{term}.csv", index=False)
     print("\033[92m {} \033[00m".format(f"Added {term}.csv"))
 
