@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Analysis
-title: analysisType
+parent: Biospecimen
+title: PBMC
 ---
 
-{% assign mydata=site.data.Analysis.analysisType %} 
+{% assign mydata=site.data.Biospecimen.PBMC %} 
 
 {: .note-title } 
->analysisType
+>PBMC
 >
->Type of analysis [[Source]](nan)
+>nan [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
