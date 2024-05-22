@@ -40,7 +40,7 @@ jobs:
           python term_file_manager.py
       
       - name: check if term files changed during the workflow execution
-        uses: tj-actions/verify-changed-files@v16
+        uses: tj-actions/verify-changed-files@v20
         id: changed-term-files
         with:
           files: |
