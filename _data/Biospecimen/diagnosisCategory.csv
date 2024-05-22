@@ -1,0 +1,5 @@
+Key,Key Description,Type,Source,Module
+CD,,STRING,,Biospecimen
+UC,,STRING,,Biospecimen
+IBDU,,STRING,,Biospecimen
+CTL,,STRING,,Biospecimen

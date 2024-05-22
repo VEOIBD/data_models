@@ -1,0 +1,4 @@
+Key,Key Description,Type,Source,Module
+RC2,,STRING,,Biospecimen
+Helmsley,,STRING,,Biospecimen
+Internal,,STRING,,Biospecimen

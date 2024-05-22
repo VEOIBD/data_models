@@ -1,0 +1,5 @@
+Key,Key Description,Type,Source,Module
+Cryopreserved,,STRING,,Biospecimen
+Snap Frozen,,STRING,,Biospecimen
+Formalin,,STRING,,Biospecimen
+PAXGene Tube,,STRING,,Biospecimen

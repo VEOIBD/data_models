@@ -1,0 +1,6 @@
+Key,Key Description,Type,Source,Module
+LP,,STRING,,Biospecimen
+EPI,,STRING,,Biospecimen
+both LP and EPI,,STRING,,Biospecimen
+blood,,STRING,,Biospecimen
+organoid,,STRING,,Biospecimen

@@ -1,5 +1,5 @@
 Key,Key Description,Type,Valid Values,DependsOn,Required,Source,Module
-individualID,"Identifying string linked to the individual or animal being studied, formatted as [site prefix] + [localID]",,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,
+individualID,"Identifying string linked to the individual or animal being studied, formatted as [site prefix] + [localID]",STRING,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,Clinical
 mesalamine,,,,,False,,
 mesalamine_use,,,,,False,,
 mesalamine_change,,,,,False,,
