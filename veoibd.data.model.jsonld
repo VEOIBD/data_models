@@ -13116,7 +13116,7 @@
             "rdfs:label": "ResourceType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:FileAnnotations"
                 }
             ],
             "schema:isPartOf": {
@@ -13249,13 +13249,30 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:FileAnnotations",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "FileAnnotations",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Thing"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "File_Annotations",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:MetadataType",
             "@type": "rdfs:Class",
             "rdfs:comment": "For files of dataSubtype: metadata, a description of the type of metadata in the file.",
             "rdfs:label": "MetadataType",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:FileAnnotations"
                 }
             ],
             "schema:isPartOf": {
