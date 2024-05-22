@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
           cache: 'pip'
@@ -27,7 +27,7 @@ jobs:
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v44
 
       - name: update term files if data model csv is changed
         if: contains(steps.changed-files.outputs.modified_files, 'veoibd.data.model.csv')
