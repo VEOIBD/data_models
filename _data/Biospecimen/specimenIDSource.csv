@@ -1,0 +1,5 @@
+Key,Key Description,Type,Source,Module
+BCH,,STRING,,Biospecimen
+TOR,,STRING,,Biospecimen
+MUN,,STRING,,Biospecimen
+NET,,STRING,,Biospecimen

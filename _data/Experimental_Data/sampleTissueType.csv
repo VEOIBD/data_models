@@ -1,6 +1,0 @@
-Key,Key Description,Type,Source,Module
-LP,,STRING,,Experimental_Data
-EPI,,STRING,,Experimental_Data
-both LP and EPI,,STRING,,Experimental_Data
-blood,,STRING,,Experimental_Data
-organoid,,STRING,,Experimental_Data

@@ -1,0 +1,5 @@
+Key,Key Description,Type,Source,Module
+Frozen,,STRING,,NGS
+Paxgene,,STRING,,NGS
+Formalin-fixed,,STRING,,NGS
+Fresh,,STRING,,NGS

@@ -1,0 +1,6 @@
+Key,Key Description,Type,Source,Module
+Biopsy,,STRING,,Biospecimen
+Blood,,STRING,,Biospecimen
+Serum,,STRING,,Biospecimen
+PBMC,,STRING,,Biospecimen
+PAX,,STRING,,Biospecimen

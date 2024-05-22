@@ -1,0 +1,9 @@
+Key,Key Description,Type,Source,Module
+fastq,,STRING,,File_Annotations
+count matrix,,STRING,,File_Annotations
+bam,,STRING,,File_Annotations
+csv,,STRING,,File_Annotations
+xlsx,,STRING,,File_Annotations
+txt,,STRING,,File_Annotations
+pdf,,STRING,,File_Annotations
+tsv,,STRING,,File_Annotations

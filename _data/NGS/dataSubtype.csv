@@ -1,0 +1,6 @@
+Key,Key Description,Type,Source,Module
+raw,,STRING,,NGS
+aligned,,STRING,,NGS
+processed,,STRING,,NGS
+normalized,,STRING,,NGS
+aggregated,,STRING,,NGS

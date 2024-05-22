@@ -1,0 +1,3 @@
+Key,Key Description,Type,Source,Module
+Inflamed,,STRING,,Biospecimen
+Uninflamed,,STRING,,Biospecimen

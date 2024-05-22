@@ -1,0 +1,16 @@
+Key,Key Description,Type,Source,Module
+Drop-Seq,,STRING,,Experimental_Data
+sac-seq,,STRING,,Experimental_Data
+NexteraXT,,STRING,,Experimental_Data
+Smart-seq1,,STRING,,Experimental_Data
+10x,,STRING,,Experimental_Data
+Omni-ATAC,,STRING,,Experimental_Data
+Accel-NGS Methyl-Seq,,STRING,,Experimental_Data
+CEL-seq,,STRING,,Experimental_Data
+NEBNext,,STRING,,Experimental_Data
+Smart-seq2,,STRING,,Experimental_Data
+Smart-seq4,,STRING,,Experimental_Data
+SMRTbell,,STRING,,Experimental_Data
+TruSeq,,STRING,,Experimental_Data
+Ultralow Methyl-Seq,,STRING,,Experimental_Data
+Accel-NGS 2S Plus,,STRING,,Experimental_Data
