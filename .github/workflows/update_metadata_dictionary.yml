@@ -57,7 +57,7 @@ jobs:
           python term_page_manager.py
       
       - name: check if term pages changed during the workflow execution
-        uses: tj-actions/verify-changed-files@v16
+        uses: tj-actions/verify-changed-files@v20
         id: changed-term-pages
         with:
           files: |
