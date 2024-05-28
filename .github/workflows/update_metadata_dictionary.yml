@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
           cache: 'pip'
@@ -27,32 +27,42 @@ jobs:
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v37
+        uses: tj-actions/changed-files@v44
 
       - name: update term files if data model csv is changed
         if: contains(steps.changed-files.outputs.modified_files, 'veoibd.data.model.csv')
         run: |
           python term_file_manager.py
-
+      
+      - name: update term files if term_file_manager.py is changed
+        if: contains(steps.changed-files.outputs.modified_files, 'term_file_manager.py')
+        run: |
+          python term_file_manager.py
+      
       - name: check if term files changed during the workflow execution
-        uses: tj-actions/verify-changed-files@v16
+        uses: tj-actions/verify-changed-files@v20
         id: changed-term-files
         with:
           files: |
              _data/**/*.csv
-
+      
       - name: update term pages if the availability of term files changed
         if: steps.changed-term-files.outputs.files_changed == 'true'
         run: |
           python term_page_manager.py
       
+      - name: update term pages if term_page_manager.py is changed
+        if: contains(steps.changed-files.outputs.modified_files, 'term_file_manager.py')
+        run: |
+          python term_page_manager.py
+      
       - name: check if term pages changed during the workflow execution
-        uses: tj-actions/verify-changed-files@v16
+        uses: tj-actions/verify-changed-files@v20
         id: changed-term-pages
         with:
           files: |
              docs/**/*.md
-
+      
       - name: update template page if the availability of term page changed
         if: steps.changed-term-pages.outputs.files_changed == 'true'
         run: |
