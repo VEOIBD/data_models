@@ -1,11 +1,11 @@
 ---
 datatable: true
 layout: page
-parent: Other
+parent: File_Annotations
 title: metadataType
 ---
 
-{% assign mydata=site.data.Other.metadataType %} 
+{% assign mydata=site.data.File_Annotations.metadataType %} 
 
 {: .note-title } 
 >metadataType

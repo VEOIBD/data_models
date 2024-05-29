@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: specimenIDSource
+parent: Biospecimen
+title: diagnosisCategory
 ---
 
-{% assign mydata=site.data.Experimental_Data.specimenIDSource %} 
+{% assign mydata=site.data.Biospecimen.diagnosisCategory %} 
 
 {: .note-title } 
->specimenIDSource
+>diagnosisCategory
 >
->Sample originator. Should match prefix on RC2 Sample ID [[Source]](https://sagebionetworks.org/)
+>The general diagnosis category [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

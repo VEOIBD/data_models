@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Other
-title: fileFormat
+parent: Biospecimen
+title: specimenIDSource
 ---
 
-{% assign mydata=site.data.Other.fileFormat %} 
+{% assign mydata=site.data.Biospecimen.specimenIDSource %} 
 
 {: .note-title } 
->fileFormat
+>specimenIDSource
 >
->Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software [[Source]](nan)
+>Sample originator. Should match prefix on RC2 Sample ID [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

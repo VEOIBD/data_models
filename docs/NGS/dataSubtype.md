@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: sampleKey
+parent: NGS
+title: dataSubtype
 ---
 
-{% assign mydata=site.data.Experimental_Data.sampleKey %} 
+{% assign mydata=site.data.NGS.dataSubtype %} 
 
 {: .note-title } 
->sampleKey
+>dataSubtype
 >
->Key indicating additional information about samples. Should match key found in RC2 Sample ID. For biopsy: suggested location, inflammation status, and preservation method. For blood: blood component, preservation method. [[Source]](https://sagebionetworks.org/)
+>Further qualification of dataType, which may be used to indicate the state of processing of the data, aggregation of the data, or presence of metadata. [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

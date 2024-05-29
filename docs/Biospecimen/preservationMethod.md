@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: sampleType
+parent: Biospecimen
+title: preservationMethod
 ---
 
-{% assign mydata=site.data.Experimental_Data.sampleType %} 
+{% assign mydata=site.data.Biospecimen.preservationMethod %} 
 
 {: .note-title } 
->sampleType
+>preservationMethod
 >
->The type of sample being described [[Source]](https://sagebionetworks.org/)
+>The method of preservation for biopsy samples [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19232)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Clinical
-title: genomicSex
+parent: File_Annotations
+title: resourceType
 ---
 
-{% assign mydata=site.data.Clinical.genomicSex %} 
+{% assign mydata=site.data.File_Annotations.resourceType %} 
 
 {: .note-title } 
->genomicSex
+>resourceType
 >
->The predicition of sex based on expression of genes [[Source]](nan)
+>The type of resource being stored and annotated [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

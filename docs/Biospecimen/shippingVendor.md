@@ -1,11 +1,11 @@
 ---
 datatable: true
 layout: page
-parent: Other
+parent: Biospecimen
 title: shippingVendor
 ---
 
-{% assign mydata=site.data.Other.shippingVendor %} 
+{% assign mydata=site.data.Biospecimen.shippingVendor %} 
 
 {: .note-title } 
 >shippingVendor

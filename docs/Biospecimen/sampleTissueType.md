@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: NGS
-title: cellViability
+parent: Biospecimen
+title: sampleTissueType
 ---
 
-{% assign mydata=site.data.NGS.cellViability %} 
+{% assign mydata=site.data.Biospecimen.sampleTissueType %} 
 
 {: .note-title } 
->cellViability
+>sampleTissueType
 >
->A cell phenotype that consists of the cell's disposition to survive and develop normally. Provided as number of live cells per unit volume [[Source]](nan)
+>Tissue type used in sample [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

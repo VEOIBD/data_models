@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: assay
+parent: Biospecimen
+title: biopsyLocation
 ---
 
-{% assign mydata=site.data.Experimental_Data.assay %} 
+{% assign mydata=site.data.Biospecimen.biopsyLocation %} 
 
 {: .note-title } 
->assay
+>biopsyLocation
 >
->The technology used to generate the data in this file [[Source]](nan)
+>Biopsy actual location [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

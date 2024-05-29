@@ -2,7 +2,7 @@
 Name: term_page_manager.py
 Descriptions: A script to generate and delete annotation term page and folder structure mirroring data folder (i.e._data/). 
               Can take csv term files or json files in https://github.com/Sage-Bionetworks/synapseAnnotations
-Contributors: Dan Lu
+Contributors: Dan Lu, Jess Vera
 """
 # load modules
 import glob
@@ -42,8 +42,8 @@ def generate_page(data_model, term_path):
     :returns: a term Markdown page generated under the docs/<module_name> folder
     """
     # get term information
-    term = term_path.split("/")[-1].split(".")[0]
-    module = term_path.split("/")[1]
+    term = term_path.split("/")[-1]
+    module = term_path.split("/")[0]
     if "json" in term_path:
         # term with JSON files
         with open(term_path) as f:
@@ -60,7 +60,7 @@ def generate_page(data_model, term_path):
     if source == "Sage Bionetworks":
         source = "https://sagebionetworks.org/"
 
-    if "Template" in term:
+    if "Template" in term_path:
         # load template
         post = frontmatter.load("template_page_template.md")
         # convert camel case to title
@@ -137,45 +137,64 @@ def generate_page(data_model, term_path):
     file = fileutils.MarkDownFile(f"docs/{post.metadata['parent']}/{term}")
     # add content to the file
     file.append_end(frontmatter.dumps(post))
+    print("\033[92m {} \033[00m".format(f"added docs/{term_path}.md"))
 
-
-def delete_page(term):
+def delete_page(page):
     """
     Function to delete term/template markdown page
 
-    :param term(str): the term name
+    :param page(str): the md file name (without file extension)
 
-    :returns: delete the term Markdown page in the docs/<module_name> folder
+    :returns: delete the term Markdown page in the docs/<page>
     """
-    for file in glob.glob("docs/**/*.md"):
-        if file.split("/")[-1].split(".")[0] == term:
-            os.remove(file)
+    print("\033[91m {} \033[00m".format(f"deleting docs/{page}.md"))
+    os.remove(f"docs/{page}.md")
 
 
 def main():
-    # load data model csv file
-    data_model = pd.read_csv("veoibd.data.model.csv")
-    # pull terms
-    term_files = [file.split("/")[-1].split(".")[0] for file in glob.glob("_data/**/*")]
-    term_pages = [
-        file.split("/")[-1].split(".")[0] for file in glob.glob("docs/**/*.md")
-    ]
-    to_add = np.setdiff1d(term_files, term_pages).tolist()
-    to_delete = np.setdiff1d(term_pages, term_files).tolist()
-    to_add_path = [
-        file
-        for term in to_add
-        for file in glob.glob("_data/**/*")
-        if file.split("/")[-1].split(".")[0] == term
-    ]
-    # generate pages for terms with the term files
-    generate_page_temp = partial(generate_page, data_model)
-    list(map(generate_page_temp, to_add_path))
-    # delete pages for terms without the term files and exclude module page
-    to_delete = [
-        x for x in to_delete if x not in data_model["Module"].dropna().unique().tolist()
-    ]
-    list(map(delete_page, to_delete))
+  # Main func
+  # load data model csv file
+  data_model = pd.read_csv("veoibd.data.model.csv")
+  
+  # get existing docs/ dirs
+  module_folders = [path.split("/")[-1] for path in glob.glob("docs/*")]
+  
+  # get model modules
+  # first remove nan Module
+  data_model_nonans = data_model[~data_model['Module'].isna()]
+  model_modules = data_model_nonans.Module.unique()
+  
+  # delete modules no longer defined in the model
+  # modules to delete
+  mod_to_delete = np.setdiff1d(module_folders, model_modules).tolist()
+  for dir in mod_to_delete:
+    for file in glob.glob(f"docs/{dir}/*"):
+      print("\033[91m {} \033[00m".format(f"deleting {file}"))
+      os.remove(f"{file}")
+    print("\033[91m {} \033[00m".format(f"deleting docs/{dir}/"))
+    os.rmdir(f"docs/{dir}/")
+   
+  term_files = []
+  for file in glob.glob("_data/**/*"):
+    file_split = file.split('/')
+    file_split[2] = file_split[2].split(".")[0]
+    term_files.append(f"{file_split[1]}/{file_split[2]}")
+  
+  term_pages = []
+  for file in glob.glob("docs/**/*"):
+    file_split = file.split('/')
+    file_split[2] = file_split[2].split(".")[0]
+    # ignore md files that define the module, want to keep those
+    if not file_split[1] == file_split[2]:
+      term_pages.append(f"{file_split[1]}/{file_split[2]}")
+  
+  to_add = np.setdiff1d(term_files, term_pages).tolist()
+  to_delete = np.setdiff1d(term_pages, term_files).tolist()
+  list(map(delete_page, to_delete))
+  
+  # generate pages for terms with the term files
+  generate_page_temp = partial(generate_page, data_model)
+  list(map(generate_page_temp, to_add))
 
 
 if __name__ == "__main__":

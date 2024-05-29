@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: sampleTissueType
+parent: Biospecimen
+title: sampleType
 ---
 
-{% assign mydata=site.data.Experimental_Data.sampleTissueType %} 
+{% assign mydata=site.data.Biospecimen.sampleType %} 
 
 {: .note-title } 
->sampleTissueType
+>sampleType
 >
->Tissue type used in sample [[Source]](nan)
+>The type of sample being described [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

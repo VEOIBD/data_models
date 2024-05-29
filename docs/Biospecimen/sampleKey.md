@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: biopsyInflammationStatus
+parent: Biospecimen
+title: sampleKey
 ---
 
-{% assign mydata=site.data.Experimental_Data.biopsyInflammationStatus %} 
+{% assign mydata=site.data.Biospecimen.sampleKey %} 
 
 {: .note-title } 
->biopsyInflammationStatus
+>sampleKey
 >
->Biopsy inflammation status [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3137)
+>Key indicating additional information about samples. Should match key found in RC2 Sample ID. For biopsy: suggested location, inflammation status, and preservation method. For blood: blood component, preservation method. [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
