@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: biopsyLocation
+parent: Biospecimen
+title: fundingSource
 ---
 
-{% assign mydata=site.data.Experimental_Data.biopsyLocation %} 
+{% assign mydata=site.data.Biospecimen.fundingSource %} 
 
 {: .note-title } 
->biopsyLocation
+>fundingSource
 >
->Biopsy actual location [[Source]](https://sagebionetworks.org/)
+>Funding source used to support sampling. May be necessary information to determine scope of sharing permissions. [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

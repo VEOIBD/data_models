@@ -2,15 +2,15 @@
 datatable: true
 layout: page
 parent: Experimental_Data
-title: preservationMethod
+title: cellViability
 ---
 
-{% assign mydata=site.data.Experimental_Data.preservationMethod %} 
+{% assign mydata=site.data.Experimental_Data.cellViability %} 
 
 {: .note-title } 
->preservationMethod
+>cellViability
 >
->The method of preservation for biopsy samples [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19232)
+>A cell phenotype that consists of the cell's disposition to survive and develop normally. Provided as number of live cells per unit volume [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

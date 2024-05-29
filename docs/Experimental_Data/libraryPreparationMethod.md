@@ -2,15 +2,15 @@
 datatable: true
 layout: page
 parent: Experimental_Data
-title: diagnosisCategory
+title: libraryPreparationMethod
 ---
 
-{% assign mydata=site.data.Experimental_Data.diagnosisCategory %} 
+{% assign mydata=site.data.Experimental_Data.libraryPreparationMethod %} 
 
 {: .note-title } 
->diagnosisCategory
+>libraryPreparationMethod
 >
->The general diagnosis category [[Source]](https://sagebionetworks.org/)
+>Method by which library was prepared [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

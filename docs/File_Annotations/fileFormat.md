@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Other
-title: resourceType
+parent: File_Annotations
+title: fileFormat
 ---
 
-{% assign mydata=site.data.Other.resourceType %} 
+{% assign mydata=site.data.File_Annotations.fileFormat %} 
 
 {: .note-title } 
->resourceType
+>fileFormat
 >
->The type of resource being stored and annotated [[Source]](nan)
+>Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -2,15 +2,15 @@
 datatable: true
 layout: page
 parent: NGS
-title: libraryPreparationMethod
+title: genomicSex
 ---
 
-{% assign mydata=site.data.NGS.libraryPreparationMethod %} 
+{% assign mydata=site.data.NGS.genomicSex %} 
 
 {: .note-title } 
->libraryPreparationMethod
+>genomicSex
 >
->Method by which library was prepared [[Source]](nan)
+>The predicition of sex based on expression of genes [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

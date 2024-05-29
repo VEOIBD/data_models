@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: sampleStatus
+parent: Biospecimen
+title: volumeUnit
 ---
 
-{% assign mydata=site.data.Experimental_Data.sampleStatus %} 
+{% assign mydata=site.data.Biospecimen.volumeUnit %} 
 
 {: .note-title } 
->sampleStatus
+>volumeUnit
 >
->Conditions under which sample is kept [[Source]](nan)
+>The units the volume is reported in [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25335)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Other
-title: fundingSource
+parent: NGS
+title: sampleStatus
 ---
 
-{% assign mydata=site.data.Other.fundingSource %} 
+{% assign mydata=site.data.NGS.sampleStatus %} 
 
 {: .note-title } 
->fundingSource
+>sampleStatus
 >
->Funding source used to support sampling. May be necessary information to determine scope of sharing permissions. [[Source]](nan)
+>Conditions under which sample is kept [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

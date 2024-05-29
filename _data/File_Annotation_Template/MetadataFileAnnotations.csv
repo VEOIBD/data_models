@@ -1,0 +1,6 @@
+Key,Key Description,Type,Valid Values,DependsOn,Required,Source,Module
+Filename,Name of a file,STRING,,,True,,Other
+site,Site at which the participant was recruited,STRING,"BCH,TOR,MUN",,True,Sage Bionetworks,Clinical
+fileFormat,"Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",STRING,"fastq,count matrix,bam,csv,xlsx,txt,pdf,tsv",,False,,File_Annotations
+resourceType,The type of resource being stored and annotated,STRING,"analysis,curatedData,experimentalData,metadata,report,tool",,True,,File_Annotations
+metadataType,"For files of dataSubtype: metadata, a description of the type of metadata in the file.",STRING,"assay metadata,biospecimen metadata,data dictionary,individual,protocol,quality assessment",,True,,File_Annotations

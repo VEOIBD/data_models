@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
-title: dataSubtype
+parent: NGS
+title: assay
 ---
 
-{% assign mydata=site.data.Experimental_Data.dataSubtype %} 
+{% assign mydata=site.data.NGS.assay %} 
 
 {: .note-title } 
->dataSubtype
+>assay
 >
->Further qualification of dataType, which may be used to indicate the state of processing of the data, aggregation of the data, or presence of metadata. [[Source]](nan)
+>The technology used to generate the data in this file [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

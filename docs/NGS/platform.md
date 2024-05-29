@@ -1,11 +1,11 @@
 ---
 datatable: true
 layout: page
-parent: Experimental_Data
+parent: NGS
 title: platform
 ---
 
-{% assign mydata=site.data.Experimental_Data.platform %} 
+{% assign mydata=site.data.NGS.platform %} 
 
 {: .note-title } 
 >platform
