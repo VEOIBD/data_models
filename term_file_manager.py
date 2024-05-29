@@ -8,9 +8,11 @@ Contributors: Dan Lu, Jess Vera
 import argparse
 import glob
 import os
+import sys
 from functools import partial
 
 import pandas as pd
+import numpy as np
 
 
 def get_template_keys(data_model, template):
@@ -37,7 +39,8 @@ def get_template_keys(data_model, template):
     valid_values = list(
         set([value for values_list in valid_values for value in values_list.split(",")])
     )
-    # get the dependsOn values for valid values and concatenate it with original dependsOn list of the template
+    # get the dependsOn values for valid values and concatenate it with 
+    # original dependsOn list of the template
     depend_on_ext = (
         data_model.loc[data_model["Attribute"].isin(valid_values), "DependsOn"]
         .dropna()
@@ -58,12 +61,13 @@ def generate_term_file(data_model, term):
 
     :param data_model (pd.DataFrame): data model data frame
     :param term (str): an annotation term
-    :returns: a term csv file saved in _data/module folder
+    :returns: a term csv file saved in _data/moduel folder
     """
     module_folder = data_model.loc[data_model["Attribute"] == term,][
         "Module"
     ].unique()[0]
-    if "Template" in term:
+    # make "template" csv if attribute or module string includes Template
+    if "Template" in term or "Template" in module_folder:
         # generate file for template
         depends_on = get_template_keys(data_model, term)
         # filter out attributes from data model table
@@ -105,7 +109,7 @@ def generate_term_file(data_model, term):
     if not os.path.exists(f"./_data/{module_folder}"):
       os.makedirs(f"./_data/{module_folder}")
     df.to_csv(f"./_data/{module_folder}/{term}.csv", index=False)
-    print("\033[92m {} \033[00m".format(f"Added {term}.csv"))
+    print("\033[92m {} \033[00m".format(f"Added _data/{module_folder}/{term}.csv"))
 
 
 def update_term_file(data_model, term):
@@ -181,28 +185,72 @@ def manage_term_files(term=None):
     # get the list of existing term csvs
     files = [file.split("/")[-1].split(".")[0] for file in glob.glob("_data/**/*")]
     if term:
-        df = data_model.loc[
-            (data_model["Module"].notnull()) & (data_model["Attribute"].isin(term))
-        ]
+      df = data_model.loc[(data_model["Module"].notnull()) & (data_model["Attribute"].isin(term))]
     else:
-        df = data_model.loc[
-            data_model["Module"].notnull(),
-        ]
+      df = data_model.loc[data_model["Module"].notnull(),]
+    
+    # delete term file if the attribute is removed from data model
+    for file in glob.glob("_data/**/*"):
+      if file.split("/")[-1].split(".")[0] not in data_model.Attribute.values:
+        #print(sys.stdout, "delelting file %s" % file, file = sys.stdout)
+        print("\033[91m {} \033[00m".format(f"deleted {file}.csv"))
+        os.remove(file)
+    
+    #delete module dir if module no longer defined in model
+    ## get existing docs/ dirs
+    module_folders = [path.split("/")[-1] for path in glob.glob("_data/*")]
+    
+    ## get model modules
+    ### first remove nan Module
+    data_model_nonans = data_model[~data_model['Module'].isna()]
+    model_modules = data_model_nonans.Module.unique()
+    
+    ## modules to delete
+    mod_to_delete = np.setdiff1d(module_folders, model_modules).tolist()
+    
+    ## delete entire modules no longer defined in the model
+    for dir in mod_to_delete:
+      for file in glob.glob(f"_data/{dir}/*"):
+        print("\033[91m {} \033[00m".format(f"deleting {file}"))
+        os.remove(f"{file}")
+      print("\033[91m {} \033[00m".format(f"deleting _data/{dir}/"))
+      os.rmdir(f"_data/{dir}/")
+    
+    # still need a way to delete/move existing csv that have been assigned to 
+    # different module than before
+    exist_terms = [] # csv files already under _data/*
+    for file in glob.glob("_data/**/*"):
+      file_split = file.split('/')
+      file_split[2] = file_split[2].split(".")[0]
+      exist_terms.append(f"{file_split[1]}/{file_split[2]}")
+    
+    model_terms = [] # terms defined in current version of the model
+    for mod, file in zip(data_model_nonans.Module, data_model_nonans.Attribute):
+      model_terms.append(f"{mod}/{file}")
+    
+    # remove terms that have been moved to a different module
+    # or which are no longer defined in model
+    terms_to_delete = np.setdiff1d(exist_terms, model_terms).tolist()
+    # delete modules no longer defined in the model
+    for file in terms_to_delete:
+      print("\033[91m {} \033[00m".format(f"deleting _data/{file}.csv"))
+      os.remove(f"_data/{file}.csv")
+    
     # generate files when term files don't exist
-    new_terms = df.loc[~df["Attribute"].isin(files), "Attribute"].tolist()
+    #new_terms = df.loc[~df["Attribute"].isin(files), "Attribute"].tolist()
+    exist_terms = np.setdiff1d(exist_terms, terms_to_delete).tolist()
+    new_terms = np.setdiff1d(model_terms, exist_terms).tolist()
+    
     # generate file by calling reformatter for each row of the df
+    new_terms = [term.split("/")[-1] for term in new_terms]
     generate_term_file_temp = partial(generate_term_file, data_model)
     list(map(generate_term_file_temp, new_terms))
+    
     # update files if the term files exist
-    exist_terms = df.loc[df["Attribute"].isin(files), "Attribute"].tolist()
+    #exist_terms = df.loc[df["Attribute"].isin(files), "Attribute"].tolist()
+    exist_terms = [term.split("/")[-1] for term in exist_terms]
     update_term_file_temp = partial(update_term_file, data_model)
     list(map(update_term_file_temp, exist_terms))
-    # delete term file if the attribute is removed from data model
-    [
-        os.remove(file)
-        for file in glob.glob("_data/**/*")
-        if file.split("/")[-1].split(".")[0] not in data_model.Attribute.values
-    ]
 
 
 def main():
@@ -217,7 +265,7 @@ def main():
     if args.term:
         manage_term_files(args.term)
     else:
-        manage_term_files()
+        manage_term_files() 
 
 
 if __name__ == "__main__":
