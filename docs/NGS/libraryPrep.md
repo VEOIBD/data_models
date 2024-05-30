@@ -10,7 +10,7 @@ title: libraryPrep
 {: .note-title } 
 >libraryPrep
 >
->The general strategy by which the library was prepared [[Source]](nan)
+>The general strategy by which the library was prepared [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
