@@ -137,7 +137,7 @@ def generate_page(data_model, term_path):
     file = fileutils.MarkDownFile(f"docs/{post.metadata['parent']}/{term}")
     # add content to the file
     file.append_end(frontmatter.dumps(post))
-    print("\033[92m {} \033[00m".format(f"added docs/{term_path}.md"))
+    print("\033[92m {} \033[00m".format(f"added or modified docs/{term_path}.md"))
 
 def delete_page(page):
     """
@@ -188,13 +188,13 @@ def main():
     if not file_split[1] == file_split[2]:
       term_pages.append(f"{file_split[1]}/{file_split[2]}")
   
-  to_add = np.setdiff1d(term_files, term_pages).tolist()
   to_delete = np.setdiff1d(term_pages, term_files).tolist()
   list(map(delete_page, to_delete))
   
-  # generate pages for terms with the term files
+  # generate pages for new terms and rewrite existing pages so that any descriptions 
+  # in the model will be pushed to the dictionary site
   generate_page_temp = partial(generate_page, data_model)
-  list(map(generate_page_temp, to_add))
+  list(map(generate_page_temp, term_files))
 
 
 if __name__ == "__main__":
