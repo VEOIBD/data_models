@@ -52,7 +52,7 @@ jobs:
           python term_page_manager.py
       
       - name: update term pages if term_page_manager.py is changed
-        if: contains(steps.changed-files.outputs.modified_files, 'term_file_manager.py')
+        if: contains(steps.changed-files.outputs.modified_files, 'term_page_manager.py')
         run: |
           python term_page_manager.py
       
