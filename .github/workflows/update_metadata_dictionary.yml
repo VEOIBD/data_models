@@ -37,18 +37,7 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done
-  
-  test_and_run:
-    name: update term files and pages
-    needs: changed_files
-    runs-on: ubuntu-latest
-    #if: ${{ needs.changed_files.outputs.any_changed == 'true' }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  
-          ref: ${{ github.event.pull_request.head.ref }}
-      
+    
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -56,11 +45,12 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
+        if: steps.changed-files.outputs.any_changed == 'true'
         run: |
           pip install -r requirements.txt
 
       - name: update term files if any defined files have changed
-        if: contains(needs.changed_files.outputs.modified_files, 'veoibd.data.model.csv') || contains(needs.changed_files.outputs.modified_files, 'term_file_manager.py')
+        if: ${{ steps.changed-files.outputs.any_changed == 'true' }}
         run: |
           python term_file_manager.py
       
@@ -72,7 +62,7 @@ jobs:
              _data/**/*.csv
       
       - name: update term pages if term csv files or associated scripts has changed
-        if: steps.changed-term-files.outputs.files_changed == 'true' || contains(needs.changed_files.outputs.modified_files, 'term_page_manager.py')
+        if: ${{ steps.changed-term-files.outputs.files_changed == 'true' || contains(steps.changed-files.outputs.modified_files, 'term_page_manager.py') }}
         run: |
           python term_page_manager.py
       
@@ -84,7 +74,7 @@ jobs:
              docs/**/*.md
       
       - name: update template page if any term pages or associated script has changed
-        if: steps.changed-term-pages.outputs.files_changed == 'true' || contains(needs.changed_files.outputs.modified_files, 'update_template_page.py')
+        if: steps.changed-term-pages.outputs.files_changed == 'true' || contains(steps.changed-files.outputs.modified_files, 'update_template_page.py')
         run: |
           python update_template_page.py
 
