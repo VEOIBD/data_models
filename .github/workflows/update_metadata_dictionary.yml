@@ -9,7 +9,7 @@ on:
 # define jobs/tasks for this action
 jobs:
   # changed_files job will query the change status of user-defined files
-  changed_files:
+  changed-files:
     name: update term files and pages
     runs-on: ubuntu-latest
     steps:
