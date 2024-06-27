@@ -10,7 +10,7 @@ on:
 jobs:
   # changed_files job will query the change status of user-defined files
   changed-files:
-    name: update term files and pages
+    name: changed files test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,9 +39,9 @@ jobs:
           done
   
   test_and_run:
-    name: Tests for executing runs
+    name: update term files and pages
     needs: [ changed-files ]
-    if: ${{ needs.changed-files.outputs.any_changed == 'true' }}
+    if: needs.changed-files.outputs.any_changed == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python
