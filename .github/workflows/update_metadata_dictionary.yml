@@ -1,11 +1,14 @@
 name: update_metadata_dictionary
 
 on:
+  # run this action when there's a PR to main branch
   pull_request:
     branches:
       - main
 
+# define jobs/tasks for this action
 jobs:
+  # changed_files job will query the change status of user-defined files
   changed_files:
     name: update term files and pages
     runs-on: ubuntu-latest
@@ -26,6 +29,7 @@ jobs:
           - '**.py'
       
       - name: List all changed files from specified list
+        # report which of the user-defined files have changed
         if: steps.changed-files.outputs.any_changed == 'true'
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
@@ -34,7 +38,7 @@ jobs:
             echo "$file was changed"
           done
   
-  tests:
+  test_and_run:
     name: Tests for executing runs
     needs: [ changed-files ]
     if: ${{ steps.changed-files.outputs.any_changed == 'true' }}
@@ -50,13 +54,8 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: update term files if data model csv is changed
-        if: contains(steps.changed-files.outputs.modified_files, 'veoibd.data.model.csv')
-        run: |
-          python term_file_manager.py
-      
-      - name: update term files if term_file_manager.py is changed
-        if: contains(steps.changed-files.outputs.modified_files, 'term_file_manager.py')
+      - name: update term files if any defined files have changed
+        if: contains(steps.changed-files.outputs.modified_files, 'veoibd.data.model.csv') || contains(steps.changed-files.outputs.modified_files, 'term_file_manager.py')
         run: |
           python term_file_manager.py
       
@@ -67,13 +66,8 @@ jobs:
           files: |
              _data/**/*.csv
       
-      - name: update term pages if the availability of term files changed
-        if: steps.changed-term-files.outputs.files_changed == 'true'
-        run: |
-          python term_page_manager.py
-      
-      - name: update term pages if term_page_manager.py is changed
-        if: contains(steps.changed-files.outputs.modified_files, 'term_page_manager.py')
+      - name: update term pages if term csv files or associated scripts has changed
+        if: steps.changed-term-files.outputs.files_changed == 'true' || contains(steps.changed-files.outputs.modified_files, 'term_page_manager.py')
         run: |
           python term_page_manager.py
       
@@ -84,8 +78,8 @@ jobs:
           files: |
              docs/**/*.md
       
-      - name: update template page if the availability of term page changed
-        if: steps.changed-term-pages.outputs.files_changed == 'true'
+      - name: update template page if any term pages or associated script has changed
+        if: steps.changed-term-pages.outputs.files_changed == 'true' || contains(steps.changed-files.outputs.modified_files, 'update_template_page.py')
         run: |
           python update_template_page.py
 
