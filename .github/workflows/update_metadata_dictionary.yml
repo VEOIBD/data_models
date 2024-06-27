@@ -42,7 +42,7 @@ jobs:
     name: update term files and pages
     needs: changed_files
     runs-on: ubuntu-latest
-    if: ${{ needs.changed_files.outputs.any_changed == 'true' }}
+    #if: ${{ needs.changed_files.outputs.any_changed == 'true' }}
     steps:
       - uses: actions/checkout@v4
         with:
