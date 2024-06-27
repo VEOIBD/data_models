@@ -1,0 +1,5 @@
+Key,Key Description,Type,Source,Module
+RC2,,STRING,,Biospecimen
+munich,,STRING,,Biospecimen
+other,,STRING,,Biospecimen
+unknown,,STRING,,Biospecimen

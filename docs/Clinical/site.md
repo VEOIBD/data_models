@@ -10,7 +10,7 @@ title: site
 {: .note-title } 
 >site
 >
->Site at which the participant was recruited [[Source]](https://sagebionetworks.org/)
+>site identifier (BCH = Boston, LMU = Munich, HSC = Toronto) [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

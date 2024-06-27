@@ -10,7 +10,7 @@ title: ethnicity
 {: .note-title } 
 >ethnicity
 >
->Population category defined using ancestry informative markers (AIMs) based on genetic/genomic data [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564)
+>ethnicity [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

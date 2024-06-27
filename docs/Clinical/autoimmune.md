@@ -10,7 +10,7 @@ title: autoimmune
 {: .note-title } 
 >autoimmune
 >
->Does the study participant have a known autoimmune condition? [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2889)
+>autoimmune diagonsis [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2889)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

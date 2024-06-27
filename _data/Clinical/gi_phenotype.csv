@@ -1,0 +1,6 @@
+Key,Key Description,Type,Source,Module
+CD,,STRING,,Clinical
+UC,,STRING,,Clinical
+IBDU,,STRING,,Clinical
+CTL,,STRING,,Clinical
+other,,STRING,,Clinical

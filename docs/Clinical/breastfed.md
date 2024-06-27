@@ -10,7 +10,7 @@ title: breastfed
 {: .note-title } 
 >breastfed
 >
->Was the study participant breastfed? [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25596)
+>history of breast feeding [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25596)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
