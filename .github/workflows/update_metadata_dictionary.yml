@@ -23,10 +23,10 @@ jobs:
         uses: tj-actions/changed-files@v44
         with:
           files: |
-          - .github/workflows/update_metadata_dictionary.yml
-          - requirements.txt
-          - veoibd.data.model.csv
-          - '**.py'
+            .github/workflows/update_metadata_dictionary.yml
+            requirements.txt
+            veoibd.data.model.csv
+            **.py
       
       - name: List all changed files from specified list
         # report which of the user-defined files have changed
