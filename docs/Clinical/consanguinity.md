@@ -10,7 +10,7 @@ title: consanguinity
 {: .note-title } 
 >consanguinity
 >
->Is the study participant the offspring of a relationship between biologically-related individuals? [[Source]](https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C189764)
+>history of consagunity [[Source]](https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C189764)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

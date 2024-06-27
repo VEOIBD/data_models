@@ -10,7 +10,7 @@ title: race
 {: .note-title } 
 >race
 >
->A geographic ancestral origin category that is assigned to a population group based mainly on physical characteristics that are thought to be distinct and inherent. [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17049)
+>race [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17049)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

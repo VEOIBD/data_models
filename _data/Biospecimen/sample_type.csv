@@ -1,0 +1,12 @@
+Key,Key Description,Type,Source,Module
+pax_gene,,STRING,,Biospecimen
+pbmcs,,STRING,,Biospecimen
+biopsy,,STRING,,Biospecimen
+serum,,STRING,,Biospecimen
+whole_blood,,STRING,,Biospecimen
+dna,,STRING,,Biospecimen
+epithelial_organoid,,STRING,,Biospecimen
+bm_organoid,,STRING,,Biospecimen
+resected_tissue,,STRING,,Biospecimen
+plasma,,STRING,,Biospecimen
+unknown,,STRING,,Biospecimen

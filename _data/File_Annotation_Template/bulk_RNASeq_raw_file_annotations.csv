@@ -1,0 +1,14 @@
+Key,Key Description,Type,Valid Values,DependsOn,Required,Source,Module
+assay,The technology used to generate the data in this file,STRING,"rnaSeq,scrnaSeq",,True,,NGS
+nucleic_acid_source,,STRING,"bulk cell,bulk nuclei,single cell,single nucleus",,True,,NGS
+file_format,"Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",STRING,"fastq,count matrix,bam,csv,xlsx,txt,pdf,tsv",,False,,File_Annotations
+data_subtype,"Further qualification of dataType, which may be used to indicate the state of processing of the data, aggregation of the data, or presence of metadata.",STRING,"raw,aligned,processed,normalized,aggregated",,False,,NGS
+data_type,Types of input/output data in bioinformatics pipelines,STRING,"genomicVariants,geneExpression",,True,Sage Bionetworks,NGS
+resource_type,The type of resource being stored and annotated,STRING,"analysis,curatedData,experimentalData,metadata,report,tool",,True,,File_Annotations
+sample_type,rc2 sample type,STRING,"pax_gene,pbmcs,biopsy,serum,whole_blood,dna,epithelial_organoid,bm_organoid,resected_tissue,plasma,unknown",,True,Sage Bionetworks,Biospecimen
+site,"site identifier (BCH = Boston, LMU = Munich, HSC = Toronto)",STRING,"BCH,LMU,HSC",,True,Sage Bionetworks,Clinical
+media,type of media,STRING,"DMSO,FRZ,FORM,TCM,RNA,ORG",,False,,Biospecimen
+filename,Name of a file,STRING,,,True,,Other
+individual_id,individual identifier,STRING,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,Clinical
+sample_id,sample identifier,,,,True,,
+Component,Category of metadata; provide the same one for all items/rows.,,,,True,https://w3id.org/biolink/vocab/category,

@@ -10,7 +10,7 @@ title: sex
 {: .note-title } 
 >sex
 >
->The biological sex of the study participant [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C28421&ns=ncit)
+>biological sex [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C28421&ns=ncit)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

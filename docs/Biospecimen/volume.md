@@ -10,7 +10,7 @@ title: volume
 {: .note-title } 
 >volume
 >
->The volume of serum, PBMC, PAX collected [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25335)
+>volume in mL [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25335)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

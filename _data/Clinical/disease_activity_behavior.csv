@@ -1,0 +1,8 @@
+Key,Key Description,Type,Source,Module
+never_severe,,STRING,,Clinical
+ever_severe,,STRING,,Clinical
+nonstricturing_nonpenetrating,,STRING,,Clinical
+stricturing,,STRING,,Clinical
+penetrating,,STRING,,Clinical
+penetrating_and_stricturing,,STRING,,Clinical
+unknown,,STRING,,Clinical
