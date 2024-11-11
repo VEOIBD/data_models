@@ -1,202 +1,202 @@
-Attribute,Description,Valid Values,DependsOn,Properties,Required,Parent,DependsOn Component,Source,Validation Rules,Module,Type
-assay,The technology used to generate the data in this file,"rnaSeq,scrnaSeq",,,TRUE,,,,,NGS,STRING
-platform,"The specific version (manufacturer, model, etc.) of a technology that is used to carry out a laboratory or computational experiment.","HiSeqX,HiSeq4000,Illumina_1M,HiSeq3000,HiSeq2500,DNBSEQ,HiSeq1000,GAIIx,Illumina_h650,ddSEQ Single-Cell Isolator,confocalImaging,Bruker Avance III,Bionano Irys,Biograph mCT,HiSeq2000,Illumina_HumanOmni1-Quadv1.0,Illumina_Omni5M,Illumina MouseWG-6 v2.0 expression beadchip,IlluminaNovaseq6000,IlluminaWholeGenomeDASL,Infinium Global Diversity Array-8,Illumina_Infinium-HumanMethylation450-BeadChip,IlluminaInfiniumGSAMD-24v2-0,IlluminaMethylationEPIC,PacBioRSII,IlluminaHumanMethylation450,IlluminaHumanHT-12_V3_0_R1,IlluminaHumanHap650Yv3_A,IlluminaHumanHap300,Illumina_Omni5-Quad,Biocrates p180,Illumina_Omni2pt5M,Illumina_Omni2.5-8_v1.3,Illumina_Omni2.5-8_v1.1,Illumina_Omni2.5-8,llumina Infinium General Screening Array 24-Kit v3.0,BGISEQ-500,Perlegen300Karray,AffymetrixU133Plus2,orbitrap,Xevo TQ-S,Agilent44Karray,NextSeq2000,NextSeq500,NanostringnCounter_MouseADPanel,NanostringnCounter,MiSeq,LTQOrbitrapXL,InfiniumPsychArrayBeadChip,Infinium Omni2.5Exome-8 v1.5,Infinium Omni2.5Exome-8 v1.4,Infinium Omni2.5Exome-8 v1.3,Infinium Omni2.5Exome-8 v1.1,Infinium HumanOmniExpressExome,OrbiTrap Fusion,Orbitrap Fusion Lumos,Olink Target 96,triple quadrupole,AffymetrixU133AB,Affymetrix Human Gene 1.0 ST Array,PacBio Sequel II,Xevo G2 QTOF,PsychChip,Affy6.0,Affy5.0,Illumina NovaSeq 6000,Q Exactive HF,Q Exactive,time-of-flight,Simoa HD-1 Analyzer,Signa Premier AIR 3T,IlluminaMiSeq,SequenomMultiplex,quadrupole time-of-flight,Q Exactive Plus",,,FALSE,,,Sage Bionetworks,,NGS,STRING
-library_prep,The general strategy by which the library was prepared,"lncRNAenrichment,SureCell,totalRNA,MULTIseq,multiome,miRNAenrichment,methylSeq,proximity ligation,EndItDNAEndRepairKit,STARRSeq,DNALibraryConstruction,Chromium Single Cell 3',cellHashing,amplicon,polyAselection,SPLITseq,rRNAdepletion,KapaHyperPrep,PCRfree",,,FALSE,,,Sage Bionetworks,,NGS,STRING
-library_preparation_method,Method by which library was prepared,"Drop-Seq,sac-seq,NexteraXT,Smart-seq1,10x,Omni-ATAC,Accel-NGS Methyl-Seq,CEL-seq,NEBNext,Smart-seq2,Smart-seq4,SMRTbell,TruSeq,Ultralow Methyl-Seq,Accel-NGS 2S Plus",,,FALSE,,,Sage Bionetworks,,Experimental_Data,STRING
-library_type,"The type of library, in assays where samples are barcoded or hashed for multiplexing or each sample has multiple libraries amplified separately before pooled sequencing.","ADT,plasmid DNA,HTO,CMO,LMO,cDNA,polyA enriched,ribozero depletion,globin depletion",,,FALSE,,,,,NGS,STRING
-is_stranded,Whether or not the library is stranded,"False,True",,,FALSE,,,,str,NGS,STRING
-read_strand_origin,The strand from which the read originates in a strand-specific protocol,"forward,reverse",,,FALSE,,,,,NGS,STRING
-run_type,The sequencing read types,"singleEnd,pairedEnd",,,FALSE,,,,,NGS,STRING
-reference_set,"A set of references (e.g., canonical assembled contigs) which defines a common coordinate space for comparing reference-aligned experimental data.","GRCh37,GRCm38,MMUL1.0,HRC,1000 Genomes phase 3,GRCh38,dmel_r6.06",,,FALSE,,,,,NGS,STRING
-sample_status,Conditions under which sample is kept,"Frozen,Paxgene,Formalin-fixed,Fresh",,,FALSE,,,,,NGS,STRING
-analysis_type,Type of analysis,"differential expression,eQTL",,,FALSE,,,,,NGS,STRING
-nucleic_acid_source,,"bulk cell,bulk nuclei,single cell,single nucleus",,,TRUE,,,,,NGS,STRING
-file_format,"Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software","fastq,count matrix,bam,csv,xlsx,txt,pdf,tsv",,,FALSE,,,,,File_Annotations,STRING
-data_subtype,"Further qualification of dataType, which may be used to indicate the state of processing of the data, aggregation of the data, or presence of metadata.","raw,aligned,processed,normalized,aggregated",,,FALSE,,,,,NGS,STRING
-data_type,Types of input/output data in bioinformatics pipelines,"genomicVariants,geneExpression",,,TRUE,,,Sage Bionetworks,,NGS,STRING
-sample_tissue_type,Tissue type used in sample,"LP,EPI,both LP and EPI,blood,organoid",,,TRUE,Biospecimen,,,,Biospecimen,STRING
-genomic_sex,The predicition of sex based on expression of genes,"Male,Female",,,FALSE,,,,,NGS,STRING
-resource_type,The type of resource being stored and annotated,"analysis,curatedData,experimentalData,metadata,report,tool",,,TRUE,File_Annotations,,,,File_Annotations,STRING
-metadata_type,"For files of dataSubtype: metadata, a description of the type of metadata in the file.","assay metadata,biospecimen metadata,data dictionary,individual,protocol,quality assessment",,,TRUE,File_Annotations,,,,File_Annotations,STRING
-participant_role,participant role,"ibd,non_ibd,mother,father,sibling,second_degree",,,TRUE,Patient,,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C71384,,Clinical,STRING
-sex,biological sex,"male,female",,,TRUE,Patient,,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C28421&ns=ncit,,Clinical,STRING
-gi_phenotype,GI phenotype,"CD,UC,IBDU,CTL,other",,,TRUE,Clinical,,Sage Bionetworks,,Clinical,STRING
-immunodeficiency,immunodeficiency diagnosis,"no,yes,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C39725&ns=ncit,,Clinical,STRING
-autoimmune,autoimmune diagonsis,"no,yes,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2889,,Clinical,STRING
-disease_activity_location,disease activity location,"L1,L2,L3,L4,E1,E2,E3,E4",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117884,list like,Clinical,STRING
-upper_disease_type,upper disease type,"L4A,L4B",,,FALSE,Clinical,,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8743432/,list like,Clinical,STRING
-disease_activity_behavior,disease activity behavior,"never_severe,ever_severe,nonstricturing_nonpenetrating,stricturing,penetrating,penetrating_and_stricturing,unknown",,,FALSE,Clinical,,Sage Bionetworks,,Clinical,STRING
-growth_delay,growth delay,"no,yes,unknown",,,FALSE,Clinical,,https://hpo.jax.org/app/browse/term/HP:0001510,,Clinical,STRING
-perianal_involvement,perianal involvment,"no,yes,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99148,,Clinical,STRING
-extraintestinal_manifestations,history of extra intestinal manifestations,"no,yes,unknown",,,FALSE,Clinical,,,,Clinical,STRING
-gi_surgeries,GI surguries,"no,yes,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15330,,Clinical,STRING
-ibd_history,family history of ibd,"no,yes,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3138,,Clinical,STRING
-consanguinity,history of consagunity,"no,yes,unknown",,,FALSE,Clinical,,https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C189764,,Clinical,STRING
-race,race,"white,black,asian,native_american,pacific_islander,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17049,list like,Clinical,STRING
-ethnicity,ethnicity,"hispanic,not_hispanic,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564,,Clinical,STRING
-jewish_origin,jewish ancestry,"no,yes,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C86561,,Clinical,STRING
-breastfed,history of breast feeding,"no,yes,unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25596,,Clinical,STRING
-sample_key,rc2 sample key (see RC2 Biopsys and Blood Flowcharts),"A,B,C,D,E,F,G,H",,,TRUE,Biospecimen,,Sage Bionetworks,,Biospecimen,STRING
-sample_type,rc2 sample type,"pax_gene,pbmcs,biopsy,serum,whole_blood,dna,epithelial_organoid,bm_organoid,resected_tissue,plasma,unknown",,,TRUE,Biospecimen,,Sage Bionetworks,,Biospecimen,STRING
-site,"site identifier indicating which institute oversaw the enrollment and sample collection of the patient (BCH = Boston, LMU = Munich, HSC = Toronto)","BCH,LMU,HSC",,,TRUE,Patient,,Sage Bionetworks,,Clinical,STRING
-external_share,"Per ICF, data can be shared externally with scientific research community","no,yes,unknown",,,FALSE,,,,,Clinical,STRING
-participant_id,"Integer code indicating the participant identity or familial relation to proband. 0 = proband; 1 = control; 2 = mother; 3 = father, ≥ 4 = sibling/secondary family","0, 1, 2, 3, 4, 5, 6, 7, 8, 9",,,TRUE,,,,regex search [0-9],Clinical,NUM
-project,project identifier,"RC2,munich,other,unknown",,,TRUE,,,,,Biospecimen,STRING
-inflammation,inflammation status,"inflamed,uninflamed,unknown",,,FALSE,,,,,Biospecimen,STRING
-media,type of media,"DMSO,FRZ,FORM,TCM,RNA,ORG",,,FALSE,,,,,Biospecimen,STRING
-specimen_area_biopsy,biopsy location,"transverse_colon,terminal_ileum,splenic_flexure,sigmoid_colon,rectum,pouch,left_colon,duodenum,descending_colon,cecum,ascending_colon,right_colon",,,FALSE,,,,list like,Biospecimen,STRING
-type_key,"rc2 tissue sample identifier (PB = PBMCs, BX = biopsy, SM = serum, PG = PAXgene tube, PL = plasma, WB = whole blood, DN = DNA, EO = epithelial organoid, RT = resected tissue, BO = bone marrow organoid, UK = unknown)","PG,PB,BX,SM,WB,DN,EO,BO,RT,PL,UK",,,TRUE,,,,,Biospecimen,STRING
-filename,Name of a file,,,,TRUE,FileMetadata,,,str,Other,STRING
-patient,"VEOIBD patient, is a model component",,"Component,individualID,localID,site",,FALSE,Individual Organism,"Clinical,Medication,Demographics",,,,
-demographics,"Patient demographics, is a model component",,Component,,FALSE,Patient,,,,,
-clinical,"Patient clinical, is a model component",,Component,,FALSE,Patient,Medication,,,,
-medication,"Patient medication history, is a model component",,Component,,FALSE,Clinical,,,,,
-biospecimen,"Patient biological entity, is a model component",,"Component,specimenID",,FALSE,Biosample,Patient,,,,
-mesalamine,,,,,FALSE,Medication,,,,,
-mesalamine_use,,,,,FALSE,Medication,,,,,
-mesalamine_change,,,,,FALSE,Medication,,,,,
-sulfasa,,,,,FALSE,Medication,,,,,
-sulfasa_use,,,,,FALSE,Medication,,,,,
-sulfasa_change,,,,,FALSE,Medication,,,,,
-balsalazide,,,,,FALSE,Medication,,,,,
-balsalazide_use,,,,,FALSE,Medication,,,,,
-balsalazide_change,,,,,FALSE,Medication,,,,,
-olsalazine,,,,,FALSE,Medication,,,,,
-olsalazine_use,,,,,FALSE,Medication,,,,,
-olsalazine_change,,,,,FALSE,Medication,,,,,
-mercap6,,,,,FALSE,Medication,,,,,
-mercap6_use,,,,,FALSE,Medication,,,,,
-mercap6_change,,,,,FALSE,Medication,,,,,
-azathioprine,,,,,FALSE,Medication,,,,,
-azathioprine_use,,,,,FALSE,Medication,,,,,
-azathioprine_change,,,,,FALSE,Medication,,,,,
-methotrex,,,,,FALSE,Medication,,,,,
-methotrex_use,,,,,FALSE,Medication,,,,,
-methotrex_change,,,,,FALSE,Medication,,,,,
-fk506,,,,,FALSE,Medication,,,,,
-fk506_use,,,,,FALSE,Medication,,,,,
-fk506_change,,,,,FALSE,Medication,,,,,
-cyclospa,,,,,FALSE,Medication,,,,,
-cyclospa_use,,,,,FALSE,Medication,,,,,
-cyclospa_change,,,,,FALSE,Medication,,,,,
-thalidomide,,,,,FALSE,Medication,,,,,
-thalidomide_use,,,,,FALSE,Medication,,,,,
-thalidomide_change,,,,,FALSE,Medication,,,,,
-lenalidomide,,,,,FALSE,Medication,,,,,
-lenalidomide_use,,,,,FALSE,Medication,,,,,
-lenalidomide_change,,,,,FALSE,Medication,,,,,
-infliximab,,,,,FALSE,Medication,,,,,
-infliximab_use,,,,,FALSE,Medication,,,,,
-infliximab_change,,,,,FALSE,Medication,,,,,
-adalimumab,,,,,FALSE,Medication,,,,,
-adalimumab_use,,,,,FALSE,Medication,,,,,
-adalimumab_change,,,,,FALSE,Medication,,,,,
-certolizumab,,,,,FALSE,Medication,,,,,
-certolizumab_use,,,,,FALSE,Medication,,,,,
-certolizumab_change,,,,,FALSE,Medication,,,,,
-golimumab,,,,,FALSE,Medication,,,,,
-golimumab_use,,,,,FALSE,Medication,,,,,
-golimumab_change,,,,,FALSE,Medication,,,,,
-natalizumab,,,,,FALSE,Medication,,,,,
-natalizumab_use,,,,,FALSE,Medication,,,,,
-natalizumab_change,,,,,FALSE,Medication,,,,,
-tocilizumab,,,,,FALSE,Medication,,,,,
-tocilizumab_use,,,,,FALSE,Medication,,,,,
-tocilizumab_change,,,,,FALSE,Medication,,,,,
-vedolizumab,,,,,FALSE,Medication,,,,,
-vedolizumab_use,,,,,FALSE,Medication,,,,,
-vedolizumab_change,,,,,FALSE,Medication,,,,,
-ustekinumab,,,,,FALSE,Medication,,,,,
-ustekinumab_use,,,,,FALSE,Medication,,,,,
-ustekinumab_change,,,,,FALSE,Medication,,,,,
-oralenteric,,,,,FALSE,Medication,,,,,
-oralenteric_use,,,,,FALSE,Medication,,,,,
-oralenteric_change,,,,,FALSE,Medication,,,,,
-rectalstrd,,,,,FALSE,Medication,,,,,
-rectalstrd_use,,,,,FALSE,Medication,,,,,
-rectalstrd_change,,,,,FALSE,Medication,,,,,
-oralsterd,,,,,FALSE,Medication,,,,,
-oralsterd_use,,,,,FALSE,Medication,,,,,
-oralsterd_change,,,,,FALSE,Medication,,,,,
-intrasterd,,,,,FALSE,Medication,,,,,
-intrasterd_use,,,,,FALSE,Medication,,,,,
-intrasterd_change,,,,,FALSE,Medication,,,,,
-metronida,,,,,FALSE,Medication,,,,,
-metronida_use,,,,,FALSE,Medication,,,,,
-metronida_change,,,,,FALSE,Medication,,,,,
-ciproflox,,,,,FALSE,Medication,,,,,
-ciproflox_use,,,,,FALSE,Medication,,,,,
-ciproflox_change,,,,,FALSE,Medication,,,,,
-trimethop,,,,,FALSE,Medication,,,,,
-trimethop_use,,,,,FALSE,Medication,,,,,
-trimethop_change,,,,,FALSE,Medication,,,,,
-amoxicillin,,,,,FALSE,Medication,,,,,
-amoxicillin_use,,,,,FALSE,Medication,,,,,
-amoxicillin_change,,,,,FALSE,Medication,,,,,
-vancomycin,,,,,FALSE,Medication,,,,,
-vancomycin_use,,,,,FALSE,Medication,,,,,
-vancomycin_change,,,,,FALSE,Medication,,,,,
-ursodiol,,,,,FALSE,Medication,,,,,
-ursodiol_use,,,,,FALSE,Medication,,,,,
-ursodiol_change,,,,,FALSE,Medication,,,,,
-cholestyr,,,,,FALSE,Medication,,,,,
-cholestyr_use,,,,,FALSE,Medication,,,,,
-cholestyr_change,,,,,FALSE,Medication,,,,,
-rifampin,,,,,FALSE,Medication,,,,,
-rifampin_use,,,,,FALSE,Medication,,,,,
-rifampin_change,,,,,FALSE,Medication,,,,,
-omega3,,,,,FALSE,Medication,,,,,
-omega3_use,,,,,FALSE,Medication,,,,,
-omega3_change,,,,,FALSE,Medication,,,,,
-probiotic,,,,,FALSE,Medication,,,,,
-probiotic_use,,,,,FALSE,Medication,,,,,
-probiotic_change,,,,,FALSE,Medication,,,,,
-library_id,Library ID as provided by the lab,,,,FALSE,,,,str,NGS,STRING
-library_version,"The version of the library. For example, rnaSeq 10x library version",,,,FALSE,,,,,NGS,STRING
-read_length,The length of the read,,,,FALSE,,,,num,NGS,NUM
-analysis_thresholds,The minimum counts-per-million (CPM) threshold,,,,FALSE,,,,num,NGS,NUM
-alignment_information,Alignment information,,,,FALSE,,,,,NGS,STRING
-vendor,Information about vendor (novagene) processes,,,,FALSE,,,,str,NGS,STRING
-sample_barcode,The nucleotide sequence of the sample barcode used to identify cells from a single sample in cell hashing or multiplexing assays.,,,,FALSE,,,,str,NGS,STRING
-RIN,RNA Integrity Number,,,,FALSE,,,,num,Experimental_Data,NUM
-rna_batch,Batch in which RNA sample was isolated,,,,FALSE,,,,str,Experimental_Data,STRING
-rna_isolation_kit,The technology used to isolate the RNA,,,,FALSE,,,,str,Experimental_Data,STRING
-library_batch,Batch library was prepared in,,,,FALSE,,,,,NGS,STRING
-sequencing_batch,Batch library was sequenced in,,,,FALSE,,,,,NGS,STRING
-total_reads,Total number of raw sequencing reads from a library,,,,FALSE,,,,num,NGS,NUM
-valid_barcode_reads,Fraction of reads with cell barcodes that match the whitelist,,,,FALSE,,,,num,NGS,NUM
-number_cells,Number of cells or nuclei sequenced,,,,FALSE,,,,int,NGS,NUM
-median_genes,The median number of genes detected (with nonzero UMI counts) across all cell-associated barcodes,,,,FALSE,,,,num,NGS,NUM
-ratio260over230,Ratio of absorbance at 230 nm and 260 nm. Measures protein or other contaminants. Range up to approximately 2.2.,,,,FALSE,,,,num,Experimental_Data,NUM
-ratio260over280,Measure of DNA vs. RNA purity. Range up to approximately 2.0.,,,,FALSE,,,,num,Experimental_Data,NUM
-unique_genes,The number of unique genes,,,,FALSE,,,,int,NGS,NUM
-mapped_reads,Mapped reads refer to those reads from the sequenced sample that align directly to a single region (set of loci) on the reference genome.,,,,FALSE,,,,int,NGS,NUM
-rRNA_rate,The percentage of rRNA in a cell,,,,FALSE,,,,num,NGS,NUM
-total_unmapped_reads,The total number of unmapped reads from the sequenced sample to a single region (set of loci) on the reference genome.,,,,FALSE,,,,num,NGS,NUM
-kit_number,Kit serial number,,,,TRUE,,,,,NGS,STRING
-DV200,A method to determine the quality of RNA obtained from a sample. DV200 evaluates the percentage of fragments of greater than 200 nucleotides.,,,,FALSE,,,,num,Experimental_Data,NUM
-duplication_rate,The duplication rate is the fraction of mapped reads where any 2 reads share the same 5_ and 3_ coordinates.,,,,FALSE,,,,num,NGS,NUM
-median_umis,The median number of total Unique Molecular Identifier (UMI) counts across all cell-associated barcodes,,,,FALSE,,,,,NGS,STRING
-ratio_mitochondria,Percent mitochondria per cell,,,,FALSE,,,,,NGS,STRING
-family_id,family identifier,,,,TRUE,Patient,,Sage Bionetworks,,Clinical,STRING
-age_at_diagnosis,age at diagnosis in years,,,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C156420&ns=ncit,num,Clinical,NUM
-collection_date,date collected (yyyy_mm_dd),,,,FALSE,Biospecimen,,Sage Bionetworks,regex search [0-9]{4}_[0-9]{2}_[0-9]{2} error,Biospecimen,STRING
-volume,volume in mL,,,,FALSE,Biospecimen,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25335,num,Biospecimen,NUM
-local_id,local identifier (max of 5 digits),,,,TRUE,Patient,,https://docs.google.com/spreadsheets/d/1d8-G1ernDQDLTwMJSrX5EQGnq_afsA0G/edit#gid=110285588,,Clinical,NUM
-individual_id,"A unique identifier for every enrolled individual. Consists of 'site' combined with 'local_id' and 'participant_id', e.g., BCH00001_0",,,,TRUE,Patient,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,regex search [A-Z]{3}[0-9]{5}_[0-9]{1} error,Clinical,STRING
-collection_age,age at time of collection in years,,,,FALSE,,,,num,,
-collection_id,collection identifier,,,,TRUE,,,,regex search [A-Z]{3}[0-9]{5}_[0-9]{1}_[0-9]{2} error,,
-collection_num,ordinal code assigned to each specimen to distinquish between different collection dates,,,,TRUE,,,,int,,
-sample_id,"Unique sample identifier, formatted as 'individual_id'_'participant_id'_'collection_num'_'type_key'_'sample_num'",,,,TRUE,,,,regex search [A-Z]{3}[0-9]{5}_[0-9]_[0-9]{2}_[A-Z]{2}_[A-Z][0-9]{2} error,,
-sample_num,identifying number of sample collected (unique biopsy count # from same region or unique vial count of blood component),,,,TRUE,,,,int,,
-vial_label,lable on vial,,,,TRUE,,,,str,,
-Component,Category of metadata; provide the same one for all items/rows.,,,,TRUE,,,https://w3id.org/biolink/vocab/category,,,
-medication_history_metadata_template,VEOIBD Medication History Metadata Template,,"Component,individual_id,mesalamine,mesalamine_use,mesalamine_change,sulfasa,sulfasa_use,sulfasa_change,balsalazide,balsalazide_use,balsalazide_change,olsalazine,olsalazine_use,olsalazine_change,mercap6,mercap6_use,mercap6_change,azathioprine,azathioprine_use,azathioprine_change,methotrex,methotrex_use,methotrex_change,fk506,fk506_use,fk506_change,cyclospa,cyclospa_use,cyclospa_change,thalidomide,thalidomide_use,thalidomide_change,lenalidomide,lenalidomide_use,lenalidomide_change,infliximab,infliximab_use,infliximab_change,adalimumab,adalimumab_use,adalimumab_change,certolizumab,certolizumab_use,certolizumab_change,golimumab,golimumab_use,golimumab_change,natalizumab,natalizumab_use,natalizumab_change,tocilizumab,tocilizumab_use,tocilizumab_change,vedolizumab,vedolizumab_use,vedolizumab_change,ustekinumab,ustekinumab_use,ustekinumab_change,oralenteric,oralenteric_use,oralenteric_change,rectalstrd,rectalstrd_use,rectalstrd_change,oralsterd,oralsterd_use,oralsterd_change,intrasterd,intrasterd_use,intrasterd_change,metronida,metronida_use,metronida_change,ciproflox,ciproflox_use,ciproflox_change,trimethop,trimethop_use,trimethop_change,amoxicillin,amoxicillin_use,amoxicillin_change,vancomycin,vancomycin_use,vancomycin_change,ursodiol,ursodiol_use,ursodiol_change,cholestyr,cholestyr_use,cholestyr_change,rifampin,rifampin_use,rifampin_change,omega3,omega3_use,omega3_change,probiotic,probiotic_use,probiotic_change",,FALSE,ManifestTemplate,,https://docs.google.com/document/d/1yN6TlK2VGP-vKvW5E8wucLjKQq769xoz4QW5OjgR29k/edit#heading=h.agzpcnpjw4d9,,Metadata_Template,STRING
-bulk_RNASeq_assay_template,VEOIBD Bulk RNASeq Assay Metadata Template,,"Component,individual_id,sample_id,library_id,assay,platform,library_prep,library_preparation_method,library_version,library_type,is_stranded,read_strand_origin,read_length,run_type,reference_set,sample_status,analysis_thresholds,analysis_type,nucleic_acid_source,alignment_information,vendor,sample_barcode,RIN,rna_batch,rna_isolation_kit,library_batch,sequencing_batch,total_reads,valid_barcode_reads,number_cells,median_genes,file_format,data_subtype,cell_viability,ratio260over230,ratio260over280,unique_genes,mapped_reads,rRNA_rate,total_unmapped_reads,data_type,kit_number,DV200,duplication_rate",,FALSE,ManifestTemplate,,https://docs.google.com/document/d/1ADIApJgEpbA1XaLig1dlxwUE5VfQkESyxHerabsbXPY/edit#heading=h.agzpcnpjw4d9,,Metadata_Template,STRING
-bulk_RNASeq_raw_file_annotations,"Files containing raw bulk RNA sequencing data (fastq) or aligned sequence files that include all unmapped reads (bam, cram)",,"Component,filename,file_format,resource_type,assay,data_type,data_subtype,sample_id,individual_id,sample_type,nucleic_acid_source,site",,FALSE,ManifestTemplate,,,,File_Annotation_Template,STRING
-bulk_RNASeq_counts_file_annotations,Files containing bulk RNA count matrix data,,"Component,filename,file_format,resource_type,assay,data_type,data_subtype,sample_id,individual_id,sample_type,nucleic_acid_source,reference_set,site",,FALSE,ManifestTemplate,,,,File_Annotation_Template,STRING
-metadata_file_annotations,Metadata files include clinical and biospecimen metadata,,"Component,filename,file_format,resource_type,metadata_type,site",,FALSE,ManifestTemplate,,,,File_Annotation_Template,STRING
-scRNASeq_assay_template,VEOIBD Single Cell RNASeq Assay Metadata Template,,"Component,individual_id,sample_id,assay,sample_barcode,sample_tissue_type,platform,library_prep,library_preparation_method,library_version,library_type,is_stranded,read_strand_origin,read_length,run_type,reference_set,sample_status,analysis_thresholds,analysis_type,nucleic_acid_source,alignment_information,vendor,RIN,library_id,rna_batch,rna_isolation_kit,library_batch,total_reads,valid_barcode_reads,number_cells,median_genes,median_umis,file_format,data_subtype,cell_viability,ratio_mitochondria,unique_genes,mapped_reads,rRNA_rate,data_type,kit_number,DV200,duplication_rate,genomic_sex",,FALSE,ManifestTemplate,,https://docs.google.com/document/d/1fNu_ANxVPBUx0rN7VBM_FjiAOG8_bmC20EQ_E0Mmt3w/edit#heading=h.agzpcnpjw4d9,,Metadata_Template,STRING
-clinical_metadata_template,VEOIBD Clinical Metadata Template,,"Component,individual_id,family_id,site,local_id,participant_id,participant_role,sex,age_at_diagnosis,gi_phenotype,project,immunodeficiency,autoimmune,disease_activity_location,upper_disease_type,disease_activity_behavior,growth_delay,perianal_involvement,gi_surgeries,extraintestinal_manifestations,ibd_history,consanguinity,race,ethnicity,jewish_origin,breastfed,external_share",,FALSE,ManifestTemplate,,https://docs.google.com/document/d/1yN6TlK2VGP-vKvW5E8wucLjKQq769xoz4QW5OjgR29k/edit#heading=h.agzpcnpjw4d9,,Metadata_Template,STRING
-biospecimen_metadata_template,VEOIBD Biospecimen Metadata Template,,"Component,sample_id,individual_id,collection_id,site,local_id,participant_id,collection_num,type_key,sample_type,sample_key,sample_num,vial_label,project,collection_age,collection_date,inflammation,specimen_area_biopsy,media,volume",,FALSE,ManifestTemplate,,https://docs.google.com/document/d/11xPPfJp89Ge0dZGzud4T6ixQhXj8a_BJtkTQ7K1UDyU/edit#heading=h.agzpcnpjw4d9,,Metadata_Template,STRING
-biopsy,,,media,,,,,,,,
+"Attribute","Description","Valid.Values","DependsOn","Properties","Required","Parent","DependsOn.Component","Source","Validation.Rules","Module","Type"
+"assay","The technology used to generate the data in this file","rnaSeq,scrnaSeq","",NA,TRUE,"","","","","NGS","STRING"
+"platform","The specific version (manufacturer, model, etc.) of a technology that is used to carry out a laboratory or computational experiment.","HiSeqX,HiSeq4000,Illumina_1M,HiSeq3000,HiSeq2500,DNBSEQ,HiSeq1000,GAIIx,Illumina_h650,ddSEQ Single-Cell Isolator,confocalImaging,Bruker Avance III,Bionano Irys,Biograph mCT,HiSeq2000,Illumina_HumanOmni1-Quadv1.0,Illumina_Omni5M,Illumina MouseWG-6 v2.0 expression beadchip,IlluminaNovaseq6000,IlluminaWholeGenomeDASL,Infinium Global Diversity Array-8,Illumina_Infinium-HumanMethylation450-BeadChip,IlluminaInfiniumGSAMD-24v2-0,IlluminaMethylationEPIC,PacBioRSII,IlluminaHumanMethylation450,IlluminaHumanHT-12_V3_0_R1,IlluminaHumanHap650Yv3_A,IlluminaHumanHap300,Illumina_Omni5-Quad,Biocrates p180,Illumina_Omni2pt5M,Illumina_Omni2.5-8_v1.3,Illumina_Omni2.5-8_v1.1,Illumina_Omni2.5-8,llumina Infinium General Screening Array 24-Kit v3.0,BGISEQ-500,Perlegen300Karray,AffymetrixU133Plus2,orbitrap,Xevo TQ-S,Agilent44Karray,NextSeq2000,NextSeq500,NanostringnCounter_MouseADPanel,NanostringnCounter,MiSeq,LTQOrbitrapXL,InfiniumPsychArrayBeadChip,Infinium Omni2.5Exome-8 v1.5,Infinium Omni2.5Exome-8 v1.4,Infinium Omni2.5Exome-8 v1.3,Infinium Omni2.5Exome-8 v1.1,Infinium HumanOmniExpressExome,OrbiTrap Fusion,Orbitrap Fusion Lumos,Olink Target 96,triple quadrupole,AffymetrixU133AB,Affymetrix Human Gene 1.0 ST Array,PacBio Sequel II,Xevo G2 QTOF,PsychChip,Affy6.0,Affy5.0,Illumina NovaSeq 6000,Q Exactive HF,Q Exactive,time-of-flight,Simoa HD-1 Analyzer,Signa Premier AIR 3T,IlluminaMiSeq,SequenomMultiplex,quadrupole time-of-flight,Q Exactive Plus","",NA,FALSE,"","","Sage Bionetworks","","NGS","STRING"
+"library_prep","The general strategy by which the library was prepared","lncRNAenrichment,SureCell,totalRNA,MULTIseq,multiome,miRNAenrichment,methylSeq,proximity ligation,EndItDNAEndRepairKit,STARRSeq,DNALibraryConstruction,Chromium Single Cell 3',cellHashing,amplicon,polyAselection,SPLITseq,rRNAdepletion,KapaHyperPrep,PCRfree","",NA,FALSE,"","","Sage Bionetworks","","NGS","STRING"
+"library_preparation_method","Method by which library was prepared","Drop-Seq,sac-seq,NexteraXT,Smart-seq1,10x,Omni-ATAC,Accel-NGS Methyl-Seq,CEL-seq,NEBNext,Smart-seq2,Smart-seq4,SMRTbell,TruSeq,Ultralow Methyl-Seq,Accel-NGS 2S Plus","",NA,FALSE,"","","Sage Bionetworks","","Experimental_Data","STRING"
+"library_type","The type of library, in assays where samples are barcoded or hashed for multiplexing or each sample has multiple libraries amplified separately before pooled sequencing.","ADT,plasmid DNA,HTO,CMO,LMO,cDNA,polyA enriched,ribozero depletion,globin depletion","",NA,FALSE,"","","","","NGS","STRING"
+"is_stranded","Whether or not the library is stranded","False,True","",NA,FALSE,"","","","str","NGS","STRING"
+"read_strand_origin","The strand from which the read originates in a strand-specific protocol","forward,reverse","",NA,FALSE,"","","","","NGS","STRING"
+"run_type","The sequencing read types","singleEnd,pairedEnd","",NA,FALSE,"","","","","NGS","STRING"
+"reference_set","A set of references (e.g., canonical assembled contigs) which defines a common coordinate space for comparing reference-aligned experimental data.","GRCh37,GRCm38,MMUL1.0,HRC,1000 Genomes phase 3,GRCh38,dmel_r6.06","",NA,FALSE,"","","","","NGS","STRING"
+"sample_status","Conditions under which sample is kept","Frozen,Paxgene,Formalin-fixed,Fresh","",NA,FALSE,"","","","","NGS","STRING"
+"analysis_type","Type of analysis","differential expression,eQTL","",NA,FALSE,"","","","","NGS","STRING"
+"nucleic_acid_source","","bulk cell,bulk nuclei,single cell,single nucleus","",NA,TRUE,"","","","","NGS","STRING"
+"file_format","Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software","fastq,count matrix,bam,csv,xlsx,txt,pdf,tsv","",NA,FALSE,"","","","","File_Annotations","STRING"
+"data_subtype","Further qualification of dataType, which may be used to indicate the state of processing of the data, aggregation of the data, or presence of metadata.","raw,aligned,processed,normalized,aggregated","",NA,FALSE,"","","","","NGS","STRING"
+"data_type","Types of input/output data in bioinformatics pipelines","genomicVariants,geneExpression","",NA,TRUE,"","","Sage Bionetworks","","NGS","STRING"
+"sample_tissue_type","Tissue type used in sample","LP,EPI,both LP and EPI,blood,organoid","",NA,TRUE,"Biospecimen","","","","Biospecimen","STRING"
+"genomic_sex","The predicition of sex based on expression of genes","Male,Female","",NA,FALSE,"","","","","NGS","STRING"
+"resource_type","The type of resource being stored and annotated","analysis,curatedData,experimentalData,metadata,report,tool","",NA,TRUE,"File_Annotations","","","","File_Annotations","STRING"
+"metadata_type","For files of dataSubtype: metadata, a description of the type of metadata in the file.","assay metadata,biospecimen metadata,data dictionary,individual,protocol,quality assessment","",NA,TRUE,"File_Annotations","","","","File_Annotations","STRING"
+"participant_role","participant role","ibd,non_ibd,mother,father,sibling,second_degree","",NA,TRUE,"Patient","","https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C71384","","Clinical","STRING"
+"sex","biological sex","male,female","",NA,TRUE,"Patient","","https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C28421&ns=ncit","","Clinical","STRING"
+"gi_phenotype","GI phenotype","CD,UC,IBDU,CTL,other","",NA,TRUE,"Clinical","","Sage Bionetworks","","Clinical","STRING"
+"immunodeficiency","immunodeficiency diagnosis","no,yes,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C39725&ns=ncit","","Clinical","STRING"
+"autoimmune","autoimmune diagonsis","no,yes,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2889","","Clinical","STRING"
+"disease_activity_location","disease activity location","L1,L2,L3,L4,E1,E2,E3,E4","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117884","list like","Clinical","STRING"
+"upper_disease_type","upper disease type","L4A,L4B","",NA,FALSE,"Clinical","","https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8743432/","list like","Clinical","STRING"
+"disease_activity_behavior","disease activity behavior","never_severe,ever_severe,nonstricturing_nonpenetrating,stricturing,penetrating,penetrating_and_stricturing,unknown","",NA,FALSE,"Clinical","","Sage Bionetworks","","Clinical","STRING"
+"growth_delay","growth delay","no,yes,unknown","",NA,FALSE,"Clinical","","https://hpo.jax.org/app/browse/term/HP:0001510","","Clinical","STRING"
+"perianal_involvement","perianal involvment","no,yes,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99148","","Clinical","STRING"
+"extraintestinal_manifestations","history of extra intestinal manifestations","no,yes,unknown","",NA,FALSE,"Clinical","","","","Clinical","STRING"
+"gi_surgeries","GI surguries","no,yes,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15330","","Clinical","STRING"
+"ibd_history","family history of ibd","no,yes,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3138","","Clinical","STRING"
+"consanguinity","history of consagunity","no,yes,unknown","",NA,FALSE,"Clinical","","https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C189764","","Clinical","STRING"
+"race","race","white,black,asian,native_american,pacific_islander,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17049","list like","Clinical","STRING"
+"ethnicity","ethnicity","hispanic,not_hispanic,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564","","Clinical","STRING"
+"jewish_origin","jewish ancestry","no,yes,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C86561","","Clinical","STRING"
+"breastfed","history of breast feeding","no,yes,unknown","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25596","","Clinical","STRING"
+"sample_key","rc2 sample key (see RC2 Biopsys and Blood Flowcharts)","A,B,C,D,E,F,G,H","",NA,TRUE,"Biospecimen","","Sage Bionetworks","","Biospecimen","STRING"
+"sample_type","rc2 sample type","pax_gene,pbmcs,biopsy,serum,whole_blood,dna,epithelial_organoid,bm_organoid,resected_tissue,plasma,unknown","",NA,TRUE,"Biospecimen","","Sage Bionetworks","","Biospecimen","STRING"
+"site","site identifier indicating which institute oversaw the enrollment and sample collection of the patient (BCH = Boston, LMU = Munich, HSC = Toronto)","BCH,LMU,HSC","",NA,TRUE,"Patient","","Sage Bionetworks","","Clinical","STRING"
+"external_share","Per ICF, data can be shared externally with scientific research community","no,yes,unknown","",NA,FALSE,"","","","","Clinical","STRING"
+"participant_id","Integer code indicating the participant identity or familial relation to proband. 0 = proband; 1 = control; 2 = mother; 3 = father, ≥ 4 = sibling/secondary family","0, 1, 2, 3, 4, 5, 6, 7, 8, 9","",NA,TRUE,"","","","regex search [0-9]","Clinical","NUM"
+"project","project identifier","RC2,munich,other,unknown","",NA,TRUE,"","","","","Biospecimen","STRING"
+"inflammation","inflammation status","inflamed,uninflamed,unknown","",NA,FALSE,"","","","","Biospecimen","STRING"
+"media","type of media","DMSO,FRZ,FORM,TCM,RNA,ORG","",NA,FALSE,"","","","","Biospecimen","STRING"
+"specimen_area_biopsy","biopsy location","transverse_colon,terminal_ileum,splenic_flexure,sigmoid_colon,rectum,pouch,left_colon,duodenum,descending_colon,cecum,ascending_colon,right_colon","",NA,FALSE,"","","","list like","Biospecimen","STRING"
+"type_key","rc2 tissue sample identifier (PB = PBMCs, BX = biopsy, SM = serum, PG = PAXgene tube, PL = plasma, WB = whole blood, DN = DNA, EO = epithelial organoid, RT = resected tissue, BO = bone marrow organoid, UK = unknown)","PG,PB,BX,SM,WB,DN,EO,BO,RT,PL,UK","",NA,TRUE,"","","","","Biospecimen","STRING"
+"filename","Name of a file","","",NA,TRUE,"FileMetadata","","","str","Other","STRING"
+"patient","VEOIBD patient, is a model component","","Component,individualID,localID,site",NA,FALSE,"Individual Organism","Clinical,Medication,Demographics","","","",""
+"demographics","Patient demographics, is a model component","","Component",NA,FALSE,"Patient","","","","",""
+"clinical","Patient clinical, is a model component","","Component",NA,FALSE,"Patient","Medication","","","",""
+"medication","Patient medication history, is a model component","","Component",NA,FALSE,"Clinical","","","","",""
+"biospecimen","Patient biological entity, is a model component","","Component,specimenID",NA,FALSE,"Biosample","Patient","","","",""
+"mesalamine","","","",NA,FALSE,"Medication","","","","",""
+"mesalamine_use","","","",NA,FALSE,"Medication","","","","",""
+"mesalamine_change","","","",NA,FALSE,"Medication","","","","",""
+"sulfasa","","","",NA,FALSE,"Medication","","","","",""
+"sulfasa_use","","","",NA,FALSE,"Medication","","","","",""
+"sulfasa_change","","","",NA,FALSE,"Medication","","","","",""
+"balsalazide","","","",NA,FALSE,"Medication","","","","",""
+"balsalazide_use","","","",NA,FALSE,"Medication","","","","",""
+"balsalazide_change","","","",NA,FALSE,"Medication","","","","",""
+"olsalazine","","","",NA,FALSE,"Medication","","","","",""
+"olsalazine_use","","","",NA,FALSE,"Medication","","","","",""
+"olsalazine_change","","","",NA,FALSE,"Medication","","","","",""
+"mercap6","","","",NA,FALSE,"Medication","","","","",""
+"mercap6_use","","","",NA,FALSE,"Medication","","","","",""
+"mercap6_change","","","",NA,FALSE,"Medication","","","","",""
+"azathioprine","","","",NA,FALSE,"Medication","","","","",""
+"azathioprine_use","","","",NA,FALSE,"Medication","","","","",""
+"azathioprine_change","","","",NA,FALSE,"Medication","","","","",""
+"methotrex","","","",NA,FALSE,"Medication","","","","",""
+"methotrex_use","","","",NA,FALSE,"Medication","","","","",""
+"methotrex_change","","","",NA,FALSE,"Medication","","","","",""
+"fk506","","","",NA,FALSE,"Medication","","","","",""
+"fk506_use","","","",NA,FALSE,"Medication","","","","",""
+"fk506_change","","","",NA,FALSE,"Medication","","","","",""
+"cyclospa","","","",NA,FALSE,"Medication","","","","",""
+"cyclospa_use","","","",NA,FALSE,"Medication","","","","",""
+"cyclospa_change","","","",NA,FALSE,"Medication","","","","",""
+"thalidomide","","","",NA,FALSE,"Medication","","","","",""
+"thalidomide_use","","","",NA,FALSE,"Medication","","","","",""
+"thalidomide_change","","","",NA,FALSE,"Medication","","","","",""
+"lenalidomide","","","",NA,FALSE,"Medication","","","","",""
+"lenalidomide_use","","","",NA,FALSE,"Medication","","","","",""
+"lenalidomide_change","","","",NA,FALSE,"Medication","","","","",""
+"infliximab","","","",NA,FALSE,"Medication","","","","",""
+"infliximab_use","","","",NA,FALSE,"Medication","","","","",""
+"infliximab_change","","","",NA,FALSE,"Medication","","","","",""
+"adalimumab","","","",NA,FALSE,"Medication","","","","",""
+"adalimumab_use","","","",NA,FALSE,"Medication","","","","",""
+"adalimumab_change","","","",NA,FALSE,"Medication","","","","",""
+"certolizumab","","","",NA,FALSE,"Medication","","","","",""
+"certolizumab_use","","","",NA,FALSE,"Medication","","","","",""
+"certolizumab_change","","","",NA,FALSE,"Medication","","","","",""
+"golimumab","","","",NA,FALSE,"Medication","","","","",""
+"golimumab_use","","","",NA,FALSE,"Medication","","","","",""
+"golimumab_change","","","",NA,FALSE,"Medication","","","","",""
+"natalizumab","","","",NA,FALSE,"Medication","","","","",""
+"natalizumab_use","","","",NA,FALSE,"Medication","","","","",""
+"natalizumab_change","","","",NA,FALSE,"Medication","","","","",""
+"tocilizumab","","","",NA,FALSE,"Medication","","","","",""
+"tocilizumab_use","","","",NA,FALSE,"Medication","","","","",""
+"tocilizumab_change","","","",NA,FALSE,"Medication","","","","",""
+"vedolizumab","","","",NA,FALSE,"Medication","","","","",""
+"vedolizumab_use","","","",NA,FALSE,"Medication","","","","",""
+"vedolizumab_change","","","",NA,FALSE,"Medication","","","","",""
+"ustekinumab","","","",NA,FALSE,"Medication","","","","",""
+"ustekinumab_use","","","",NA,FALSE,"Medication","","","","",""
+"ustekinumab_change","","","",NA,FALSE,"Medication","","","","",""
+"oralenteric","","","",NA,FALSE,"Medication","","","","",""
+"oralenteric_use","","","",NA,FALSE,"Medication","","","","",""
+"oralenteric_change","","","",NA,FALSE,"Medication","","","","",""
+"rectalstrd","","","",NA,FALSE,"Medication","","","","",""
+"rectalstrd_use","","","",NA,FALSE,"Medication","","","","",""
+"rectalstrd_change","","","",NA,FALSE,"Medication","","","","",""
+"oralsterd","","","",NA,FALSE,"Medication","","","","",""
+"oralsterd_use","","","",NA,FALSE,"Medication","","","","",""
+"oralsterd_change","","","",NA,FALSE,"Medication","","","","",""
+"intrasterd","","","",NA,FALSE,"Medication","","","","",""
+"intrasterd_use","","","",NA,FALSE,"Medication","","","","",""
+"intrasterd_change","","","",NA,FALSE,"Medication","","","","",""
+"metronida","","","",NA,FALSE,"Medication","","","","",""
+"metronida_use","","","",NA,FALSE,"Medication","","","","",""
+"metronida_change","","","",NA,FALSE,"Medication","","","","",""
+"ciproflox","","","",NA,FALSE,"Medication","","","","",""
+"ciproflox_use","","","",NA,FALSE,"Medication","","","","",""
+"ciproflox_change","","","",NA,FALSE,"Medication","","","","",""
+"trimethop","","","",NA,FALSE,"Medication","","","","",""
+"trimethop_use","","","",NA,FALSE,"Medication","","","","",""
+"trimethop_change","","","",NA,FALSE,"Medication","","","","",""
+"amoxicillin","","","",NA,FALSE,"Medication","","","","",""
+"amoxicillin_use","","","",NA,FALSE,"Medication","","","","",""
+"amoxicillin_change","","","",NA,FALSE,"Medication","","","","",""
+"vancomycin","","","",NA,FALSE,"Medication","","","","",""
+"vancomycin_use","","","",NA,FALSE,"Medication","","","","",""
+"vancomycin_change","","","",NA,FALSE,"Medication","","","","",""
+"ursodiol","","","",NA,FALSE,"Medication","","","","",""
+"ursodiol_use","","","",NA,FALSE,"Medication","","","","",""
+"ursodiol_change","","","",NA,FALSE,"Medication","","","","",""
+"cholestyr","","","",NA,FALSE,"Medication","","","","",""
+"cholestyr_use","","","",NA,FALSE,"Medication","","","","",""
+"cholestyr_change","","","",NA,FALSE,"Medication","","","","",""
+"rifampin","","","",NA,FALSE,"Medication","","","","",""
+"rifampin_use","","","",NA,FALSE,"Medication","","","","",""
+"rifampin_change","","","",NA,FALSE,"Medication","","","","",""
+"omega3","","","",NA,FALSE,"Medication","","","","",""
+"omega3_use","","","",NA,FALSE,"Medication","","","","",""
+"omega3_change","","","",NA,FALSE,"Medication","","","","",""
+"probiotic","","","",NA,FALSE,"Medication","","","","",""
+"probiotic_use","","","",NA,FALSE,"Medication","","","","",""
+"probiotic_change","","","",NA,FALSE,"Medication","","","","",""
+"library_id","Library ID as provided by the lab","","",NA,FALSE,"","","","str","NGS","STRING"
+"library_version","The version of the library. For example, rnaSeq 10x library version","","",NA,FALSE,"","","","","NGS","STRING"
+"read_length","The length of the read","","",NA,FALSE,"","","","num","NGS","NUM"
+"analysis_thresholds","The minimum counts-per-million (CPM) threshold","","",NA,FALSE,"","","","num","NGS","NUM"
+"alignment_information","Alignment information","","",NA,FALSE,"","","","","NGS","STRING"
+"vendor","Information about vendor (novagene) processes","","",NA,FALSE,"","","","str","NGS","STRING"
+"sample_barcode","The nucleotide sequence of the sample barcode used to identify cells from a single sample in cell hashing or multiplexing assays.","","",NA,FALSE,"","","","str","NGS","STRING"
+"RIN","RNA Integrity Number","","",NA,FALSE,"","","","num","Experimental_Data","NUM"
+"rna_batch","Batch in which RNA sample was isolated","","",NA,FALSE,"","","","str","Experimental_Data","STRING"
+"rna_isolation_kit","The technology used to isolate the RNA","","",NA,FALSE,"","","","str","Experimental_Data","STRING"
+"library_batch","Batch library was prepared in","","",NA,FALSE,"","","","","NGS","STRING"
+"sequencing_batch","Batch library was sequenced in","","",NA,FALSE,"","","","","NGS","STRING"
+"total_reads","Total number of raw sequencing reads from a library","","",NA,FALSE,"","","","num","NGS","NUM"
+"valid_barcode_reads","Fraction of reads with cell barcodes that match the whitelist","","",NA,FALSE,"","","","num","NGS","NUM"
+"number_cells","Number of cells or nuclei sequenced","","",NA,FALSE,"","","","int","NGS","NUM"
+"median_genes","The median number of genes detected (with nonzero UMI counts) across all cell-associated barcodes","","",NA,FALSE,"","","","num","NGS","NUM"
+"ratio260over230","Ratio of absorbance at 230 nm and 260 nm. Measures protein or other contaminants. Range up to approximately 2.2.","","",NA,FALSE,"","","","num","Experimental_Data","NUM"
+"ratio260over280","Measure of DNA vs. RNA purity. Range up to approximately 2.0.","","",NA,FALSE,"","","","num","Experimental_Data","NUM"
+"unique_genes","The number of unique genes","","",NA,FALSE,"","","","int","NGS","NUM"
+"mapped_reads","Mapped reads refer to those reads from the sequenced sample that align directly to a single region (set of loci) on the reference genome.","","",NA,FALSE,"","","","int","NGS","NUM"
+"rRNA_rate","The percentage of rRNA in a cell","","",NA,FALSE,"","","","num","NGS","NUM"
+"total_unmapped_reads","The total number of unmapped reads from the sequenced sample to a single region (set of loci) on the reference genome.","","",NA,FALSE,"","","","num","NGS","NUM"
+"kit_number","Kit serial number","","",NA,TRUE,"","","","","NGS","STRING"
+"DV200","A method to determine the quality of RNA obtained from a sample. DV200 evaluates the percentage of fragments of greater than 200 nucleotides.","","",NA,FALSE,"","","","num","Experimental_Data","NUM"
+"duplication_rate","The duplication rate is the fraction of mapped reads where any 2 reads share the same 5_ and 3_ coordinates.","","",NA,FALSE,"","","","num","NGS","NUM"
+"median_umis","The median number of total Unique Molecular Identifier (UMI) counts across all cell-associated barcodes","","",NA,FALSE,"","","","","NGS","STRING"
+"ratio_mitochondria","Percent mitochondria per cell","","",NA,FALSE,"","","","","NGS","STRING"
+"family_id","family identifier","","",NA,TRUE,"Patient","","Sage Bionetworks","","Clinical","STRING"
+"age_at_diagnosis","age at diagnosis in years","","",NA,FALSE,"Clinical","","https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C156420&ns=ncit","num","Clinical","NUM"
+"collection_date","date collected (yyyy_mm_dd)","","",NA,FALSE,"Biospecimen","","Sage Bionetworks","regex search [0-9]{4}_[0-9]{2}_[0-9]{2} error","Biospecimen","STRING"
+"volume","volume in mL","","",NA,FALSE,"Biospecimen","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25335","num","Biospecimen","NUM"
+"local_id","local identifier (max of 5 digits)","","",NA,TRUE,"Patient","","https://docs.google.com/spreadsheets/d/1d8-G1ernDQDLTwMJSrX5EQGnq_afsA0G/edit#gid=110285588","","Clinical","NUM"
+"individual_id","A unique identifier for every enrolled individual. Consists of 'site' combined with 'local_id' and 'participant_id', e.g., BCH00001_0","","",NA,TRUE,"Patient","","https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit","regex search [A-Z]{3}[0-9]{5}_[0-9]{1} error","Clinical","STRING"
+"collection_age","age at time of collection in years","","",NA,FALSE,"","","","num","",""
+"collection_id","collection identifier","","",NA,TRUE,"","","","regex search [A-Z]{3}[0-9]{5}_[0-9]{1}_[0-9]{2} error","",""
+"collection_num","ordinal code assigned to each specimen to distinquish between different collection dates","","",NA,TRUE,"","","","int","",""
+"sample_id","Unique sample identifier, formatted as 'individual_id'_'participant_id'_'collection_num'_'type_key'_'sample_num'","","",NA,TRUE,"","","","regex search [A-Z]{3}[0-9]{5}_[0-9]_[0-9]{2}_[A-Z]{2}_[A-Z][0-9]{2} error","",""
+"sample_num","identifying number of sample collected (unique biopsy count # from same region or unique vial count of blood component)","","",NA,TRUE,"","","","int","",""
+"vial_label","lable on vial","","",NA,TRUE,"","","","str","",""
+"Component","Category of metadata; provide the same one for all items/rows.","","",NA,TRUE,"","","https://w3id.org/biolink/vocab/category","","",""
+"medication_history_metadata_template","VEOIBD Medication History Metadata Template","","Component,individual_id,mesalamine,mesalamine_use,mesalamine_change,sulfasa,sulfasa_use,sulfasa_change,balsalazide,balsalazide_use,balsalazide_change,olsalazine,olsalazine_use,olsalazine_change,mercap6,mercap6_use,mercap6_change,azathioprine,azathioprine_use,azathioprine_change,methotrex,methotrex_use,methotrex_change,fk506,fk506_use,fk506_change,cyclospa,cyclospa_use,cyclospa_change,thalidomide,thalidomide_use,thalidomide_change,lenalidomide,lenalidomide_use,lenalidomide_change,infliximab,infliximab_use,infliximab_change,adalimumab,adalimumab_use,adalimumab_change,certolizumab,certolizumab_use,certolizumab_change,golimumab,golimumab_use,golimumab_change,natalizumab,natalizumab_use,natalizumab_change,tocilizumab,tocilizumab_use,tocilizumab_change,vedolizumab,vedolizumab_use,vedolizumab_change,ustekinumab,ustekinumab_use,ustekinumab_change,oralenteric,oralenteric_use,oralenteric_change,rectalstrd,rectalstrd_use,rectalstrd_change,oralsterd,oralsterd_use,oralsterd_change,intrasterd,intrasterd_use,intrasterd_change,metronida,metronida_use,metronida_change,ciproflox,ciproflox_use,ciproflox_change,trimethop,trimethop_use,trimethop_change,amoxicillin,amoxicillin_use,amoxicillin_change,vancomycin,vancomycin_use,vancomycin_change,ursodiol,ursodiol_use,ursodiol_change,cholestyr,cholestyr_use,cholestyr_change,rifampin,rifampin_use,rifampin_change,omega3,omega3_use,omega3_change,probiotic,probiotic_use,probiotic_change",NA,FALSE,"ManifestTemplate","","https://docs.google.com/document/d/1yN6TlK2VGP-vKvW5E8wucLjKQq769xoz4QW5OjgR29k/edit#heading=h.agzpcnpjw4d9","","Metadata_Template","STRING"
+"bulk_RNASeq_assay_template","VEOIBD Bulk RNASeq Assay Metadata Template","","Component,individual_id,sample_id,library_id,assay,platform,library_prep,library_preparation_method,library_version,library_type,is_stranded,read_strand_origin,read_length,run_type,reference_set,sample_status,analysis_thresholds,analysis_type,nucleic_acid_source,alignment_information,vendor,sample_barcode,RIN,rna_batch,rna_isolation_kit,library_batch,sequencing_batch,total_reads,valid_barcode_reads,number_cells,median_genes,file_format,data_subtype,cell_viability,ratio260over230,ratio260over280,unique_genes,mapped_reads,rRNA_rate,total_unmapped_reads,data_type,kit_number,DV200,duplication_rate",NA,FALSE,"ManifestTemplate","","https://docs.google.com/document/d/1ADIApJgEpbA1XaLig1dlxwUE5VfQkESyxHerabsbXPY/edit#heading=h.agzpcnpjw4d9","","Metadata_Template","STRING"
+"bulk_RNASeq_raw_file_annotations","Files containing raw bulk RNA sequencing data (fastq) or aligned sequence files that include all unmapped reads (bam, cram)","","Component,filename,file_format,resource_type,assay,data_type,data_subtype,sample_id,individual_id,sample_type,nucleic_acid_source,site",NA,FALSE,"ManifestTemplate","","","","File_Annotation_Template","STRING"
+"bulk_RNASeq_counts_file_annotations","Files containing bulk RNA count matrix data","","Component,filename,file_format,resource_type,assay,data_type,data_subtype,sample_id,individual_id,sample_type,nucleic_acid_source,reference_set,site",NA,FALSE,"ManifestTemplate","","","","File_Annotation_Template","STRING"
+"metadata_file_annotations","Metadata files include clinical and biospecimen metadata","","Component,filename,file_format,resource_type,metadata_type,site",NA,FALSE,"ManifestTemplate","","","","File_Annotation_Template","STRING"
+"scRNASeq_assay_template","VEOIBD Single Cell RNASeq Assay Metadata Template","","Component,individual_id,sample_id,assay,sample_barcode,sample_tissue_type,platform,library_prep,library_preparation_method,library_version,library_type,is_stranded,read_strand_origin,read_length,run_type,reference_set,sample_status,analysis_thresholds,analysis_type,nucleic_acid_source,alignment_information,vendor,RIN,library_id,rna_batch,rna_isolation_kit,library_batch,total_reads,valid_barcode_reads,number_cells,median_genes,median_umis,file_format,data_subtype,cell_viability,ratio_mitochondria,unique_genes,mapped_reads,rRNA_rate,data_type,kit_number,DV200,duplication_rate,genomic_sex",NA,FALSE,"ManifestTemplate","","https://docs.google.com/document/d/1fNu_ANxVPBUx0rN7VBM_FjiAOG8_bmC20EQ_E0Mmt3w/edit#heading=h.agzpcnpjw4d9","","Metadata_Template","STRING"
+"clinical_metadata_template","VEOIBD Clinical Metadata Template","","Component,individual_id,family_id,site,local_id,participant_id,participant_role,sex,age_at_diagnosis,gi_phenotype,project,immunodeficiency,autoimmune,disease_activity_location,upper_disease_type,disease_activity_behavior,growth_delay,perianal_involvement,gi_surgeries,extraintestinal_manifestations,ibd_history,consanguinity,race,ethnicity,jewish_origin,breastfed,external_share",NA,FALSE,"ManifestTemplate","","https://docs.google.com/document/d/1yN6TlK2VGP-vKvW5E8wucLjKQq769xoz4QW5OjgR29k/edit#heading=h.agzpcnpjw4d9","","Metadata_Template","STRING"
+"biospecimen_metadata_template","VEOIBD Biospecimen Metadata Template","","Component,sample_id,individual_id,collection_id,site,local_id,participant_id,collection_num,type_key,sample_type,sample_key,sample_num,vial_label,project,collection_age,collection_date,inflammation,specimen_area_biopsy,media,volume",NA,FALSE,"ManifestTemplate","","https://docs.google.com/document/d/11xPPfJp89Ge0dZGzud4T6ixQhXj8a_BJtkTQ7K1UDyU/edit#heading=h.agzpcnpjw4d9","","Metadata_Template","STRING"
+"biopsy","","","media",NA,NA,"","","","","",""
