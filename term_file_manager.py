@@ -67,7 +67,7 @@ def generate_term_file(data_model, term):
         "Module"
     ].unique()[0]
     # make "template" csv if attribute or module string includes Template
-    if "Template" in term or "Template" in module_folder:
+    if "template" in term or "Template" in module_folder:
         # generate file for template
         depends_on = get_template_keys(data_model, term)
         # filter out attributes from data model table
@@ -120,7 +120,7 @@ def update_term_file(data_model, term):
     :param term (str): an annotation term
     :returns: an updated term csv file saved in _data/moduel folder
     """
-    if "Template" in term:
+    if "template" in term:
         module_folder = data_model.loc[data_model["Attribute"] == term,][
             "Module"
         ].unique()[0]
@@ -160,7 +160,10 @@ def update_term_file(data_model, term):
         # add columns
         new.rename(columns={"Valid Values": "Key"}, inplace=True)
         # load existing file
-        old = pd.read_csv(f"./_data/{new.Module.dropna().unique()[0]}/{term}.csv")
+        old = pd.read_csv(
+          f"./_data/{new.Module.dropna().unique()[0]}/{term}.csv", 
+          dtype = object
+        )
         # upload existing file if Key, Type or Module column is changed
         if not (
             new["Key"].equals(old["Key"])
