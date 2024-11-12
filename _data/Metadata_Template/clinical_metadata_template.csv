@@ -17,12 +17,12 @@ race,race,STRING,"white,black,asian,native_american,pacific_islander,unknown",,F
 ethnicity,ethnicity,STRING,"hispanic,not_hispanic,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564,Clinical
 jewish_origin,jewish ancestry,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C86561,Clinical
 breastfed,history of breast feeding,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25596,Clinical
-site,"site identifier (BCH = Boston, LMU = Munich, HSC = Toronto)",STRING,"BCH,LMU,HSC",,True,Sage Bionetworks,Clinical
+site,"site identifier indicating which institute oversaw the enrollment and sample collection of the patient (BCH = Boston, LMU = Munich, HSC = Toronto)",STRING,"BCH,LMU,HSC",,True,Sage Bionetworks,Clinical
 external_share,"Per ICF, data can be shared externally with scientific research community",STRING,"no,yes,unknown",,False,,Clinical
 participant_id,"Integer code indicating the participant identity or familial relation to proband. 0 = proband; 1 = control; 2 = mother; 3 = father, ≥ 4 = sibling/secondary family",NUM,"0, 1, 2, 3, 4, 5, 6, 7, 8, 9",,True,,Clinical
 project,project identifier,STRING,"RC2,munich,other,unknown",,True,,Biospecimen
 family_id,family identifier,STRING,,,True,Sage Bionetworks,Clinical
 age_at_diagnosis,age at diagnosis in years,NUM,,,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C156420&ns=ncit,Clinical
 local_id,local identifier (max of 5 digits),NUM,,,True,https://docs.google.com/spreadsheets/d/1d8-G1ernDQDLTwMJSrX5EQGnq_afsA0G/edit#gid=110285588,Clinical
-individual_id,individual identifier,STRING,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,Clinical
+individual_id,"A unique identifier for every enrolled individual. Consists of 'site' combined with 'local_id' and 'participant_id', e.g., BCH00001_0",STRING,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,Clinical
 Component,Category of metadata; provide the same one for all items/rows.,,,,True,https://w3id.org/biolink/vocab/category,
