@@ -3576,7 +3576,7 @@
         {
             "@id": "bts:Biospecimen",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Patient biological entity",
+            "rdfs:comment": "Patient biological entity, is a model component",
             "rdfs:label": "Biospecimen",
             "rdfs:subClassOf": [
                 {
@@ -4105,7 +4105,7 @@
         {
             "@id": "bts:Patient",
             "@type": "rdfs:Class",
-            "rdfs:comment": "VEOIBD patient",
+            "rdfs:comment": "VEOIBD patient, is a model component",
             "rdfs:label": "Patient",
             "rdfs:subClassOf": [
                 {
@@ -4294,7 +4294,7 @@
         {
             "@id": "bts:Clinical",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Patient clinical",
+            "rdfs:comment": "Patient clinical, is a model component",
             "rdfs:label": "Clinical",
             "rdfs:subClassOf": [
                 {
@@ -5736,7 +5736,7 @@
         {
             "@id": "bts:Site",
             "@type": "rdfs:Class",
-            "rdfs:comment": "site identifier (BCH = Boston, LMU = Munich, HSC = Toronto)",
+            "rdfs:comment": "site identifier indicating which institute oversaw the enrollment and sample collection of the patient (BCH = Boston, LMU = Munich, HSC = Toronto)",
             "rdfs:label": "Site",
             "rdfs:subClassOf": [
                 {
@@ -6591,7 +6591,7 @@
         {
             "@id": "bts:TypeKey",
             "@type": "rdfs:Class",
-            "rdfs:comment": "rc2 tissue sample identifier",
+            "rdfs:comment": "rc2 tissue sample identifier (PB = PBMCs, BX = biopsy, SM = serum, PG = PAXgene tube, PL = plasma, WB = whole blood, DN = DNA, EO = epithelial organoid, RT = resected tissue, BO = bone marrow organoid, UK = unknown)",
             "rdfs:label": "TypeKey",
             "rdfs:subClassOf": [
                 {
@@ -6917,7 +6917,7 @@
         {
             "@id": "bts:Medication",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Patient medication history",
+            "rdfs:comment": "Patient medication history, is a model component",
             "rdfs:label": "Medication",
             "rdfs:subClassOf": [
                 {
@@ -6939,7 +6939,7 @@
         {
             "@id": "bts:Demographics",
             "@type": "rdfs:Class",
-            "rdfs:comment": "Patient demographics",
+            "rdfs:comment": "Patient demographics, is a model component",
             "rdfs:label": "Demographics",
             "rdfs:subClassOf": [
                 {
@@ -9285,7 +9285,7 @@
         {
             "@id": "bts:IndividualId",
             "@type": "rdfs:Class",
-            "rdfs:comment": "individual identifier",
+            "rdfs:comment": "A unique identifier for every enrolled individual. Consists of 'site' combined with 'local_id' and 'participant_id', e.g., BCH00001_0",
             "rdfs:label": "IndividualId",
             "rdfs:subClassOf": [
                 {
@@ -9361,7 +9361,7 @@
         {
             "@id": "bts:SampleId",
             "@type": "rdfs:Class",
-            "rdfs:comment": "sample identifier",
+            "rdfs:comment": "Unique sample identifier, formatted as 'individual_id'_'participant_id'_'collection_num'_'type_key'_'sample_num'",
             "rdfs:label": "SampleId",
             "rdfs:subClassOf": [
                 {

@@ -10,7 +10,7 @@ title: type_key
 {: .note-title } 
 >type_key
 >
->rc2 tissue sample identifier [[Source]](nan)
+>rc2 tissue sample identifier (PB = PBMCs, BX = biopsy, SM = serum, PG = PAXgene tube, PL = plasma, WB = whole blood, DN = DNA, EO = epithelial organoid, RT = resected tissue, BO = bone marrow organoid, UK = unknown) [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -39,6 +39,6 @@ DV200,A method to determine the quality of RNA obtained from a sample. DV200 eva
 duplication_rate,The duplication rate is the fraction of mapped reads where any 2 reads share the same 5_ and 3_ coordinates.,NUM,,,False,,NGS
 median_umis,The median number of total Unique Molecular Identifier (UMI) counts across all cell-associated barcodes,STRING,,,False,,NGS
 ratio_mitochondria,Percent mitochondria per cell,STRING,,,False,,NGS
-individual_id,individual identifier,STRING,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,Clinical
-sample_id,sample identifier,,,,True,,
+individual_id,"A unique identifier for every enrolled individual. Consists of 'site' combined with 'local_id' and 'participant_id', e.g., BCH00001_0",STRING,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,Clinical
+sample_id,"Unique sample identifier, formatted as 'individual_id'_'participant_id'_'collection_num'_'type_key'_'sample_num'",,,,True,,
 Component,Category of metadata; provide the same one for all items/rows.,,,,True,https://w3id.org/biolink/vocab/category,

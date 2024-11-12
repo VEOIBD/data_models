@@ -45,7 +45,8 @@ You can add additional descriptions to home page or specific page by directly ed
 
 1. Install Jekyll `gem install bundler jekyll`
 2. Install Bundler `bundle install`
-3. Run `bundle exec jekyll serve` to build your site and preview it at `http://localhost:4000`. The built site is stored in the directory `_site`.
+3. Update Jekyll to resolve serve error `bundle update jekyll`
+4. Run `bundle exec jekyll serve` to build your site and preview it at `http://localhost:4000`. The built site is stored in the directory `_site`.
 
 ## Publish site on GitHub pages
 In addition to setting up the GitHub Actions workflow (i.e pages.yml), you need to allow deploying the GitHub pages using the workflow. Go to `Settings`-> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.

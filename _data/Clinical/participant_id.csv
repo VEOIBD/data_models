@@ -1,8 +1,8 @@
 Key,Key Description,Type,Source,Module
-0,,NUM,,Clinical
- 1,,NUM,,Clinical
- 2,,NUM,,Clinical
- 3,,NUM,,Clinical
+0,proband,NUM,,Clinical
+ 1,control,NUM,,Clinical
+ 2,mother,NUM,,Clinical
+ 3,father,NUM,,Clinical
  4,,NUM,,Clinical
  5,,NUM,,Clinical
  6,,NUM,,Clinical
