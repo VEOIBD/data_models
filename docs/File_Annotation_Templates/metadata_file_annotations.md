@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: File Annotations
-title: metadata_type
+parent: File Annotation Templates
+title: metadata_file_annotations
 ---
 
-{% assign mydata=site.data.File_Annotations.metadata_type %} 
+{% assign mydata=site.data.File_Annotation_Templates.metadata_file_annotations %} 
 
 {: .note-title } 
->metadata_type
+>metadata_file_annotations
 >
->For files of dataSubtype: metadata, a description of the type of metadata in the file. [[Source]](nan)
+>Metadata files include clinical and biospecimen metadata [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -1,16 +1,17 @@
 ---
 datatable: true
 layout: page
-parent: File Annotations
-title: metadata_type
+parent: Other
+title: data_code
 ---
 
-{% assign mydata=site.data.File_Annotations.metadata_type %} 
+{% assign mydata=site.data.Other.data_code %} 
 
 {: .note-title } 
->metadata_type
+>data_code
 >
->For files of dataSubtype: metadata, a description of the type of metadata in the file. [[Source]](nan)
+>A two letter label specifying the type of data generated. SR = scRNA-seq, BR = bulk RNA-seq, CY = CyTOF, PT = proteomics, FS = functional study, MT = metabolomics, WE = whole exome sequencing, WG = whole genome sequencing
+Type of sequencing library [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

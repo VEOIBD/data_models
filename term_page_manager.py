@@ -44,6 +44,8 @@ def generate_page(data_model, term_path):
     # get term information
     term = term_path.split("/")[-1]
     module = term_path.split("/")[0]
+    #module_title = re.sub("([A-Z]+)", r" \1", module).title()
+    module_title = re.sub("_", " ", module)
     if "json" in term_path:
         # term with JSON files
         with open(term_path) as f:
@@ -60,12 +62,15 @@ def generate_page(data_model, term_path):
     if source == "Sage Bionetworks":
         source = "https://sagebionetworks.org/"
 
-    if "Template" in term_path:
+    if "template" in term_path:
         # load template
         post = frontmatter.load("template_page_template.md")
-        # convert camel case to title
-        post.metadata["title"] = re.sub("([A-Z]+)", r" \1", term).title()
-        post.metadata["permalink"] = f'docs/{post.metadata["title"]}.html'
+        ## convert term in title to title case no underscores
+        title_term = re.sub("([A-Z]+)", r" \1", term).title()
+        title_term = re.sub("_", " ", title_term)
+        post.metadata["title"] = title_term
+        #post.metadata["permalink"] = f'docs/{post.metadata["link_term"]}.html'
+        post.metadata["permalink"] = f'docs/{term}.html'
     elif "json" in term_path:
         # load template
         post = frontmatter.load("json_term_page_template.md")
@@ -74,9 +79,9 @@ def generate_page(data_model, term_path):
         post = frontmatter.load("csv_term_page_template.md")
         post.metadata["title"] = term
     # post.metadata["parent"] = re.sub("([A-Z]+)", r" \1", module).title() # used when working with json file in synapseAnnotation repo
-    post.metadata["parent"] = module
+    post.metadata["parent"] = module_title
     # load input data and term/template description
-    if "Template" in term_path:
+    if "template" in term_path:
         post.content = (
             "{% assign mydata=site.data."
             + f"{module}."
@@ -116,25 +121,27 @@ def generate_page(data_model, term_path):
             + post.content
         )
 
-    # create directory for the moduel if not exist
-    if not os.path.exists(f"docs/{post.metadata['parent']}/"):
-        os.mkdir(f"docs/{post.metadata['parent']}/")
+    # create directory for the module if not exist
+    if not os.path.exists(f"docs/{module}/"):
+        os.mkdir(f"docs/{module}/")
         # create a module page
         module_page = fileutils.MarkDownFile(
-            f"docs/{post.metadata['parent']}/{post.metadata['parent']}"
+            f"docs/{module}/{module}"
         )
-        if "Template" in term:
+        if "Templates" in module:
             # add permalink for template page
             module_page.append_end(
-                f"--- \nlayout: page \ntitle: {post.metadata['parent']} \nhas_children: true \nnav_order: 5 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
+                f"--- \nlayout: page \ntitle: {module_title} \nhas_children: true \nnav_order: 2 \npermalink: docs/{module}.html \n---"
             )
         else:
             module_page.append_end(
-                f"--- \nlayout: page \ntitle: {post.metadata['parent']} \nhas_children: true \nnav_order: 2 \npermalink: docs/{' '.join(post.metadata['parent'].split('_'))}.html \n---"
+                f"--- \nlayout: page \ntitle: {post.metadata['parent']} \nhas_children: true \nnav_order: 5 \npermalink: docs/{module}.html \n---"
             )
-
-    # create file
-    file = fileutils.MarkDownFile(f"docs/{post.metadata['parent']}/{term}")
+        ## write module page
+        #module_page.append_end(frontmatter.dumps(post))
+    
+    # create term md file
+    file = fileutils.MarkDownFile(f"docs/{module}/{term}")
     # add content to the file
     file.append_end(frontmatter.dumps(post))
     print("\033[92m {} \033[00m".format(f"added or modified docs/{term_path}.md"))

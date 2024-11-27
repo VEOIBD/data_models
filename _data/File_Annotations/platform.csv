@@ -1,0 +1,76 @@
+Key,Key Description,Type,Source,Module
+HiSeqX,,STRING,,File_Annotations
+HiSeq4000,,STRING,,File_Annotations
+Illumina_1M,,STRING,,File_Annotations
+HiSeq3000,,STRING,,File_Annotations
+HiSeq2500,,STRING,,File_Annotations
+DNBSEQ,,STRING,,File_Annotations
+HiSeq1000,,STRING,,File_Annotations
+GAIIx,,STRING,,File_Annotations
+Illumina_h650,,STRING,,File_Annotations
+ddSEQ Single-Cell Isolator,,STRING,,File_Annotations
+confocalImaging,,STRING,,File_Annotations
+Bruker Avance III,,STRING,,File_Annotations
+Bionano Irys,,STRING,,File_Annotations
+Biograph mCT,,STRING,,File_Annotations
+HiSeq2000,,STRING,,File_Annotations
+Illumina_HumanOmni1-Quadv1.0,,STRING,,File_Annotations
+Illumina_Omni5M,,STRING,,File_Annotations
+Illumina MouseWG-6 v2.0 expression beadchip,,STRING,,File_Annotations
+IlluminaNovaseq6000,,STRING,,File_Annotations
+IlluminaWholeGenomeDASL,,STRING,,File_Annotations
+Infinium Global Diversity Array-8,,STRING,,File_Annotations
+Illumina_Infinium-HumanMethylation450-BeadChip,,STRING,,File_Annotations
+IlluminaInfiniumGSAMD-24v2-0,,STRING,,File_Annotations
+IlluminaMethylationEPIC,,STRING,,File_Annotations
+PacBioRSII,,STRING,,File_Annotations
+IlluminaHumanMethylation450,,STRING,,File_Annotations
+IlluminaHumanHT-12_V3_0_R1,,STRING,,File_Annotations
+IlluminaHumanHap650Yv3_A,,STRING,,File_Annotations
+IlluminaHumanHap300,,STRING,,File_Annotations
+Illumina_Omni5-Quad,,STRING,,File_Annotations
+Biocrates p180,,STRING,,File_Annotations
+Illumina_Omni2pt5M,,STRING,,File_Annotations
+Illumina_Omni2.5-8_v1.3,,STRING,,File_Annotations
+Illumina_Omni2.5-8_v1.1,,STRING,,File_Annotations
+Illumina_Omni2.5-8,,STRING,,File_Annotations
+llumina Infinium General Screening Array 24-Kit v3.0,,STRING,,File_Annotations
+BGISEQ-500,,STRING,,File_Annotations
+Perlegen300Karray,,STRING,,File_Annotations
+AffymetrixU133Plus2,,STRING,,File_Annotations
+orbitrap,,STRING,,File_Annotations
+Xevo TQ-S,,STRING,,File_Annotations
+Agilent44Karray,,STRING,,File_Annotations
+NextSeq2000,,STRING,,File_Annotations
+NextSeq500,,STRING,,File_Annotations
+NanostringnCounter_MouseADPanel,,STRING,,File_Annotations
+NanostringnCounter,,STRING,,File_Annotations
+MiSeq,,STRING,,File_Annotations
+LTQOrbitrapXL,,STRING,,File_Annotations
+InfiniumPsychArrayBeadChip,,STRING,,File_Annotations
+Infinium Omni2.5Exome-8 v1.5,,STRING,,File_Annotations
+Infinium Omni2.5Exome-8 v1.4,,STRING,,File_Annotations
+Infinium Omni2.5Exome-8 v1.3,,STRING,,File_Annotations
+Infinium Omni2.5Exome-8 v1.1,,STRING,,File_Annotations
+Infinium HumanOmniExpressExome,,STRING,,File_Annotations
+OrbiTrap Fusion,,STRING,,File_Annotations
+Orbitrap Fusion Lumos,,STRING,,File_Annotations
+Olink Target 96,,STRING,,File_Annotations
+triple quadrupole,,STRING,,File_Annotations
+AffymetrixU133AB,,STRING,,File_Annotations
+Affymetrix Human Gene 1.0 ST Array,,STRING,,File_Annotations
+PacBio Sequel II,,STRING,,File_Annotations
+Xevo G2 QTOF,,STRING,,File_Annotations
+PsychChip,,STRING,,File_Annotations
+Affy6.0,,STRING,,File_Annotations
+Affy5.0,,STRING,,File_Annotations
+Illumina NovaSeq 6000,,STRING,,File_Annotations
+Q Exactive HF,,STRING,,File_Annotations
+Q Exactive,,STRING,,File_Annotations
+time-of-flight,,STRING,,File_Annotations
+Simoa HD-1 Analyzer,,STRING,,File_Annotations
+Signa Premier AIR 3T,,STRING,,File_Annotations
+IlluminaMiSeq,,STRING,,File_Annotations
+SequenomMultiplex,,STRING,,File_Annotations
+quadrupole time-of-flight,,STRING,,File_Annotations
+Q Exactive Plus,,STRING,,File_Annotations

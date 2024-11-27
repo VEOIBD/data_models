@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: File Annotations
-title: metadata_type
+parent: Biospecimen
+title: sample_id
 ---
 
-{% assign mydata=site.data.File_Annotations.metadata_type %} 
+{% assign mydata=site.data.Biospecimen.sample_id %} 
 
 {: .note-title } 
->metadata_type
+>sample_id
 >
->For files of dataSubtype: metadata, a description of the type of metadata in the file. [[Source]](nan)
+>Unique sample identifier, formatted as `'individual_id'_'participant_id'_'collection_num'_'type_key'_'sample_num'` [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

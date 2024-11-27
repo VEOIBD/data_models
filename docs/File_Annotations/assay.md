@@ -2,15 +2,15 @@
 datatable: true
 layout: page
 parent: File Annotations
-title: metadata_type
+title: assay
 ---
 
-{% assign mydata=site.data.File_Annotations.metadata_type %} 
+{% assign mydata=site.data.File_Annotations.assay %} 
 
 {: .note-title } 
->metadata_type
+>assay
 >
->For files of dataSubtype: metadata, a description of the type of metadata in the file. [[Source]](nan)
+>The technology used to generate the data in this file [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

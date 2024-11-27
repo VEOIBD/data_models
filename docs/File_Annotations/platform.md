@@ -2,15 +2,15 @@
 datatable: true
 layout: page
 parent: File Annotations
-title: metadata_type
+title: platform
 ---
 
-{% assign mydata=site.data.File_Annotations.metadata_type %} 
+{% assign mydata=site.data.File_Annotations.platform %} 
 
 {: .note-title } 
->metadata_type
+>platform
 >
->For files of dataSubtype: metadata, a description of the type of metadata in the file. [[Source]](nan)
+>The specific version (manufacturer, model, etc.) of a technology that is used to carry out a laboratory or computational experiment. [[Source]](https://sagebionetworks.org/)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

@@ -1,7 +1,7 @@
 ---
 datatable: true
 layout: page
-parent: File_Annotations
+parent: File Annotations
 title: resource_type
 ---
 
