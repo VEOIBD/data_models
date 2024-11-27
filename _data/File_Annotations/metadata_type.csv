@@ -1,7 +1,0 @@
-Key,Key Description,Type,Source,Module
-assay metadata,,STRING,,File_Annotations
-biospecimen metadata,,STRING,,File_Annotations
-data dictionary,,STRING,,File_Annotations
-individual,,STRING,,File_Annotations
-protocol,,STRING,,File_Annotations
-quality assessment,,STRING,,File_Annotations

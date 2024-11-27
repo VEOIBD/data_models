@@ -1,0 +1,9 @@
+Key,Key Description,Type,Source,Module
+SR,scRNA-seq data,STRING,,Other
+BR,bulk RNA-seq data,STRING,,Other
+CY,cytometry data,STRING,,Other
+PT,proteomics data,STRING,,Other
+FS,functional study data,STRING,,Other
+MT,metabolomics data,STRING,,Other
+WE,whole exome sequencing,STRING,,Other
+WG,whole genome sequencing,STRING,,Other

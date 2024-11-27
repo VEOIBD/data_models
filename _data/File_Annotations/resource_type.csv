@@ -1,7 +1,0 @@
-Key,Key Description,Type,Source,Module
-analysis,,STRING,,File_Annotations
-curatedData,,STRING,,File_Annotations
-experimentalData,,STRING,,File_Annotations
-metadata,,STRING,,File_Annotations
-report,,STRING,,File_Annotations
-tool,,STRING,,File_Annotations
