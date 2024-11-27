@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Biospecimen
-title: sample_tissue_type
+parent: File Annotations
+title: metadata_type
 ---
 
-{% assign mydata=site.data.Biospecimen.sample_tissue_type %} 
+{% assign mydata=site.data.File_Annotations.metadata_type %} 
 
 {: .note-title } 
->sample_tissue_type
+>metadata_type
 >
->Tissue type used in sample [[Source]](nan)
+>For files of dataSubtype: metadata, a description of the type of metadata in the file. [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

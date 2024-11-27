@@ -1,16 +1,17 @@
 ---
 datatable: true
 layout: page
-parent: Clinical
-title: individual_id
+parent: Other
+title: data_code
 ---
 
-{% assign mydata=site.data.Clinical.individual_id %} 
+{% assign mydata=site.data.Other.data_code %} 
 
 {: .note-title } 
->individual_id
+>data_code
 >
->A unique identifier for every enrolled individual, formatted as `'site''local_id'_'participant_id'`, e.g., BCH00001_0 [[Source]](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit)
+>A two letter label specifying the type of data generated. SR = scRNA-seq, BR = bulk RNA-seq, CY = CyTOF, PT = proteomics, FS = functional study, MT = metabolomics, WE = whole exome sequencing, WG = whole genome sequencing
+Type of sequencing library [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

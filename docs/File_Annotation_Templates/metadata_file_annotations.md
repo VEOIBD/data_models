@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: Other
-title: filename
+parent: File Annotation Templates
+title: metadata_file_annotations
 ---
 
-{% assign mydata=site.data.Other.filename %} 
+{% assign mydata=site.data.File_Annotation_Templates.metadata_file_annotations %} 
 
 {: .note-title } 
->filename
+>metadata_file_annotations
 >
->Name of a file [[Source]](nan)
+>Metadata files include clinical and biospecimen metadata [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
