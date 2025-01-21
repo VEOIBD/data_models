@@ -2408,10 +2408,10 @@
                     "@id": "bts:Component"
                 },
                 {
-                    "@id": "bts:IndividualID"
+                    "@id": "bts:IndividualId"
                 },
                 {
-                    "@id": "bts:LocalID"
+                    "@id": "bts:LocalId"
                 },
                 {
                     "@id": "bts:Site"
@@ -5220,37 +5220,39 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:IndividualID",
+            "@id": "bts:IndividualId",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "IndividualID",
+            "rdfs:comment": "A unique identifier for every enrolled individual, formatted as `'site''local_id'_'participant_id'`, e.g., BCH00001_0",
+            "rdfs:label": "IndividualId",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:Patient"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "individualID",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
+            "sms:displayName": "individual_id",
+            "sms:required": "sms:true",
+            "sms:validationRules": {
+                "ClinicalMetadataTemplate": "unique error"
+            }
         },
         {
-            "@id": "bts:LocalID",
+            "@id": "bts:LocalId",
             "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "LocalID",
+            "rdfs:comment": "local identifier (max of 5 digits)",
+            "rdfs:label": "LocalId",
             "rdfs:subClassOf": [
                 {
-                    "@id": "bts:Thing"
+                    "@id": "bts:Patient"
                 }
             ],
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "localID",
-            "sms:required": "sms:false",
+            "sms:displayName": "local_id",
+            "sms:required": "sms:true",
             "sms:validationRules": []
         },
         {
@@ -7087,43 +7089,6 @@
             ]
         },
         {
-            "@id": "bts:LocalId",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "local identifier (max of 5 digits)",
-            "rdfs:label": "LocalId",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Patient"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "local_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:IndividualId",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A unique identifier for every enrolled individual, formatted as `'site''local_id'_'participant_id'`, e.g., BCH00001_0",
-            "rdfs:label": "IndividualId",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:Patient"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "individual_id",
-            "sms:required": "sms:true",
-            "sms:validationRules": {
-                "all_other_components": "unique error",
-                "clinical_metadata_template": ""
-            }
-        },
-        {
             "@id": "bts:CollectionAge",
             "@type": "rdfs:Class",
             "rdfs:comment": "age at time of collection in years",
@@ -7196,8 +7161,7 @@
             "sms:displayName": "sample_id",
             "sms:required": "sms:true",
             "sms:validationRules": {
-                "all_other_components": "unique error",
-                "biospecimen_metadata_template": ""
+                "BiospecimenMetadataTemplate": "unique error"
             }
         },
         {
