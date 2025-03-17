@@ -1,7 +1,7 @@
 Key,Key Description,Type,Source,Module
 ibd,,STRING,,Clinical
-non_ibd,,STRING,,Clinical
-mother,,STRING,,Clinical
-father,,STRING,,Clinical
-sibling,,STRING,,Clinical
-second_degree,,STRING,,Clinical
+ non_ibd,,STRING,,Clinical
+ mother,,STRING,,Clinical
+ father,,STRING,,Clinical
+ sibling,,STRING,,Clinical
+ second_degree,,STRING,,Clinical

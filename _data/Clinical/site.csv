@@ -1,4 +1,4 @@
 Key,Key Description,Type,Source,Module
 BCH,Boston Children's Hospital,STRING,Sage Bionetworks,Clinical
-LMU,Ludwig Maximilian University of Munich,STRING,,Clinical
-HSC,Hospital for Sick Children,STRING,,Clinical
+ LMU,,STRING,,Clinical
+ HSC,,STRING,,Clinical

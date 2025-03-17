@@ -1,28 +1,2 @@
 Key,Key Description,Type,Valid Values,DependsOn,Required,Source,Module
-participant_role,participant role,STRING,"ibd,non_ibd,mother,father,sibling,second_degree",,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C71384,Clinical
-sex,biological sex,STRING,"male,female",,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C28421&ns=ncit,Clinical
-gi_phenotype,GI phenotype,STRING,"CD,UC,IBDU,CTL,other",,True,Sage Bionetworks,Clinical
-immunodeficiency,immunodeficiency diagnosis,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C39725&ns=ncit,Clinical
-autoimmune,autoimmune diagonsis,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C2889,Clinical
-disease_activity_location,disease activity location,STRING,"L1,L2,L3,L4,E1,E2,E3,E4",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C117884,Clinical
-upper_disease_type,upper disease type,STRING,"L4A,L4B",,False,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8743432/,Clinical
-disease_activity_behavior,disease activity behavior,STRING,"never_severe,ever_severe,nonstricturing_nonpenetrating,stricturing,penetrating,penetrating_and_stricturing,unknown",,False,Sage Bionetworks,Clinical
-growth_delay,growth delay,STRING,"no,yes,unknown",,False,https://hpo.jax.org/app/browse/term/HP:0001510,Clinical
-perianal_involvement,perianal involvment,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C99148,Clinical
-extraintestinal_manifestations,history of extra intestinal manifestations,STRING,"no,yes,unknown",,False,,Clinical
-gi_surgeries,GI surguries,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15330,Clinical
-ibd_history,family history of ibd,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C3138,Clinical
-consanguinity,history of consagunity,STRING,"no,yes,unknown",,False,https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C189764,Clinical
-race,race,STRING,"white,black,asian,native_american,pacific_islander,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C17049,Clinical
-ethnicity,ethnicity,STRING,"hispanic,not_hispanic,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C16564,Clinical
-jewish_origin,jewish ancestry,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C86561,Clinical
-breastfed,history of breast feeding,STRING,"no,yes,unknown",,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25596,Clinical
-site,"site identifier indicating which institute oversaw the enrollment and sample collection of the patient (BCH = Boston, LMU = Munich, HSC = Toronto)",STRING,"BCH,LMU,HSC",,True,Sage Bionetworks,Clinical
-external_share,"Per ICF, data can be shared externally with scientific research community",STRING,"no,yes,unknown",,False,,Clinical
-participant_id,"Integer code indicating the participant identity or familial relation to proband. 0 = proband; 1 = control; 2 = mother; 3 = father, ≥ 4 = sibling/secondary family",NUM,"0, 1, 2, 3, 4, 5, 6, 7, 8, 9",,True,,Clinical
-project,project identifier,STRING,"RC2,munich,other,unknown",,True,,Biospecimen
-family_id,family identifier,STRING,,,True,Sage Bionetworks,Clinical
-age_at_diagnosis,age at diagnosis in years,NUM,,,False,https://ncithesaurus.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=22.07d&code=C156420&ns=ncit,Clinical
-local_id,local identifier (max of 5 digits),NUM,,,True,https://docs.google.com/spreadsheets/d/1d8-G1ernDQDLTwMJSrX5EQGnq_afsA0G/edit#gid=110285588,Clinical
-individual_id,"A unique identifier for every enrolled individual, formatted as `'site''local_id'_'participant_id'`, e.g., BCH00001_0",STRING,,,True,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.09d&code=C69256&ns=ncit,Clinical
 Component,Category of metadata; provide the same one for all items/rows.,,,,True,https://w3id.org/biolink/vocab/category,
