@@ -1,16 +1,16 @@
 ---
 datatable: true
 layout: page
-parent: File Annotations
-title: assay
+parent: Assay
+title: confident_reads
 ---
 
-{% assign mydata=site.data.File_Annotations.assay %} 
+{% assign mydata=site.data.Assay.confident_reads %} 
 
 {: .note-title } 
->assay
+>confident_reads
 >
->The technology used to generate the data in this file [[Source]](nan)
+>Reads mapped confidently to genome; Fraction of reads that mapped uniquely to a genome. A gene mapped to exonic loci from a single gene and also to non-exonic loci is considered uniquely mapped to one of the exonic loci [[Source]](nan)
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}

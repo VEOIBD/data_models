@@ -1,7 +1,7 @@
 Key,Key Description,Type,Source,Module
 white,,STRING,,Clinical
-black,,STRING,,Clinical
-asian,,STRING,,Clinical
-native_american,,STRING,,Clinical
-pacific_islander,,STRING,,Clinical
-unknown,,STRING,,Clinical
+ black,,STRING,,Clinical
+ asian,,STRING,,Clinical
+ native_american,,STRING,,Clinical
+ pacific_islander,,STRING,,Clinical
+ unknown,,STRING,,Clinical

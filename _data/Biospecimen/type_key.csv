@@ -1,12 +1,12 @@
 Key,Key Description,Type,Source,Module
 PG,PAXgene tube ,STRING,,Biospecimen
-PB,PBMCs,STRING,,Biospecimen
-BX,biopsy,STRING,,Biospecimen
-SM,serum,STRING,,Biospecimen
-WB,whole blood,STRING,,Biospecimen
-DN,DNA,STRING,,Biospecimen
-EO,epithelial organoid,STRING,,Biospecimen
-BO,bone marrow organoid,STRING,,Biospecimen
-RT,resected tissue,STRING,,Biospecimen
-PL,plasma,STRING,,Biospecimen
-UK,unknown,STRING,,Biospecimen
+ PB,,STRING,,Biospecimen
+ BX,,STRING,,Biospecimen
+ SM,,STRING,,Biospecimen
+ WB,,STRING,,Biospecimen
+ DN,,STRING,,Biospecimen
+ EO,,STRING,,Biospecimen
+ BO,,STRING,,Biospecimen
+ RT,,STRING,,Biospecimen
+ PL,,STRING,,Biospecimen
+ UK,,STRING,,Biospecimen
