@@ -12,6 +12,7 @@ on:
     paths:
       - '_data/**'
       - 'docs/**'
+      - '_includes/**'
       - '.github/workflows/pages.yml'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
