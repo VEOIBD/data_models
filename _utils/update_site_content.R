@@ -203,11 +203,11 @@ purrr::walk2(model_templates$Attribute, model_templates$DependsOn,
 ###############
 ### metadata templates Markdown files
 # make parent md file
-parent_md <- c("___", 
+parent_md <- c("---", 
                "layout: page", "title: Metadata Templates", 
                "has_children: true", "nav_order 2", 
                "permalink: docs/Metadata_Templates.html",
-               "___")
+               "---")
 write_lines(parent_md, file = "docs/metadata_templates/metadata_templates.md", sep = "\n")
 ### docs/metadata_templates/ one md per template
 purrr::pwalk(select(model_templates, Attribute, DependsOn, Description),
@@ -233,11 +233,11 @@ purrr::pwalk(select(model_templates, Attribute, DependsOn, Description),
 
 ### attributes with valid values
 # make parent md file
-parent_md <- c("___", 
+parent_md <- c("---", 
                "layout: page", "title: Attributes", 
                "has_children: true", "nav_order 3", 
                "permalink: docs/Attributes.html",
-               "___")
+               "---")
 write_lines(parent_md, file = "docs/attributes/attributes.md", sep = "\n")
 
 purrr::pwalk(select(model_valid_val, Attribute, Description, rank),
