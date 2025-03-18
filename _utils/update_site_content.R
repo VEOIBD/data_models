@@ -111,6 +111,8 @@ purrr::walk(c("docs",
               "docs/attributes", 
               "docs/metadata_templates"), 
             make_subdir)
+purrr::walk(c("_includes/content"), 
+            make_subdir)
 
 # download latest version of data model
 fid <- "veoibd.data.model.csv"
