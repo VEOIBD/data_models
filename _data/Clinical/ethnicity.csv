@@ -1,4 +1,0 @@
-Key,Key Description,Type,Source,Module
-hispanic,,STRING,,Clinical
- not_hispanic,,STRING,,Clinical
- unknown,,STRING,,Clinical
