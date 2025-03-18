@@ -205,7 +205,7 @@ purrr::walk2(model_templates$Attribute, model_templates$DependsOn,
 # make parent md file
 parent_md <- c("---", 
                "layout: page", "title: Metadata Templates", 
-               "has_children: true", "nav_order 2", 
+               "has_children: true", "nav_order: 2", 
                "permalink: docs/Metadata_Templates.html",
                "---")
 write_lines(parent_md, file = "docs/metadata_templates/metadata_templates.md", sep = "\n")
@@ -235,7 +235,7 @@ purrr::pwalk(select(model_templates, Attribute, DependsOn, Description),
 # make parent md file
 parent_md <- c("---", 
                "layout: page", "title: Attributes", 
-               "has_children: true", "nav_order 3", 
+               "has_children: true", "nav_order: 3", 
                "permalink: docs/Attributes.html",
                "---")
 write_lines(parent_md, file = "docs/attributes/attributes.md", sep = "\n")
