@@ -20,7 +20,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "scRNASeq_assay_metadata_template",
+            "sms:displayName": "scRNASeq Assay Metadata Template",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
@@ -1223,7 +1223,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "scRNASeq_level_3_file_annotations_template",
+            "sms:displayName": "scRNASeq Level 3 File Annotations Template",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
@@ -1536,7 +1536,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "scRNASeq_level_1_file_annotations_template",
+            "sms:displayName": "scRNASeq Level 1 File Annotations Template",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
@@ -1585,7 +1585,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "medication_history_metadata_template",
+            "sms:displayName": "Medication History Metadata Template",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
@@ -3626,7 +3626,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "biospecimen_metadata_template",
+            "sms:displayName": "Biospecimen Metadata Template",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
@@ -4212,7 +4212,7 @@
             "schema:isPartOf": {
                 "@id": "http://schema.biothings.io"
             },
-            "sms:displayName": "clinical_metadata_template",
+            "sms:displayName": "Clinical Metadata Template",
             "sms:required": "sms:false",
             "sms:requiresDependency": [
                 {
