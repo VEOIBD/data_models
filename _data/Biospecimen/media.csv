@@ -1,7 +1,0 @@
-Key,Key Description,Type,Source,Module
-DMSO,,STRING,,Biospecimen
- FRZ,,STRING,,Biospecimen
- FORM,,STRING,,Biospecimen
- TCM,,STRING,,Biospecimen
- RNA,,STRING,,Biospecimen
- ORG,,STRING,,Biospecimen

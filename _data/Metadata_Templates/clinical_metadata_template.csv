@@ -1,2 +1,0 @@
-Key,Key Description,Type,Valid Values,DependsOn,Required,Source,Module
-Component,Category of metadata; provide the same one for all items/rows.,,,,True,https://w3id.org/biolink/vocab/category,
