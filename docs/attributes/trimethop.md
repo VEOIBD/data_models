@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: "170"
 permalink: "docs/attributes/trimethop.html"
-date: "2025-03-18"
+date: "2025-04-07"
 params:
   title: ""
   rank: ""

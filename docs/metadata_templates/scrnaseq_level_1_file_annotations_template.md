@@ -4,7 +4,7 @@ parent: Metadata Templates
 datatable: true
 layout: page
 permalink: "docs/metadata_templates/scrnaseq_level_1_file_annotations_template.html"
-date: "2025-03-18"
+date: "2025-04-07"
 params:
   title: ""
   title_snake: ""
