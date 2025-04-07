@@ -3711,7 +3711,7 @@
         {
             "@id": "bts:Site",
             "@type": "rdfs:Class",
-            "rdfs:comment": "site identifier indicating which institute oversaw the enrollment and sample collection of the patient (BCH = Boston, LMU = Munich, HSC = Toronto)",
+            "rdfs:comment": "site identifier indicating which institute oversaw the enrollment and sample collection of the patient.",
             "rdfs:label": "Site",
             "rdfs:subClassOf": [
                 {
@@ -3730,6 +3730,12 @@
                 },
                 {
                     "@id": "bts:HSC"
+                },
+                {
+                    "@id": "bts:OXF"
+                },
+                {
+                    "@id": "bts:MSSM"
                 }
             ],
             "sms:displayName": "site",
@@ -7906,6 +7912,46 @@
             "sms:validationRules": []
         },
         {
+            "@id": "bts:OXF",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "OXF",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:Site"
+                },
+                {
+                    "@id": "bts:DataGenerator"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "OXF",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
+            "@id": "bts:MSSM",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "TBD",
+            "rdfs:label": "MSSM",
+            "rdfs:subClassOf": [
+                {
+                    "@id": "bts:DataGenerator"
+                },
+                {
+                    "@id": "bts:Site"
+                }
+            ],
+            "schema:isPartOf": {
+                "@id": "http://schema.biothings.io"
+            },
+            "sms:displayName": "MSSM",
+            "sms:required": "sms:false",
+            "sms:validationRules": []
+        },
+        {
             "@id": "bts:0",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -8781,23 +8827,6 @@
             "sms:validationRules": []
         },
         {
-            "@id": "bts:MSSM",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "MSSM",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataGenerator"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "MSSM",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
             "@id": "bts:CSMC",
             "@type": "rdfs:Class",
             "rdfs:comment": "TBD",
@@ -8811,23 +8840,6 @@
                 "@id": "http://schema.biothings.io"
             },
             "sms:displayName": "CSMC",
-            "sms:required": "sms:false",
-            "sms:validationRules": []
-        },
-        {
-            "@id": "bts:OXF",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "TBD",
-            "rdfs:label": "OXF",
-            "rdfs:subClassOf": [
-                {
-                    "@id": "bts:DataGenerator"
-                }
-            ],
-            "schema:isPartOf": {
-                "@id": "http://schema.biothings.io"
-            },
-            "sms:displayName": "OXF",
             "sms:required": "sms:false",
             "sms:validationRules": []
         },
