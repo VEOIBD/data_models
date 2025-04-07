@@ -30,7 +30,7 @@ jewish_origin,jewish ancestry,"no, yes, unknown",,,FALSE,Clinical,,https://ncith
 breastfed,history of breast feeding,"no, yes, unknown",,,FALSE,Clinical,,https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C25596,,Clinical,STRING
 sample_key,rc2 sample key (see RC2 Biopsys and Blood Flowcharts),"A, B, C, D, E, F, G, H",,,TRUE,Biospecimen,,Sage Bionetworks,,Biospecimen,STRING
 sample_type,rc2 sample type,"pax_gene, pbmcs, biopsy, serum, whole_blood, dna, epithelial_organoid, bm_organoid, resected_tissue, plasma, unknown",,,TRUE,Biospecimen,,Sage Bionetworks,,Biospecimen,STRING
-site,"site identifier indicating which institute oversaw the enrollment and sample collection of the patient (BCH = Boston, LMU = Munich, HSC = Toronto)","BCH, LMU, HSC",,,TRUE,Patient,,Sage Bionetworks,,Clinical,STRING
+site,"site identifier indicating which institute oversaw the enrollment and sample collection of the patient.","BCH, LMU, HSC, OXF, MSSM",,,TRUE,Patient,,Sage Bionetworks,,Clinical,STRING
 external_share,"Per ICF, data can be shared externally with scientific research community","no, yes, unknown",,,FALSE,,,,,Clinical,STRING
 participant_id,"Integer code indicating the participant identity or familial relation to proband. 0 = proband; 1 = control; 2 = mother; 3 = father, ≥ 4 = sibling/secondary family","0, 1, 2, 3, 4, 5, 6, 7, 8, 9",,,TRUE,,,,regex search [0-9] error,Clinical,NUM
 project,project identifier,"RC2, munich, other, unknown",,,TRUE,,,,,Biospecimen,STRING
