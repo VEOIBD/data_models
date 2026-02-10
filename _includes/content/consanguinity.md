@@ -1,2 +1,0 @@
-# consanguinity
-history of consagunity

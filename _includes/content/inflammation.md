@@ -1,2 +1,0 @@
-# inflammation
-inflammation status

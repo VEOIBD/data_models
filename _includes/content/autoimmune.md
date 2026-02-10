@@ -1,2 +1,0 @@
-# autoimmune
-autoimmune diagonsis

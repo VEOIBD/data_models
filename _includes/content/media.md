@@ -1,2 +1,0 @@
-# media
-type of media

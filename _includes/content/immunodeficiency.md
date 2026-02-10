@@ -1,2 +1,0 @@
-# immunodeficiency
-immunodeficiency diagnosis
