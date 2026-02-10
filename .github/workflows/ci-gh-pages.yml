@@ -40,6 +40,8 @@ jobs:
             any::rlang
             any::remotes
             any::lubridate
+            any::readr
+            any::yaml
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
