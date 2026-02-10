@@ -102,6 +102,9 @@ suppressPackageStartupMessages({
   
 })
 
+# read in command line args
+args <- commandArgs(trailingOnly = TRUE)
+
 # setup dirs check; mostly needed if this is the first time running this code
 purrr::walk(c("_data", "_data/csv", 
               "_data/csv/attributes", 
@@ -114,9 +117,8 @@ purrr::walk(c("docs",
 purrr::walk(c("_includes/content"), 
             make_subdir)
 
-# download latest version of data model
-fid <- "veoibd.data.model.csv"
-model <- read.csv(fid)
+# load version of data model specified in CLI args
+model <- read.csv(args[1])
 
 # remove mock templates
 model <- filter(model, !grepl("mock|test ", Attribute, ignore.case = TRUE))
