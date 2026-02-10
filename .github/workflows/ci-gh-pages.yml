@@ -49,7 +49,7 @@ jobs:
 
       - name: Update site content
         run: |
-          Rscript _utils/update_site_content.R https://raw.githubusercontent.com/ARK-Portal/data_model/refs/heads/main/ark.model.csv
+          Rscript _utils/update_site_content.R https://raw.githubusercontent.com/VEOIBD/data_models/refs/heads/main/veoibd.data.model.csv
 
       - name: Commit files if there are changes
         run: |
