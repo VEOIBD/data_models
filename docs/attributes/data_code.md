@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: "47"
 permalink: "docs/attributes/data_code.html"
-date: "2025-04-07"
+date: "2026-02-10"
 params:
   title: ""
   rank: ""

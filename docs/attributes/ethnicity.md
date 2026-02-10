@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: "56"
 permalink: "docs/attributes/ethnicity.html"
-date: "2025-04-07"
+date: "2026-02-10"
 params:
   title: ""
   rank: ""
