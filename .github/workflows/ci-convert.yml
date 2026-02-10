@@ -13,7 +13,7 @@ jobs:
     name: schema-convert
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PAT: ${{ secrets.VEOIBD_SERVICE_ACCOUNT }}
 
     steps:
       - uses: actions/checkout@v4
@@ -37,16 +37,16 @@ jobs:
 
       - uses: r-lib/actions/pr-fetch@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.VEOIBD_SERVICE_ACCOUNT }}
 
       - name: Commit the changes
         run: |
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config --local user.name "$veoibd-service-account"
+          git config --local user.email "veoibd-service-account@users.noreply.github.com"
           git add veoibd.data.model.jsonld
           git commit -m "GitHub Action: convert *.model.csv to *.model.jsonld" || echo "No changes to commit"
 
       - uses: r-lib/actions/pr-push@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.VEOIBD_SERVICE_ACCOUNT }}
 
