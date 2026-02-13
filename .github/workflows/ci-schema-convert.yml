@@ -11,6 +11,7 @@ on:
       - 'veoibd.data.model.csv'
       - '.github/workflows/ci-schema-convert.yml'
       - 'utils/generate_jsonschema.py'
+      - 'utils/generate_csv_templates.py'
   workflow_dispatch:
 
 env:
@@ -38,6 +39,10 @@ jobs:
       - name: Generate json schemas
         run: |
           python utils/generate_jsonschema.py
+
+      - name: Generate blank csv templates
+        run: |
+          python utils/generate_csv_templates.py
 
       - name: Commit files if there are changes
         run: |
