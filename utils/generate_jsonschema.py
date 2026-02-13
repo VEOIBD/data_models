@@ -28,7 +28,8 @@ for t in templates:
     data_model_source = model_csv_fid,
     output=f"model_json_schemas/veoibd.{t}.schema.json",
     data_types= [t],
-    synapse_client=syn
+    synapse_client=syn, 
+    data_model_labels = "display_label"
   )
 
 print("JSON schema generation complete!")
