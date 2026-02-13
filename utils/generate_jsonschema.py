@@ -26,7 +26,7 @@ for t in templates:
   print(f"Generating JSON schemas for {t}...")
   schemas, file_paths = generate_jsonschema(
     data_model_source = model_csv_fid,
-    output=f"model_json_schema/veoibd.{t}.schema.json",
+    output=f"model_json_schemas/veoibd.{t}.schema.json",
     data_types= [t],
     synapse_client=syn
   )
