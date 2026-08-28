@@ -1,0 +1,150 @@
+{
+  "$id": "http://example.com/ScRNASeqLevel3FileAnnotationsTemplate",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "specimen_modality": {
+            "enum": [
+              "single specimen"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "sample_id": {
+            "not": {
+              "type": "null"
+            }
+          }
+        },
+        "required": [
+          "sample_id"
+        ]
+      }
+    }
+  ],
+  "description": "A template for collecting file-level metadata for scRNA-seq level 3 files including .h5 and tar.gz archives",
+  "properties": {
+    "Component": {
+      "description": "Category of metadata; provide the same one for all items/rows.",
+      "title": "Component",
+      "type": "string"
+    },
+    "Filename": {
+      "description": "Name of a file",
+      "title": "Filename",
+      "type": "string"
+    },
+    "assay": {
+      "description": "The technology used to generate the data.",
+      "enum": [
+        "CyTOF",
+        "LC-MS/MS",
+        "RNASeq",
+        "WES",
+        "WGS",
+        "scRNASeq"
+      ],
+      "title": "assay"
+    },
+    "assay_metadata_synID": {
+      "description": "The synID scRNA-seq assay metadata file corresponding to this data file.",
+      "pattern": "^syn[0-9]{8}",
+      "title": "assay_metadata_synID",
+      "type": "string"
+    },
+    "biospecimen_metadata_synID": {
+      "description": "The synID biospecimen metadata file containing information about the samples profiled",
+      "pattern": "^syn[0-9]{8}",
+      "title": "biospecimen_metadata_synID",
+      "type": "string"
+    },
+    "cellranger_output_class": {
+      "description": "This attribute labels files according to the Cell Ranger output folder from which they were derived.",
+      "enum": [
+        "filtered_feature_bc_matrix",
+        "molecule_info",
+        "raw_feature_bc_matrix"
+      ],
+      "title": "cellranger_output_class"
+    },
+    "data_level": {
+      "description": "The processing level of the data.",
+      "enum": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "title": "data_level"
+    },
+    "data_type": {
+      "description": "High-level classification of the type of data contained in the file, loosely related to the experimental method or biological entity that is being profiled.",
+      "enum": [
+        "cytometry",
+        "functional study",
+        "genomics",
+        "lipidomics",
+        "metabolomics",
+        "microbiome",
+        "proteomics",
+        "transcriptomics"
+      ],
+      "title": "data_type"
+    },
+    "file_format": {
+      "description": "Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",
+      "enum": [
+        ".h5",
+        ".h5ad",
+        "bam",
+        "csv",
+        "fastq",
+        "pdf",
+        "tar.gz",
+        "tsv",
+        "txt",
+        "xlsx"
+      ],
+      "title": "file_format"
+    },
+    "resource_type": {
+      "description": "The type of resource being stored and annotated",
+      "enum": [
+        "experimental data",
+        "metadata",
+        "report"
+      ],
+      "title": "resource_type"
+    },
+    "sample_id": {
+      "description": "Unique sample identifier, formatted as `'individual_id'_'participant_id'_'collection_num'_'type_key'_'sample_num'`",
+      "title": "sample_id",
+      "type": "string"
+    },
+    "specimen_modality": {
+      "description": "Label assigned to experimental data files indicating whether the data contained corresponds to a single or multiple biospecimens",
+      "enum": [
+        "multispecimen",
+        "single specimen"
+      ],
+      "title": "specimen_modality"
+    }
+  },
+  "required": [
+    "assay",
+    "cellranger_output_class",
+    "Component",
+    "data_level",
+    "data_type",
+    "file_format",
+    "Filename",
+    "resource_type",
+    "specimen_modality"
+  ],
+  "title": "ScRNASeqLevel3FileAnnotationsTemplate",
+  "type": "object"
+}
