@@ -1,0 +1,276 @@
+{
+  "$id": "http://example.com/ClinicalMetadataTemplate",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "VEOIBD Clinical Metadata Template",
+  "properties": {
+    "age_at_diagnosis": {
+      "description": "age at diagnosis in years",
+      "title": "age_at_diagnosis",
+      "type": "number"
+    },
+    "autoimmune": {
+      "description": "autoimmune diagonsis",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "autoimmune"
+    },
+    "breastfed": {
+      "description": "history of breast feeding",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "breastfed"
+    },
+    "consanguinity": {
+      "description": "history of consagunity",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "consanguinity"
+    },
+    "disease_activity_behavior": {
+      "description": "disease activity behavior",
+      "enum": [
+        "ever_severe",
+        "never_severe",
+        "nonstricturing_nonpenetrating",
+        "penetrating",
+        "penetrating_and_stricturing",
+        "stricturing",
+        "unknown"
+      ],
+      "title": "disease_activity_behavior"
+    },
+    "disease_activity_location": {
+      "description": "disease activity location",
+      "items": {
+        "enum": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ],
+        "type": "string"
+      },
+      "title": "disease_activity_location",
+      "type": "array"
+    },
+    "ethnicity": {
+      "description": "ethnicity",
+      "enum": [
+        "hispanic",
+        "not_hispanic",
+        "unknown"
+      ],
+      "title": "ethnicity"
+    },
+    "external_share": {
+      "description": "Per ICF, data can be shared externally with scientific research community",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "external_share"
+    },
+    "extraintestinal_manifestations": {
+      "description": "history of extra intestinal manifestations",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "extraintestinal_manifestations"
+    },
+    "family_id": {
+      "description": "family identifier",
+      "title": "family_id",
+      "type": "string"
+    },
+    "gi_phenotype": {
+      "description": "GI phenotype",
+      "enum": [
+        "CD",
+        "CTL",
+        "IBDU",
+        "UC",
+        "other"
+      ],
+      "title": "gi_phenotype"
+    },
+    "gi_surgeries": {
+      "description": "GI surguries",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "gi_surgeries"
+    },
+    "growth_delay": {
+      "description": "growth delay",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "growth_delay"
+    },
+    "ibd_history": {
+      "description": "family history of ibd",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "ibd_history"
+    },
+    "immunodeficiency": {
+      "description": "immunodeficiency diagnosis",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "immunodeficiency"
+    },
+    "individual_id": {
+      "description": "A unique identifier for every enrolled individual, formatted as `'site''local_id'_'participant_id'`, e.g., BCH00001_0",
+      "title": "individual_id",
+      "type": "string"
+    },
+    "jewish_origin": {
+      "description": "jewish ancestry",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "jewish_origin"
+    },
+    "local_id": {
+      "description": "local identifier (max of 5 digits)",
+      "title": "local_id",
+      "type": "string"
+    },
+    "participant_id": {
+      "description": "Integer code indicating the participant identity or familial relation to proband. 0 = proband; 1 = control; 2 = mother; 3 = father, ≥ 4 = sibling/secondary family",
+      "enum": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "pattern": "[0-9]",
+      "title": "participant_id"
+    },
+    "participant_role": {
+      "description": "participant role",
+      "enum": [
+        "father",
+        "ibd",
+        "mother",
+        "non_ibd",
+        "second_degree",
+        "sibling"
+      ],
+      "title": "participant_role"
+    },
+    "perianal_involvement": {
+      "description": "perianal involvment",
+      "enum": [
+        "no",
+        "unknown",
+        "yes"
+      ],
+      "title": "perianal_involvement"
+    },
+    "project": {
+      "description": "project identifier",
+      "enum": [
+        "RC2",
+        "munich",
+        "other",
+        "unknown"
+      ],
+      "title": "project"
+    },
+    "race": {
+      "description": "race",
+      "items": {
+        "enum": [
+          "asian",
+          "black",
+          "native_american",
+          "pacific_islander",
+          "unknown",
+          "white"
+        ],
+        "type": "string"
+      },
+      "title": "race",
+      "type": "array"
+    },
+    "sex": {
+      "description": "biological sex",
+      "enum": [
+        "female",
+        "male"
+      ],
+      "title": "sex"
+    },
+    "site": {
+      "description": "site identifier indicating which institute oversaw the enrollment and sample collection of the patient.",
+      "enum": [
+        "BCH",
+        "HSC",
+        "LMU",
+        "MSSM",
+        "OXF"
+      ],
+      "title": "site"
+    },
+    "upper_disease_type": {
+      "description": "upper disease type",
+      "items": {
+        "enum": [
+          "L4A",
+          "L4B"
+        ],
+        "type": "string"
+      },
+      "title": "upper_disease_type",
+      "type": "array"
+    }
+  },
+  "required": [
+    "family_id",
+    "gi_phenotype",
+    "individual_id",
+    "local_id",
+    "participant_id",
+    "participant_role",
+    "project",
+    "sex",
+    "site"
+  ],
+  "title": "ClinicalMetadataTemplate",
+  "type": "object"
+}

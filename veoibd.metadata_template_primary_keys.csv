@@ -1,0 +1,5 @@
+template,primary_key
+ScRNASeqAssayMetadataTemplate,sample_id
+MedicationHistoryMetadataTemplate,individual_id
+BiospecimenMetadataTemplate,sample_id
+ClinicalMetadataTemplate,individual_id

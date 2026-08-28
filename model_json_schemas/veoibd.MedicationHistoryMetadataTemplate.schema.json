@@ -1,0 +1,512 @@
+{
+  "$id": "http://example.com/MedicationHistoryMetadataTemplate",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "VEOIBD Medication History Metadata Template",
+  "properties": {
+    "adalimumab": {
+      "description": "TBD",
+      "title": "adalimumab",
+      "type": "string"
+    },
+    "adalimumab_change": {
+      "description": "TBD",
+      "title": "adalimumab_change",
+      "type": "string"
+    },
+    "adalimumab_use": {
+      "description": "TBD",
+      "title": "adalimumab_use",
+      "type": "string"
+    },
+    "amoxicillin": {
+      "description": "TBD",
+      "title": "amoxicillin",
+      "type": "string"
+    },
+    "amoxicillin_change": {
+      "description": "TBD",
+      "title": "amoxicillin_change",
+      "type": "string"
+    },
+    "amoxicillin_use": {
+      "description": "TBD",
+      "title": "amoxicillin_use",
+      "type": "string"
+    },
+    "azathioprine": {
+      "description": "TBD",
+      "title": "azathioprine",
+      "type": "string"
+    },
+    "azathioprine_change": {
+      "description": "TBD",
+      "title": "azathioprine_change",
+      "type": "string"
+    },
+    "azathioprine_use": {
+      "description": "TBD",
+      "title": "azathioprine_use",
+      "type": "string"
+    },
+    "balsalazide": {
+      "description": "TBD",
+      "title": "balsalazide",
+      "type": "string"
+    },
+    "balsalazide_change": {
+      "description": "TBD",
+      "title": "balsalazide_change",
+      "type": "string"
+    },
+    "balsalazide_use": {
+      "description": "TBD",
+      "title": "balsalazide_use",
+      "type": "string"
+    },
+    "certolizumab": {
+      "description": "TBD",
+      "title": "certolizumab",
+      "type": "string"
+    },
+    "certolizumab_change": {
+      "description": "TBD",
+      "title": "certolizumab_change",
+      "type": "string"
+    },
+    "certolizumab_use": {
+      "description": "TBD",
+      "title": "certolizumab_use",
+      "type": "string"
+    },
+    "cholestyr": {
+      "description": "TBD",
+      "title": "cholestyr",
+      "type": "string"
+    },
+    "cholestyr_change": {
+      "description": "TBD",
+      "title": "cholestyr_change",
+      "type": "string"
+    },
+    "cholestyr_use": {
+      "description": "TBD",
+      "title": "cholestyr_use",
+      "type": "string"
+    },
+    "ciproflox": {
+      "description": "TBD",
+      "title": "ciproflox",
+      "type": "string"
+    },
+    "ciproflox_change": {
+      "description": "TBD",
+      "title": "ciproflox_change",
+      "type": "string"
+    },
+    "ciproflox_use": {
+      "description": "TBD",
+      "title": "ciproflox_use",
+      "type": "string"
+    },
+    "cyclospa": {
+      "description": "TBD",
+      "title": "cyclospa",
+      "type": "string"
+    },
+    "cyclospa_change": {
+      "description": "TBD",
+      "title": "cyclospa_change",
+      "type": "string"
+    },
+    "cyclospa_use": {
+      "description": "TBD",
+      "title": "cyclospa_use",
+      "type": "string"
+    },
+    "fk506": {
+      "description": "TBD",
+      "title": "fk506",
+      "type": "string"
+    },
+    "fk506_change": {
+      "description": "TBD",
+      "title": "fk506_change",
+      "type": "string"
+    },
+    "fk506_use": {
+      "description": "TBD",
+      "title": "fk506_use",
+      "type": "string"
+    },
+    "golimumab": {
+      "description": "TBD",
+      "title": "golimumab",
+      "type": "string"
+    },
+    "golimumab_change": {
+      "description": "TBD",
+      "title": "golimumab_change",
+      "type": "string"
+    },
+    "golimumab_use": {
+      "description": "TBD",
+      "title": "golimumab_use",
+      "type": "string"
+    },
+    "individual_id": {
+      "description": "A unique identifier for every enrolled individual, formatted as `'site''local_id'_'participant_id'`, e.g., BCH00001_0",
+      "title": "individual_id",
+      "type": "string"
+    },
+    "infliximab": {
+      "description": "TBD",
+      "title": "infliximab",
+      "type": "string"
+    },
+    "infliximab_change": {
+      "description": "TBD",
+      "title": "infliximab_change",
+      "type": "string"
+    },
+    "infliximab_use": {
+      "description": "TBD",
+      "title": "infliximab_use",
+      "type": "string"
+    },
+    "intrasterd": {
+      "description": "TBD",
+      "title": "intrasterd",
+      "type": "string"
+    },
+    "intrasterd_change": {
+      "description": "TBD",
+      "title": "intrasterd_change",
+      "type": "string"
+    },
+    "intrasterd_use": {
+      "description": "TBD",
+      "title": "intrasterd_use",
+      "type": "string"
+    },
+    "lenalidomide": {
+      "description": "TBD",
+      "title": "lenalidomide",
+      "type": "string"
+    },
+    "lenalidomide_change": {
+      "description": "TBD",
+      "title": "lenalidomide_change",
+      "type": "string"
+    },
+    "lenalidomide_use": {
+      "description": "TBD",
+      "title": "lenalidomide_use",
+      "type": "string"
+    },
+    "mercap6": {
+      "description": "TBD",
+      "title": "mercap6",
+      "type": "string"
+    },
+    "mercap6_change": {
+      "description": "TBD",
+      "title": "mercap6_change",
+      "type": "string"
+    },
+    "mercap6_use": {
+      "description": "TBD",
+      "title": "mercap6_use",
+      "type": "string"
+    },
+    "mesalamine": {
+      "description": "TBD",
+      "title": "mesalamine",
+      "type": "string"
+    },
+    "mesalamine_change": {
+      "description": "TBD",
+      "title": "mesalamine_change",
+      "type": "string"
+    },
+    "mesalamine_use": {
+      "description": "TBD",
+      "title": "mesalamine_use",
+      "type": "string"
+    },
+    "methotrex": {
+      "description": "TBD",
+      "title": "methotrex",
+      "type": "string"
+    },
+    "methotrex_change": {
+      "description": "TBD",
+      "title": "methotrex_change",
+      "type": "string"
+    },
+    "methotrex_use": {
+      "description": "TBD",
+      "title": "methotrex_use",
+      "type": "string"
+    },
+    "metronida": {
+      "description": "TBD",
+      "title": "metronida",
+      "type": "string"
+    },
+    "metronida_change": {
+      "description": "TBD",
+      "title": "metronida_change",
+      "type": "string"
+    },
+    "metronida_use": {
+      "description": "TBD",
+      "title": "metronida_use",
+      "type": "string"
+    },
+    "natalizumab": {
+      "description": "TBD",
+      "title": "natalizumab",
+      "type": "string"
+    },
+    "natalizumab_change": {
+      "description": "TBD",
+      "title": "natalizumab_change",
+      "type": "string"
+    },
+    "natalizumab_use": {
+      "description": "TBD",
+      "title": "natalizumab_use",
+      "type": "string"
+    },
+    "olsalazine": {
+      "description": "TBD",
+      "title": "olsalazine",
+      "type": "string"
+    },
+    "olsalazine_change": {
+      "description": "TBD",
+      "title": "olsalazine_change",
+      "type": "string"
+    },
+    "olsalazine_use": {
+      "description": "TBD",
+      "title": "olsalazine_use",
+      "type": "string"
+    },
+    "omega3": {
+      "description": "TBD",
+      "title": "omega3",
+      "type": "string"
+    },
+    "omega3_change": {
+      "description": "TBD",
+      "title": "omega3_change",
+      "type": "string"
+    },
+    "omega3_use": {
+      "description": "TBD",
+      "title": "omega3_use",
+      "type": "string"
+    },
+    "oralenteric": {
+      "description": "TBD",
+      "title": "oralenteric",
+      "type": "string"
+    },
+    "oralenteric_change": {
+      "description": "TBD",
+      "title": "oralenteric_change",
+      "type": "string"
+    },
+    "oralenteric_use": {
+      "description": "TBD",
+      "title": "oralenteric_use",
+      "type": "string"
+    },
+    "oralsterd": {
+      "description": "TBD",
+      "title": "oralsterd",
+      "type": "string"
+    },
+    "oralsterd_change": {
+      "description": "TBD",
+      "title": "oralsterd_change",
+      "type": "string"
+    },
+    "oralsterd_use": {
+      "description": "TBD",
+      "title": "oralsterd_use",
+      "type": "string"
+    },
+    "probiotic": {
+      "description": "TBD",
+      "title": "probiotic",
+      "type": "string"
+    },
+    "probiotic_change": {
+      "description": "TBD",
+      "title": "probiotic_change",
+      "type": "string"
+    },
+    "probiotic_use": {
+      "description": "TBD",
+      "title": "probiotic_use",
+      "type": "string"
+    },
+    "rectalstrd": {
+      "description": "TBD",
+      "title": "rectalstrd",
+      "type": "string"
+    },
+    "rectalstrd_change": {
+      "description": "TBD",
+      "title": "rectalstrd_change",
+      "type": "string"
+    },
+    "rectalstrd_use": {
+      "description": "TBD",
+      "title": "rectalstrd_use",
+      "type": "string"
+    },
+    "rifampin": {
+      "description": "TBD",
+      "title": "rifampin",
+      "type": "string"
+    },
+    "rifampin_change": {
+      "description": "TBD",
+      "title": "rifampin_change",
+      "type": "string"
+    },
+    "rifampin_use": {
+      "description": "TBD",
+      "title": "rifampin_use",
+      "type": "string"
+    },
+    "sulfasa": {
+      "description": "TBD",
+      "title": "sulfasa",
+      "type": "string"
+    },
+    "sulfasa_change": {
+      "description": "TBD",
+      "title": "sulfasa_change",
+      "type": "string"
+    },
+    "sulfasa_use": {
+      "description": "TBD",
+      "title": "sulfasa_use",
+      "type": "string"
+    },
+    "thalidomide": {
+      "description": "TBD",
+      "title": "thalidomide",
+      "type": "string"
+    },
+    "thalidomide_change": {
+      "description": "TBD",
+      "title": "thalidomide_change",
+      "type": "string"
+    },
+    "thalidomide_use": {
+      "description": "TBD",
+      "title": "thalidomide_use",
+      "type": "string"
+    },
+    "tocilizumab": {
+      "description": "TBD",
+      "title": "tocilizumab",
+      "type": "string"
+    },
+    "tocilizumab_change": {
+      "description": "TBD",
+      "title": "tocilizumab_change",
+      "type": "string"
+    },
+    "tocilizumab_use": {
+      "description": "TBD",
+      "title": "tocilizumab_use",
+      "type": "string"
+    },
+    "trimethop": {
+      "description": "TBD",
+      "title": "trimethop",
+      "type": "string"
+    },
+    "trimethop_change": {
+      "description": "TBD",
+      "title": "trimethop_change",
+      "type": "string"
+    },
+    "trimethop_use": {
+      "description": "TBD",
+      "title": "trimethop_use",
+      "type": "string"
+    },
+    "ursodiol": {
+      "description": "TBD",
+      "title": "ursodiol",
+      "type": "string"
+    },
+    "ursodiol_change": {
+      "description": "TBD",
+      "title": "ursodiol_change",
+      "type": "string"
+    },
+    "ursodiol_use": {
+      "description": "TBD",
+      "title": "ursodiol_use",
+      "type": "string"
+    },
+    "ustekinumab": {
+      "description": "TBD",
+      "title": "ustekinumab",
+      "type": "string"
+    },
+    "ustekinumab_change": {
+      "description": "TBD",
+      "title": "ustekinumab_change",
+      "type": "string"
+    },
+    "ustekinumab_use": {
+      "description": "TBD",
+      "title": "ustekinumab_use",
+      "type": "string"
+    },
+    "vancomycin": {
+      "description": "TBD",
+      "title": "vancomycin",
+      "type": "string"
+    },
+    "vancomycin_change": {
+      "description": "TBD",
+      "title": "vancomycin_change",
+      "type": "string"
+    },
+    "vancomycin_use": {
+      "description": "TBD",
+      "title": "vancomycin_use",
+      "type": "string"
+    },
+    "vedolizumab": {
+      "description": "TBD",
+      "title": "vedolizumab",
+      "type": "string"
+    },
+    "vedolizumab_change": {
+      "description": "TBD",
+      "title": "vedolizumab_change",
+      "type": "string"
+    },
+    "vedolizumab_use": {
+      "description": "TBD",
+      "title": "vedolizumab_use",
+      "type": "string"
+    }
+  },
+  "required": [
+    "individual_id"
+  ],
+  "title": "MedicationHistoryMetadataTemplate",
+  "type": "object"
+}
