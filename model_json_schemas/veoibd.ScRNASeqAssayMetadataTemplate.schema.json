@@ -3,11 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Template for collecting metadata about scRNA-seq data.",
   "properties": {
-    "Component": {
-      "description": "Category of metadata; provide the same one for all items/rows.",
-      "title": "Component",
-      "type": "string"
-    },
     "Q30_UMI": {
       "description": "Q30 Bases in UMI; Fraction of bases with Q-score at least 30 in the UMI sequences. This is the R2 read for the Single Cell 3' v1 chemistry and the R1 read for the Single Cell 3' v2 chemistry.",
       "title": "Q30_UMI",
@@ -330,7 +325,6 @@
     "assay",
     "avg_reads_cell",
     "cell_count_1mL",
-    "Component",
     "confident_exonic",
     "confident_intergenic",
     "confident_intronic",

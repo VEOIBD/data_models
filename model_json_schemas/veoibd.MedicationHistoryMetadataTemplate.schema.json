@@ -3,11 +3,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "VEOIBD Medication History Metadata Template",
   "properties": {
-    "Component": {
-      "description": "Category of metadata; provide the same one for all items/rows.",
-      "title": "Component",
-      "type": "string"
-    },
     "adalimumab": {
       "description": "TBD",
       "title": "adalimumab",
@@ -510,7 +505,6 @@
     }
   },
   "required": [
-    "Component",
     "individual_id"
   ],
   "title": "MedicationHistoryMetadataTemplate",

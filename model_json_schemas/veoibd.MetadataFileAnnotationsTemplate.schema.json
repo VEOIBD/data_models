@@ -1,0 +1,63 @@
+{
+  "$id": "http://example.com/MetadataFileAnnotationsTemplate",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Metadata files include clinical and biospecimen metadata",
+  "properties": {
+    "file_format": {
+      "description": "Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",
+      "enum": [
+        ".h5",
+        ".h5ad",
+        "bam",
+        "csv",
+        "fastq",
+        "pdf",
+        "tar.gz",
+        "tsv",
+        "txt",
+        "xlsx"
+      ],
+      "title": "file_format"
+    },
+    "metadata_type": {
+      "description": "For files of dataSubtype: metadata, a description of the type of metadata in the file.",
+      "enum": [
+        "assay metadata",
+        "biospecimen metadata",
+        "data dictionary",
+        "individual",
+        "protocol",
+        "quality assessment"
+      ],
+      "title": "metadata_type"
+    },
+    "resource_type": {
+      "description": "The type of resource being stored and annotated",
+      "enum": [
+        "experimental data",
+        "metadata",
+        "report"
+      ],
+      "title": "resource_type"
+    },
+    "site": {
+      "description": "site identifier indicating which institute oversaw the enrollment and sample collection of the patient.",
+      "enum": [
+        "BCH",
+        "HSC",
+        "LMU",
+        "MSSM",
+        "OXF"
+      ],
+      "title": "site"
+    }
+  },
+  "required": [
+    "file_format",
+    "metadata_type",
+    "resource_type",
+    "site"
+  ],
+  "title": "MetadataFileAnnotationsTemplate",
+  "type": "object"
+}
