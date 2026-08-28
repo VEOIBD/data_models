@@ -10,7 +10,7 @@ use synapseclient extension to create Curator json schema from context models
 syn = Synapse()
 
 # compile list of templates defined in the model
-model_csv_fid = "veoibd.data.model.csv"
+model_csv_fid = "veoibd.model.csv"
 model = pd.read_csv(model_csv_fid, dtype=object)
 
 model['IsTemplate'] = model['IsTemplate'].map({'TRUE': True, 'FALSE': False})

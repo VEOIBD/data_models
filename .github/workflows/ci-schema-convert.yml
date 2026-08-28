@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths: 
       - 'veoibd.data.model.csv'
+      - 'veoibd.model.csv'
       - '.github/workflows/ci-schema-convert.yml'
       - 'utils/**'
   workflow_dispatch:
