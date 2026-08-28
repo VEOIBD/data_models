@@ -12,8 +12,11 @@ syn = Synapse()
 # compile list of templates defined in the model
 model_csv_fid = "veoibd.data.model.csv"
 model = pd.read_csv(model_csv_fid, dtype=object)
-templates = model[model.DependsOn.str.contains("Component") == True]
-templates = templates[templates.Attribute.str.contains("Template") == True]
+
+model['IsTemplate'] = model['IsTemplate'].map({'TRUE': True, 'FALSE': False})
+templates = model[model['IsTemplate']]
+#templates = model[model.DependsOn.str.contains("Component") == True]
+#templates = templates[templates.Attribute.str.contains("Template") == True]
 templates.loc[:,'Attribute'] = templates['Attribute'].apply(lambda x: x.replace(' ',''))
 
 def first_cap(x):
