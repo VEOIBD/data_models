@@ -1,19 +1,14 @@
 ---
-title: "library_prep_method"
+title: library_prep_method
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "91"
-permalink: "docs/attributes/library_prep_method.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 87
+permalink: docs/attributes/library_prep_method.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.library_prep_method %} 
-
+{% assign mydata=site.data.csv.attributes.library_prep_method %}
 {% include content/library_prep_method.md %}
-
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
@@ -35,7 +30,9 @@ params:
     $('#myTable').DataTable({
       responsive: true,
       deferRender: false,
-      paging: false,
+      paging: true,
+      pageLength: 50,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
       order: [],
     });
   });

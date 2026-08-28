@@ -1,19 +1,14 @@
 ---
-title: "data_code"
+title: data_code
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "47"
-permalink: "docs/attributes/data_code.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 44
+permalink: docs/attributes/data_code.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.data_code %} 
-
+{% assign mydata=site.data.csv.attributes.data_code %}
 {% include content/data_code.md %}
-
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
@@ -35,7 +30,9 @@ params:
     $('#myTable').DataTable({
       responsive: true,
       deferRender: false,
-      paging: false,
+      paging: true,
+      pageLength: 50,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
       order: [],
     });
   });

@@ -1,7 +1,8 @@
 ---
-layout: page
 title: Metadata Templates
 has_children: true
+layout: page
+permalink: docs/metadata_templates/Metadata_Templates.html
 nav_order: 2
-permalink: docs/Metadata_Templates.html
+date: 2026-08-28
 ---

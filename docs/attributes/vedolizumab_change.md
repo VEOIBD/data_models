@@ -1,15 +1,10 @@
 ---
-title: "vedolizumab_change"
+title: vedolizumab_change
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "187"
-permalink: "docs/attributes/vedolizumab_change.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 180
+permalink: docs/attributes/vedolizumab_change.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.vedolizumab_change %} 
-
 {% include content/vedolizumab_change.md %}

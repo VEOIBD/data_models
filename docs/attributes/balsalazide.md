@@ -1,15 +1,10 @@
 ---
-title: "balsalazide"
+title: balsalazide
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "16"
-permalink: "docs/attributes/balsalazide.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 16
+permalink: docs/attributes/balsalazide.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.balsalazide %} 
-
 {% include content/balsalazide.md %}

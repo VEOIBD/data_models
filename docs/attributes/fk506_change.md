@@ -1,15 +1,10 @@
 ---
-title: "fk506_change"
+title: fk506_change
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "63"
-permalink: "docs/attributes/fk506_change.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 59
+permalink: docs/attributes/fk506_change.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.fk506_change %} 
-
 {% include content/fk506_change.md %}

@@ -1,19 +1,14 @@
 ---
-title: "gi_surgeries"
+title: gi_surgeries
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "69"
-permalink: "docs/attributes/gi_surgeries.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 65
+permalink: docs/attributes/gi_surgeries.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.gi_surgeries %} 
-
+{% assign mydata=site.data.csv.attributes.gi_surgeries %}
 {% include content/gi_surgeries.md %}
-
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
@@ -35,7 +30,9 @@ params:
     $('#myTable').DataTable({
       responsive: true,
       deferRender: false,
-      paging: false,
+      paging: true,
+      pageLength: 50,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
       order: [],
     });
   });

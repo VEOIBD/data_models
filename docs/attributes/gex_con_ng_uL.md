@@ -1,15 +1,10 @@
 ---
-title: "gex_con_ng_uL"
+title: gex_con_ng_uL
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "67"
-permalink: "docs/attributes/gex_con_ng_uL.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 63
+permalink: docs/attributes/gex_con_ng_uL.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.gex_con_ng_uL %} 
-
 {% include content/gex_con_ng_uL.md %}

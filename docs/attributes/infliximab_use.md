@@ -1,15 +1,10 @@
 ---
-title: "infliximab_use"
+title: infliximab_use
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "82"
-permalink: "docs/attributes/infliximab_use.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 78
+permalink: docs/attributes/infliximab_use.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.infliximab_use %} 
-
 {% include content/infliximab_use.md %}

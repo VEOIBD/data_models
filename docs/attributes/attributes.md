@@ -1,7 +1,8 @@
 ---
-layout: page
 title: Attributes
 has_children: true
+layout: page
+permalink: docs/attributes/Attributes.html
 nav_order: 3
-permalink: docs/Attributes.html
+date: 2026-08-28
 ---

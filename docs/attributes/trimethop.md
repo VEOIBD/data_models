@@ -1,15 +1,10 @@
 ---
-title: "trimethop"
+title: trimethop
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "170"
-permalink: "docs/attributes/trimethop.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 163
+permalink: docs/attributes/trimethop.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.trimethop %} 
-
 {% include content/trimethop.md %}

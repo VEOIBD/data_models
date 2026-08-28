@@ -1,15 +1,10 @@
 ---
-title: "sample_num"
+title: sample_num
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "152"
-permalink: "docs/attributes/sample_num.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 145
+permalink: docs/attributes/sample_num.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.sample_num %} 
-
 {% include content/sample_num.md %}

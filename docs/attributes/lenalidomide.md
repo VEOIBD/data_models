@@ -1,15 +1,10 @@
 ---
-title: "lenalidomide"
+title: lenalidomide
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "87"
-permalink: "docs/attributes/lenalidomide.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 83
+permalink: docs/attributes/lenalidomide.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.lenalidomide %} 
-
 {% include content/lenalidomide.md %}

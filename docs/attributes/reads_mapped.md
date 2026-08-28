@@ -1,15 +1,10 @@
 ---
-title: "reads_mapped"
+title: reads_mapped
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "142"
-permalink: "docs/attributes/reads_mapped.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 135
+permalink: docs/attributes/reads_mapped.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.reads_mapped %} 
-
 {% include content/reads_mapped.md %}

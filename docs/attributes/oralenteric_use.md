@@ -1,15 +1,10 @@
 ---
-title: "oralenteric_use"
+title: oralenteric_use
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "122"
-permalink: "docs/attributes/oralenteric_use.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 116
+permalink: docs/attributes/oralenteric_use.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.oralenteric_use %} 
-
 {% include content/oralenteric_use.md %}

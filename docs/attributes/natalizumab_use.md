@@ -1,15 +1,10 @@
 ---
-title: "natalizumab_use"
+title: natalizumab_use
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "113"
-permalink: "docs/attributes/natalizumab_use.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 107
+permalink: docs/attributes/natalizumab_use.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.natalizumab_use %} 
-
 {% include content/natalizumab_use.md %}

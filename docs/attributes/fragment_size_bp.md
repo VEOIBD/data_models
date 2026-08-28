@@ -1,15 +1,10 @@
 ---
-title: "fragment_size_bp"
+title: fragment_size_bp
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "65"
-permalink: "docs/attributes/fragment_size_bp.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 61
+permalink: docs/attributes/fragment_size_bp.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.fragment_size_bp %} 
-
 {% include content/fragment_size_bp.md %}

@@ -1,15 +1,10 @@
 ---
-title: "probiotic_use"
+title: probiotic_use
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "134"
-permalink: "docs/attributes/probiotic_use.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 127
+permalink: docs/attributes/probiotic_use.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.probiotic_use %} 
-
 {% include content/probiotic_use.md %}

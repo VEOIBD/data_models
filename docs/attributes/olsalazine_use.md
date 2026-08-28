@@ -1,15 +1,10 @@
 ---
-title: "olsalazine_use"
+title: olsalazine_use
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "116"
-permalink: "docs/attributes/olsalazine_use.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 110
+permalink: docs/attributes/olsalazine_use.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.olsalazine_use %} 
-
 {% include content/olsalazine_use.md %}

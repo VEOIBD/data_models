@@ -1,24 +1,18 @@
 ---
-title: "scRNASeq Assay Metadata Template"
+title: scRNASeq Assay Metadata Template
 parent: Metadata Templates
 datatable: true
 layout: page
-permalink: "docs/metadata_templates/scrnaseq_assay_metadata_template.html"
-date: "2026-02-10"
-params:
-  title: ""
-  title_snake: ""
-  dependsOn: ""
+permalink: docs/metadata_templates/scrnaseq_assay_metadata_template.html
+date: 2026-08-28
 ---
-
-{% assign mydata=site.data.csv.metadata_templates.scrnaseq_assay_metadata_template %} 
+{% assign mydata=site.data.csv.metadata_templates.scrnaseq_assay_metadata_template %}
 {% include content/scrnaseq_assay_metadata_template.md %}
-
 <table id="myTable" class="display" style="width:100%">
     <thead>
-    {% for column in mydata[0] %}
-        <th>{{ column[0] }}</th>
-    {% endfor %}
+      {% for column in mydata[0] %}
+          <th>{{ column[0] }}</th>
+      {% endfor %}
     </thead>
     <tbody>
     {% for row in mydata %}
@@ -32,15 +26,14 @@ params:
 </table>
 
 <script type="text/javascript">
-  var pages = [];
   $(document).ready(function () {
     $('#myTable').DataTable({
       responsive: true,
-      deferRender: true,
+      deferRender: false,
       paging: false,
       order: [],
       columnDefs: [
-        { 
+        {
           targets: 0,
           orderable: false,
           render : function(data, type, row, meta){
@@ -52,8 +45,8 @@ params:
                    .html();
           }
         },
-        { 
-          targets: [1,2,3], 
+        {
+          targets: [1,2,3],
           orderable: false
         }
       ]

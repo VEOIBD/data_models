@@ -1,15 +1,10 @@
 ---
-title: "collection_id"
+title: collection_id
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "35"
-permalink: "docs/attributes/collection_id.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 33
+permalink: docs/attributes/collection_id.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.collection_id %} 
-
 {% include content/collection_id.md %}

@@ -1,15 +1,10 @@
 ---
-title: "valid_bc"
+title: valid_bc
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "181"
-permalink: "docs/attributes/valid_bc.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 174
+permalink: docs/attributes/valid_bc.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.valid_bc %} 
-
 {% include content/valid_bc.md %}

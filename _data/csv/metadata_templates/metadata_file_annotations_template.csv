@@ -1,0 +1,5 @@
+"Attribute","Description","Required","Valid Values"
+"file_format","Defined format of the data file, typically corresponding to extension, but sometimes indicating more general group of files produced by the same tool or software",TRUE,"fastq, bam, csv, xlsx, txt, pdf, tsv, .h5, tar.gz, .h5ad"
+"metadata_type","For files of dataSubtype: metadata, a description of the type of metadata in the file.",TRUE,"assay metadata, biospecimen metadata, data dictionary, individual, protocol, quality assessment"
+"resource_type","The type of resource being stored and annotated",TRUE,"experimental data, metadata, report"
+"site","site identifier indicating which institute oversaw the enrollment and sample collection of the patient.",TRUE,"BCH, LMU, HSC, OXF, MSSM"

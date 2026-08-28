@@ -1,15 +1,10 @@
 ---
-title: "natalizumab_change"
+title: natalizumab_change
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "112"
-permalink: "docs/attributes/natalizumab_change.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 106
+permalink: docs/attributes/natalizumab_change.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.natalizumab_change %} 
-
 {% include content/natalizumab_change.md %}

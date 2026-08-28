@@ -1,15 +1,10 @@
 ---
-title: "amoxicillin_change"
+title: amoxicillin_change
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "7"
-permalink: "docs/attributes/amoxicillin_change.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 7
+permalink: docs/attributes/amoxicillin_change.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.amoxicillin_change %} 
-
 {% include content/amoxicillin_change.md %}

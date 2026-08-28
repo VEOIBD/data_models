@@ -1,15 +1,10 @@
 ---
-title: "omega3_use"
+title: omega3_use
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "119"
-permalink: "docs/attributes/omega3_use.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 113
+permalink: docs/attributes/omega3_use.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.omega3_use %} 
-
 {% include content/omega3_use.md %}

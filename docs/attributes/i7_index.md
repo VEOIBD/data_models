@@ -1,15 +1,10 @@
 ---
-title: "i7_index"
+title: i7_index
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "75"
-permalink: "docs/attributes/i7_index.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 71
+permalink: docs/attributes/i7_index.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.i7_index %} 
-
 {% include content/i7_index.md %}

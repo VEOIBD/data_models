@@ -1,19 +1,14 @@
 ---
-title: "disease_activity_behavior"
+title: disease_activity_behavior
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "53"
-permalink: "docs/attributes/disease_activity_behavior.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 49
+permalink: docs/attributes/disease_activity_behavior.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.disease_activity_behavior %} 
-
+{% assign mydata=site.data.csv.attributes.disease_activity_behavior %}
 {% include content/disease_activity_behavior.md %}
-
 <table id="myTable" class="display" style="width:100%">
     <thead>
     {% for column in mydata[0] %}
@@ -35,7 +30,9 @@ params:
     $('#myTable').DataTable({
       responsive: true,
       deferRender: false,
-      paging: false,
+      paging: true,
+      pageLength: 50,
+      lengthMenu: [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
       order: [],
     });
   });

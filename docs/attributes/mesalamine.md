@@ -1,15 +1,10 @@
 ---
-title: "mesalamine"
+title: mesalamine
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "100"
-permalink: "docs/attributes/mesalamine.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 95
+permalink: docs/attributes/mesalamine.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.mesalamine %} 
-
 {% include content/mesalamine.md %}

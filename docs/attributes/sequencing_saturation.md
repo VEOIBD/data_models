@@ -1,15 +1,10 @@
 ---
-title: "sequencing_saturation"
+title: sequencing_saturation
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "154"
-permalink: "docs/attributes/sequencing_saturation.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 147
+permalink: docs/attributes/sequencing_saturation.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.sequencing_saturation %} 
-
 {% include content/sequencing_saturation.md %}

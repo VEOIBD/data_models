@@ -1,15 +1,10 @@
 ---
-title: "median_genes_cell"
+title: median_genes_cell
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "94"
-permalink: "docs/attributes/median_genes_cell.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 90
+permalink: docs/attributes/median_genes_cell.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.median_genes_cell %} 
-
 {% include content/median_genes_cell.md %}

@@ -1,15 +1,10 @@
 ---
-title: "oralsterd_change"
+title: oralsterd_change
 parent: Attributes
 datatable: true
 layout: page
-nav_order: "124"
-permalink: "docs/attributes/oralsterd_change.html"
-date: "2026-02-10"
-params:
-  title: ""
-  rank: ""
+nav_order: 118
+permalink: docs/attributes/oralsterd_change.html
+date: 2026-08-28
 ---
-{% assign mydata=site.data.csv.attributes.oralsterd_change %} 
-
 {% include content/oralsterd_change.md %}
