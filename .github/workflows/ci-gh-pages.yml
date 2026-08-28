@@ -5,12 +5,12 @@ name: ci gh-pages content update
 
 on:
   push:
-  #  branches: ["gh-pages", "main"]
-  #  paths:
-  #    - '.github/workflows/ci-gh-pages.yml'
-  #    - '_utils/update_site_content.R'
-  #    - 'model_templates/**'
-  #    - 'veoibd.model.csv'
+    branches: ["gh-pages", "curator_extension"]
+    paths:
+      - '.github/workflows/ci-gh-pages.yml'
+      - '_utils/update_site_content.R'
+      - 'model_templates/**'
+      - 'veoibd.model.csv'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
