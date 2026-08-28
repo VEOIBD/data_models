@@ -1,16 +1,16 @@
-# This workflow is used to update gh-pages content by running an R workflow when 
-# changes occur directly to files the produce site content in the gh-pages branch
+# This workflow is used to update gh-pages content by running an R workflow when
+# changes occur to ark.model.csv in the main branch
 
 name: ci gh-pages content update
 
 on:
   push:
-    branches: ["gh-pages"]
-    paths: 
-      - '.github/workflows/ci-gh-pages.yml'
-      - '_utils/**.R'
-      - 'templates/**'
-      - 'veoibd.data.model.csv'
+  #  branches: ["gh-pages", "main"]
+  #  paths:
+  #    - '.github/workflows/ci-gh-pages.yml'
+  #    - '_utils/update_site_content.R'
+  #    - 'model_templates/**'
+  #    - 'veoibd.model.csv'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -32,25 +32,37 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            any::rmarkdown
             any::dplyr
             any::stringr
             any::glue
             any::purrr
             any::snakecase
-            any::readr
-            any::sys
+            any::rlang
+            any::remotes
             any::lubridate
+            any::openxlsx
 
       - name: Checkout gh-pages
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: gh-pages
           token: ${{ secrets.VEOIBD_SERVICE_ACCOUNT }}
 
+      - name: Checkout other branch
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ github.repository }} # Checkout the same repository
+          ref: curator_extension # Specify the branch you want to access
+          path: main # Checkout into a different directory
+          token: ${{ secrets.VEOIBD_SERVICE_ACCOUNT }}
+
       - name: Update site content
         run: |
-          Rscript _utils/update_site_content.R https://raw.githubusercontent.com/VEOIBD/data_models/refs/heads/main/veoibd.data.model.csv
+          Rscript _utils/update_site_content.R
+
+      - name: Clean up before commit
+        run: |
+          rm -Rf main/
 
       - name: Commit files if there are changes
         run: |
