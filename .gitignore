@@ -9,4 +9,7 @@ _site/
 .bundle/
 vendor/
 docs/.DS_Store
+
+
 .DS_Store
+.Rhistory
