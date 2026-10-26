@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 45
 permalink: docs/attributes/data_generator.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.data_generator %}
 {% include content/data_generator.md %}

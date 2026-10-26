@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 49
 permalink: docs/attributes/disease_activity_behavior.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.disease_activity_behavior %}
 {% include content/disease_activity_behavior.md %}

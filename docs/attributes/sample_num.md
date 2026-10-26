@@ -5,6 +5,6 @@ datatable: true
 layout: page
 nav_order: 145
 permalink: docs/attributes/sample_num.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% include content/sample_num.md %}

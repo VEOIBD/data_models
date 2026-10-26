@@ -5,6 +5,6 @@ datatable: true
 layout: page
 nav_order: 164
 permalink: docs/attributes/trimethop_change.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% include content/trimethop_change.md %}

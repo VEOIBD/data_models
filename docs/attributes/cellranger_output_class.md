@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 22
 permalink: docs/attributes/cellranger_output_class.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.cellranger_output_class %}
 {% include content/cellranger_output_class.md %}

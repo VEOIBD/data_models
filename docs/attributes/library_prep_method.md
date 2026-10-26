@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 87
 permalink: docs/attributes/library_prep_method.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.library_prep_method %}
 {% include content/library_prep_method.md %}

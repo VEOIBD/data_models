@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 167
 permalink: docs/attributes/upper_disease_type.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.upper_disease_type %}
 {% include content/upper_disease_type.md %}

@@ -5,6 +5,6 @@ datatable: true
 layout: page
 nav_order: 32
 permalink: docs/attributes/collection_age.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% include content/collection_age.md %}

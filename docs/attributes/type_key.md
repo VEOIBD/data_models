@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 166
 permalink: docs/attributes/type_key.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.type_key %}
 {% include content/type_key.md %}

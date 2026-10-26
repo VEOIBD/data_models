@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 72
 permalink: docs/attributes/ibd_history.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.ibd_history %}
 {% include content/ibd_history.md %}

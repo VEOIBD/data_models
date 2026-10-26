@@ -5,6 +5,6 @@ datatable: true
 layout: page
 nav_order: 135
 permalink: docs/attributes/reads_mapped.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% include content/reads_mapped.md %}

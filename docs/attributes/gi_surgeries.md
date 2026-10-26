@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 65
 permalink: docs/attributes/gi_surgeries.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.gi_surgeries %}
 {% include content/gi_surgeries.md %}

@@ -5,6 +5,6 @@ datatable: true
 layout: page
 nav_order: 8
 permalink: docs/attributes/amoxicillin_use.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% include content/amoxicillin_use.md %}

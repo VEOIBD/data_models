@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 54
 permalink: docs/attributes/extraintestinal_manifestations.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.extraintestinal_manifestations %}
 {% include content/extraintestinal_manifestations.md %}

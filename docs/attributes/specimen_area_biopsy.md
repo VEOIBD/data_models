@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 151
 permalink: docs/attributes/specimen_area_biopsy.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.specimen_area_biopsy %}
 {% include content/specimen_area_biopsy.md %}

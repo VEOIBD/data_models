@@ -5,7 +5,7 @@ datatable: true
 layout: page
 nav_order: 53
 permalink: docs/attributes/external_share.html
-date: 2026-08-28
+date: 2026-10-26
 ---
 {% assign mydata=site.data.csv.attributes.external_share %}
 {% include content/external_share.md %}
